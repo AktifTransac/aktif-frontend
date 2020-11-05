@@ -1,0 +1,190 @@
+#single {
+    @apply mt-30;
+    article:first-of-type {
+        h3 {
+            @apply text-30;
+            @apply text-grey-dark;
+        }
+    }
+
+    article:nth-of-type(2) {
+        @apply mt-10;
+        img {
+            width: 100%;
+        }
+
+        aside {
+            @apply grid;
+            @apply grid-cols-5;
+            @apply gap-5;
+
+            @apply mt-5;
+        }
+    }
+
+    article:nth-of-type(3) {
+        @apply mt-30;
+
+        h4 {
+            @apply text-25;
+            @apply text-grey-dark;
+        }
+
+        p {
+            @apply mt-10;
+            @apply text-16;
+            @apply text-grey-dark;
+            @apply text-justify;
+        }
+    }
+
+    article:nth-of-type(4) {
+        @apply mt-30;
+
+        @apply grid;
+        @apply grid-cols-2;
+        @apply gap-30;
+
+        aside {
+            h4 {
+                @apply text-16;
+                @apply text-grey-dark;
+                @apply border-0;
+                @apply border-b;
+                @apply border-grey-light;
+                @apply border-solid;
+                @apply pb-15;
+            }
+
+            h3 {
+                @apply mt-10;
+                @apply text-30;
+                @apply text-red;
+            }
+        }
+    }
+
+    article:nth-of-type(5) {
+        @apply mt-40;
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+
+        h4 {
+            @apply text-16;
+            @apply text-grey-dark;
+        }
+
+        svg {
+            @apply cursor-pointer;
+            &:first-of-type {
+                @apply ml-30;
+            }
+            &:last-of-type {
+                @apply ml-20;
+            }
+        }
+    }
+
+    article:last-of-type {
+        @apply mt-80;
+        form {
+            fieldset {
+                @apply mx-15;
+                @apply border-0;
+
+                > div {
+                    &:not(:first-of-type) {
+                        @apply mt-30;
+                    }
+
+                    @apply flex;
+                    @apply flex-col;
+                    label {
+                        @apply text-16;
+                        @apply text-grey-dark;
+                        @apply mb-30;
+                    }
+
+                    input {
+                        @apply border-0;
+                        @apply border-b;
+                        @apply border-red;
+                        @apply border-solid;
+
+                        @apply pb-2;
+                    }
+
+                    div {
+                        @apply grid;
+                        @apply grid-cols-2;
+                        @apply gap-30;
+
+                        // span {
+                        //     @apply relative;
+                        //     width: 100%;
+
+                        //     select {
+                        //         width: 100%;
+                        //     }
+
+                        //     &::after {
+                        //         content: "\2193";
+                        //         position: absolute;
+                        //         top: 0;
+                        //         bottom: 0;
+                        //         right: 15px;
+                        //         height: 100%;
+
+                        //         @apply flex;
+                        //         @apply items-center;
+
+                        //         @apply text-20;
+                        //         @apply text-red;
+                        //         pointer-events: none;
+                        //     }
+                        // }
+
+                        select,
+                        button {
+                            @apply py-15;
+                            @apply px-20;
+
+                            @apply text-red;
+                            @apply text-center;
+
+                            @apply border;
+                            @apply border-solid;
+                            @apply border-red;
+                            -webkit-appearance: none;
+                        }
+
+                        button {
+                            @apply bg-transparent-full;
+                            @apply cursor-pointer;
+
+                            &.selected {
+                                @apply bg-red;
+                                @apply text-white;
+                            }
+                        }
+                    }
+                }
+            }
+
+            input[type="submit"] {
+                @apply mt-30;
+                @apply w-full;
+
+                @apply py-30;
+                @apply bg-red;
+                @apply border-0;
+
+                @apply text-25;
+                @apply text-white;
+
+                @apply cursor-pointer;
+            }
+        }
+    }
+}

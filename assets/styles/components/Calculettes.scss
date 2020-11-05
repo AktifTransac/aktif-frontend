@@ -1,0 +1,47 @@
+#calculette {
+    .calculs {
+        @apply px-10;
+        @apply py-20;
+
+        @apply border;
+        @apply border-grey-dark;
+        @apply border-solid;
+
+        @apply transition-all;
+        @apply duration-300;
+
+        @apply cursor-pointer;
+
+        &:not(:last-of-type) {
+            @apply mb-10;
+        }
+
+        &.selected {
+            @apply border-red;
+
+            h3 {
+                @apply text-red;
+            }
+        }
+
+        h3 {
+            @apply text-grey-dark;
+            @apply text-20;
+
+            @apply transition-all;
+            @apply duration-300;
+        }
+    }
+}
+
+@screen md {
+    #calculette {
+        .calculs {
+            @apply p-20;
+    
+            &:not(:last-of-type) {
+                @apply mb-30;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.container {
+    @apply px-15;
+}
+
+.btn {
+    @apply py-15;
+    @apply px-25;
+    @apply block;
+    width: fit-content;
+    @apply border;  
+    @apply border-solid;
+    @apply border-red;
+    @apply text-red;
+    @apply no-underline;
+
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, rgba(255,255,255, 0) 50%, #FC5555 50%);
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-position: -100% 0;
+        @apply text-white;
+    }
+}
+
+.btn-biens {
+    @apply py-15;
+    @apply px-25;
+    @apply block;
+    width: fit-content;
+    @apply border;
+    @apply border-solid;
+    @apply border-white;
+    @apply text-white;
+    @apply no-underline;
+
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, rgba(255,255,255, 0) 50%, #fcfcfc 50%);
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-position: -100% 0;
+        @apply text-red;
+    }
+}
+
+@screen md {
+    .container {
+        @apply px-35;
+    }
+}

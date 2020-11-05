@@ -1,0 +1,40 @@
+#gestion {
+    @apply mt-60;
+
+    img {
+        @apply w-full;
+    }
+
+    article {
+        @apply mt-30;
+
+        h2 {
+            @apply text-grey-dark;
+            @apply text-30;
+
+            >span {
+                @apply text-red;
+            }
+        }
+
+        p {
+            @apply mt-30;
+            @apply text-16;
+            @apply text-grey-dark;
+            @apply text-justify;
+        }
+    }
+}
+
+@screen md {
+    #gestion {
+        @apply mt-80;
+    
+        article {
+    
+            h2 {
+                @apply text-40;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+#contact {
+    @apply mt-60;
+
+    h2 {
+        @apply text-16;
+        @apply text-red;
+    }
+
+    form {
+        @apply mt-30;
+        @apply grid;
+        @apply gap-y-30;
+
+        input:not([type="submit"]) {
+            @apply pb-10;
+            @apply border-t-0;
+            @apply border-l-0;
+            @apply border-r-0;
+            @apply border-b;
+            @apply border-grey-light;
+
+            @apply text-20;
+            @apply text-grey-dark;
+            &::placeholder {
+                @apply opacity-100;
+            }
+        }
+
+        select {
+            @apply pb-10;
+            @apply border-t-0;
+            @apply border-l-0;
+            @apply border-r-0;
+            @apply border-b;
+            @apply border-grey-light;
+
+            @apply text-center;
+            @apply text-20;
+            @apply text-red;
+
+            appearance: none;
+        }
+
+        fieldset {
+            @apply border-0;
+            @apply flex;
+            @apply flex-col;
+
+            label {
+                @apply text-20;
+                @apply text-grey-dark;
+                @apply mb-10;
+            }
+
+            textarea {
+                @apply border-grey-dark;
+                @apply border;
+            }
+        }
+
+        input[type="submit"] {
+            @apply bg-red;
+            @apply border-0;
+            @apply px-40;
+            @apply py-20;
+
+            @apply text-25;
+            @apply text-white;
+
+            @apply w-3/6;
+            @apply m-auto;
+
+            @apply cursor-pointer;
+        }
+    }
+}

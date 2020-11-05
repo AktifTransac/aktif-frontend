@@ -1,0 +1,212 @@
+footer {
+    @apply mt-60;
+    > section:first-of-type {
+        @apply relative;
+        @apply bg-transparent-light;
+        &::after {
+            content: "";
+            background-image: url("~assets/images/footer/alert-bg.jpg");
+            @apply bg-cover;
+            background-position: 30% 30%;
+            @apply absolute;
+            @apply inset-0;
+            z-index: -1;
+        }
+
+        > h2 {
+            @apply text-white;
+            @apply text-30;
+            @apply text-center;
+            @apply pt-30;
+        }
+
+        > p {
+            @apply text-16;
+            @apply text-white;
+            @apply text-center;
+            @apply mt-10;
+        }
+
+        > article {
+            @apply mt-30;
+            @apply pb-30;
+
+            aside:first-of-type {
+                @apply flex;
+                @apply justify-between;
+                button {
+                    @apply cursor-pointer;
+                    @apply bg-transparent-full;
+                    @apply text-white;
+                    @apply border-0;
+
+                    span {
+                        @apply pl-10;
+                    }
+                }
+
+                > div {
+                    @apply flex;
+                    button {
+                        @apply py-10;
+                        @apply px-15;
+
+                        @apply bg-red;
+
+                        @apply transition-all;
+                        @apply duration-300;
+
+                        &.active {
+                            @apply bg-white;
+                            @apply text-red;
+                        }
+                    }
+                }
+            }
+
+            form {
+                @apply grid;
+                @apply justify-items-start;
+                grid-template-columns: 1fr 1fr fit-content(100%);
+
+                div {
+                    @apply bg-white;
+                    @apply border-0;
+                    @apply pt-10;
+                    @apply pb-25;
+                    @apply px-20;
+                    @apply flex;
+                    @apply flex-col;
+                    @apply justify-start;
+                    @apply w-full;
+
+                    &:nth-of-type(5),
+                    &:last-of-type {
+                        grid-row: 2;
+                    }
+
+                    label {
+                        @apply text-grey-dark;
+                        @apply text-12;
+                        @apply mb-10;
+                    }
+
+                    input,
+                    select {
+                        @apply text-20;
+                        @apply text-red;
+                        @apply bg-white;
+                        @apply border-0;
+                        @apply w-full;
+                        -webkit-appearance: none;
+                    }
+                }
+
+                button {
+                    @apply bg-red;
+                    @apply border-0;
+                    @apply px-20;
+                    @apply w-full;
+                    display: block;
+                    @apply cursor-pointer;
+                }
+            }
+
+            aside:last-of-type {
+                @apply flex;
+                @apply items-start;
+
+                @apply mt-15;
+
+                input {
+                    -webkit-appearance: none;
+                    flex-basis: 1;
+                    flex-shrink: 0;
+                    @apply border;
+                    @apply border-red;
+                    @apply border-solid;
+
+                    @apply bg-white;
+
+                    width: 20px;
+                    height: 20px;
+
+                    &:checked {
+                        @apply relative;
+                        &::before {
+                            content: "\2714";
+                            @apply text-16;
+                            @apply text-red;
+
+                            @apply absolute;
+                            @apply inset-0;
+
+                            @apply flex;
+                            @apply items-center;
+                            @apply justify-center;
+                        }
+                    }
+                }
+
+                p {
+                    @apply ml-10;
+                    @apply text-left;
+                    @apply text-white;
+                    @apply text-16;
+
+                    a {
+                        @apply text-white;
+                        @apply text-16;
+                    }
+                }
+            }
+        }
+    }
+
+    > section:nth-of-type(2) {
+        @apply bg-grey-dark;
+        article {
+            @apply pt-30;
+            @apply grid;
+            @apply gap-10;
+
+            p {
+                @apply text-red;
+                @apply text-16;
+            }
+
+            h3 {
+                @apply text-white;
+                @apply text-25;
+            }
+        }
+    }
+
+    > section:nth-of-type(3) {
+        @apply bg-grey-dark;
+        @apply pt-80;
+        @apply grid;
+        @apply gap-10;
+
+        p {
+            @apply text-white;
+            @apply text-16;
+            @apply text-center;
+        }
+    }
+
+    > section:last-of-type {
+        @apply bg-grey-dark;
+        @apply pt-60;
+        @apply pb-15;
+
+        @apply text-center;
+        @apply text-white;
+
+        p {
+            svg {
+                @apply mx-10;
+            }
+        }
+    }
+}

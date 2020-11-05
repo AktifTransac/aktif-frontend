@@ -1,0 +1,154 @@
+#biens {
+    @apply pt-60;
+
+    article:first-of-type {
+        @apply mb-30;
+        h2 {
+            @apply text-30;
+            @apply text-grey-dark;
+            @apply mb-30;
+
+            span {
+                @apply text-red;
+            }
+        }
+    }
+
+    article:nth-of-type(2) {
+        @apply mb-30;
+
+        @apply flex;
+        @apply overflow-hidden;
+
+        aside {
+            @apply h-400;
+            @apply mx-15;
+            @apply relative;
+
+            transition: all 0.3s;
+
+            img {
+                width: calc(100vw - (15px * 2));
+                @apply h-400;
+                @apply object-cover;
+                @apply box-content;
+            }
+
+            > div {
+                @apply absolute;
+                @apply inset-0;
+                @apply bg-transparent-light;
+
+                @apply flex;
+                @apply flex-col;
+                @apply justify-end;
+
+                @apply text-white;
+
+                @apply px-30;
+                @apply pb-30;
+
+                h3 {
+                    @apply text-30;
+                    @apply pb-10;
+                }
+
+                p {
+                    @apply text-25;
+                }
+
+                div {
+                    @apply mt-30;
+                    @apply flex;
+                    @apply justify-between;
+                    @apply items-end;
+
+                    @apply text-white;
+
+                    svg {
+                        @apply cursor-pointer;
+                        @apply w-6;
+                    }
+                }
+            }
+        }
+    }
+
+    article:last-of-type {
+        @apply mx-15;
+        @apply flex;
+        @apply justify-between;
+        @apply text-20;
+
+        nav {
+            @apply flex;
+            @apply items-center;
+            @apply cursor-pointer;
+            @apply text-grey-dark;
+
+            @apply transition-all;
+            @apply duration-300;
+
+            svg {
+                fill: #424242;
+            }
+
+            &.active {
+                @apply text-red;
+
+                svg {
+                    fill: #FC5555;
+                }
+            }
+        }
+
+        nav:first-of-type {
+            svg {
+                @apply mr-10;
+            }
+        }
+
+        nav:last-of-type {
+            svg {
+                @apply ml-10;
+            }
+        }
+    }
+}
+
+@screen md {
+    #biens {
+        @apply pt-80;
+
+        article:first-of-type {
+            @apply mb-60;
+            h2 {
+                @apply text-40;
+                @apply mb-10;
+            }
+        }
+
+        article:nth-of-type(2) {
+            aside {
+                @apply mx-15;
+
+                img {
+                    width: calc(50vw - (30px));
+                }
+
+                > div {
+                    @apply pb-40;
+                }
+            }
+        }
+
+        article:last-of-type {
+            @apply mx-60;
+            @apply justify-end;
+
+            nav:first-of-type {
+                @apply mr-100;
+            }
+        }
+    }
+}

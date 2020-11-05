@@ -1,0 +1,104 @@
+#goods {
+    @apply mt-30;
+
+    article:first-of-type {
+        @apply grid;
+        @apply gap-y-30;
+
+        > div {
+            @apply relative;
+            @apply h-400;
+            img {
+                @apply w-full;
+                @apply h-400;
+            }
+
+            > div {
+                @apply absolute;
+                @apply inset-0;
+                @apply bg-transparent-light;
+
+                @apply flex;
+                @apply flex-col;
+                @apply justify-end;
+
+                @apply text-white;
+
+                @apply px-30;
+                @apply pb-30;
+
+                h3 {
+                    @apply text-30;
+                    @apply pb-10;
+                }
+
+                p {
+                    @apply text-25;
+                }
+
+                div {
+                    @apply mt-30;
+                    @apply flex;
+                    @apply justify-between;
+                    @apply items-end;
+
+                    @apply text-white;
+
+                    svg {
+                        @apply cursor-pointer;
+                        @apply w-6;
+                    }
+                }
+            }
+        }
+    }
+
+    article:last-of-type {
+        @apply mt-30;
+        @apply mx-15;
+        @apply flex;
+        @apply justify-between;
+        @apply text-20;
+
+        nav {
+            @apply flex;
+            @apply items-center;
+            @apply cursor-pointer;
+            @apply text-grey-dark;
+
+            @apply transition-all;
+            @apply duration-300;
+
+            svg {
+                fill: #424242;
+            }
+
+            &.active {
+                @apply text-red;
+
+                svg {
+                    fill: #fc5555;
+                }
+            }
+        }
+
+        nav:first-of-type {
+            svg {
+                @apply mr-10;
+            }
+        }
+
+        nav:last-of-type {
+            svg {
+                @apply ml-10;
+            }
+        }
+    }
+
+    > p {
+        @apply mt-10;
+        @apply text-center;
+        @apply text-16;
+        @apply text-grey-dark;
+    }
+}

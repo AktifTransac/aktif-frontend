@@ -1,0 +1,25 @@
+header {
+    @apply relative;
+    min-height: 40vh;
+    @apply bg-transparent-light;
+
+    &::after {
+        content: "";
+        background-image: url("~assets/images/home/home-header.jpg");
+        @apply bg-cover;
+        background-position: 30% 30%;
+        @apply absolute;
+        @apply inset-0;
+        z-index: -1;
+    }
+
+    > section:last-of-type {
+        @apply mt-120;
+        @apply pb-60;
+
+        h1 {
+            @apply text-white;
+            @apply text-40;
+        }
+    }
+}

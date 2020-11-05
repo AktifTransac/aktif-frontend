@@ -1,0 +1,71 @@
+#outils {
+    @apply mt-60;
+
+    > article {
+        h2 {
+            @apply text-grey-dark;
+            @apply text-30;
+        }
+
+        > div {
+            @apply mt-30;
+            @apply grid;
+            @apply grid-cols-2;
+            @apply gap-x-30;
+            @apply gap-y-10;
+            input[type="button"] {
+                @apply transition-all;
+                @apply duration-300;
+                
+                @apply bg-transparent-full;
+
+                @apply border-t-0;
+                @apply border-l-0;
+                @apply border-r-0;
+                @apply border-b;
+                @apply border-grey-light;
+                @apply border-solid;
+
+                @apply pb-15;
+                @apply text-25;
+                @apply text-grey-light;
+                @apply text-left;
+
+                @apply cursor-pointer;
+                
+                &.selected {
+                    @apply text-red;
+                    @apply border-red;
+                }
+            }
+        }
+
+        &:not(:first-of-type) {
+            @apply mt-30;
+            @apply mx-5;
+        }
+    }
+}
+
+@screen md {
+    #outils {
+        @apply mt-80;
+    
+        > article {
+            h2 {
+                @apply text-40;
+            }
+    
+            > div {
+                @apply mt-60;
+                @apply grid-cols-3;
+                @apply gap-x-30;
+            }
+    
+            &:not(:first-of-type) {
+                @apply mt-60;
+                @apply mx-35;
+            }
+        }
+    }
+}

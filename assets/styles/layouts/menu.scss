@@ -1,0 +1,126 @@
+section {
+    @apply pt-30;
+    @apply flex;
+    @apply justify-between;
+    @apply items-start;
+
+    #btn-menu {
+        @apply cursor-pointer;
+        @apply border-0;
+        @apply border-b-2;
+        @apply border-solid;
+        @apply pb-10;
+        @apply px-10;
+        @apply text-20;
+    }
+
+    #menu-wrapper {
+        @apply z-50;
+        @apply fixed;
+        @apply inset-0;
+        @apply bg-transparent-dark;
+        @apply flex;
+        @apply justify-end;
+
+        #menu {
+            @apply h-full;
+            @apply w-11/12;
+            @apply bg-grey-dark;
+            @apply px-30;
+
+            @apply grid;
+            grid-template-rows: fit-content(100%) 1fr fit-content(100%);
+            @apply relative;
+
+            svg {
+                @apply cursor-pointer;
+                @apply justify-self-end;
+                @apply mt-40;
+                @apply mr-10;
+            }
+
+            div {
+                &:first-of-type {
+                    @apply mt-50;
+                }
+
+                &:last-of-type {
+                    @apply mb-30;
+                }
+
+                p {
+                    @apply text-16;
+                    @apply text-red;
+                }
+
+                ul {
+                    @apply mt-10;
+                    @apply grid;
+                    @apply gap-30;
+
+                    li {
+                        a {
+                            @apply text-white;
+                            @apply text-25;
+                            @apply no-underline;
+                        }
+                    }
+                }
+
+                h3 {
+                    @apply text-25;
+                    @apply text-white;
+
+                    &:first-of-type {
+                        @apply mt-10;
+                    }
+
+                    &:last-of-type {
+                        @apply mt-30;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide-enter-active {
+    transition: all 0.3s ease;
+}
+.slide-leave-active {
+    transition: all 0.3s ease;
+    transition-delay: 0.3s;
+}
+.slide-enter,
+.slide-leave-to {
+    transform: translateX(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+
+.fade-enter-active {
+    transition-delay: 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+@screen md {
+    section {
+        @apply pt-40;
+
+        #btn-menu {
+            @apply text-25;
+        }
+    
+        #menu-wrapper {
+            #menu {
+                @apply w-3/6;
+            }
+        }
+    }
+}

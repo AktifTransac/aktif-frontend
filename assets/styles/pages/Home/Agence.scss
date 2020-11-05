@@ -1,0 +1,51 @@
+#agence {
+    @apply mt-60;
+
+    img {
+        @apply w-full;
+    }
+
+    article {
+        @apply mt-30;
+
+        h2 {
+            @apply text-grey-dark;
+            @apply text-30;
+
+            span {
+                @apply text-red;
+            }
+        }
+
+        p {
+            @apply mt-30;
+            @apply mb-30;
+            @apply text-16;
+            @apply text-grey-dark;
+            @apply text-justify;
+        }
+    }
+}
+
+@screen md {
+    #agence {
+        @apply mt-80;
+    
+        article {
+            @apply mt-30;
+    
+            h2 {
+                @apply text-grey-dark;
+                @apply text-30;
+            }
+    
+            p {
+                @apply mt-30;
+                @apply mb-30;
+                @apply text-16;
+                @apply text-grey-dark;
+                @apply text-justify;
+            }
+        }
+    }
+}
