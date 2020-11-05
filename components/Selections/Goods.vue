@@ -115,7 +115,7 @@ export default {
       )
     },
     nbPages() {
-      const nb = (this.filteredgoods.length / this.itemsByPage).toFixed()
+      const nb = Math.ceil(this.filteredgoods.length / this.itemsByPage)
       if (nb < 1) {
         return 1
       } else {

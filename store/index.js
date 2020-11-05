@@ -1,4 +1,5 @@
 import cookie from 'vue-cookies'
+const convert = require('xml-js')
 
 export const state = () => ({
   goods: [],
@@ -35,12 +36,14 @@ export const getters = {
 }
 
 export const mutations = {
-  setGoods(state, data) {
-    data.BIENS.BIEN.forEach((el) => {
+  async setGoods(state, data) {
+    const biens = convert.xml2json(data, { compact: true, spaces: 4 })
+    const formated = await JSON.parse(biens)
+    await formated.BIENS.BIEN.forEach((el) => {
       const format = el.DATE_OFFRE._cdata.split('/').reverse().join('/')
       el.DATE_OFFRE._cdata = format
     })
-    state.goods = data.BIENS.BIEN
+    state.goods = formated.BIENS.BIEN
   },
   like(state, dossier) {
     if (!cookie.isKey('likes')) {
@@ -73,7 +76,7 @@ export const mutations = {
 
 export const actions = {
   async getGoods({ commit }) {
-    const data = await this.$axios.$get('http://localhost:8000/biens')
+    const data = await this.$axios.$get('https://api.aktif-transac.com/biens')
     await commit('setGoods', data)
   },
 }

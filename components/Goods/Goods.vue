@@ -9,6 +9,7 @@
             <span> {{ surface(bien) }} m² </span>
           </h3>
           <p>{{ prix(bien) }}</p>
+          <p>{{ bien.DATE_OFFRE._cdata }}</p>
           <div>
             <nuxt-link
               :to="'/biens/' + bien.NO_DOSSIER._cdata"
@@ -106,13 +107,16 @@ export default {
       return 6
     },
     displayed() {
+      this.filteredgoods.map((el) => {
+        console.log(el.DATE_OFFRE._cdata)
+      })
       return this.filteredgoods.slice(
         this.page * this.itemsByPage - this.itemsByPage,
         this.page * this.itemsByPage
       )
     },
     nbPages() {
-      const nb = (this.filteredgoods.length / this.itemsByPage).toFixed()
+      const nb = Math.ceil(this.filteredgoods.length / this.itemsByPage)
       if (nb < 1) {
         return 1
       } else {
