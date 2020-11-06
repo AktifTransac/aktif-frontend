@@ -107,9 +107,6 @@ export default {
       return 6
     },
     displayed() {
-      this.filteredgoods.map((el) => {
-        console.log(el.DATE_OFFRE._cdata)
-      })
       return this.filteredgoods.slice(
         this.page * this.itemsByPage - this.itemsByPage,
         this.page * this.itemsByPage
