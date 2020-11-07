@@ -1,5 +1,53 @@
 #single {
     @apply mt-30;
+
+    > nav {
+        @apply mb-15;
+        @apply flex;
+
+        a, p {
+            @apply text-grey-light;
+            @apply no-underline;
+
+            @apply ml-5;
+
+            @apply cursor-pointer;
+            &:hover {
+                @apply text-red;
+            }
+
+            @apply text-12;
+        }
+
+        a {
+            &:first-of-type {
+                @apply m-0;
+            }
+        }
+
+        p:last-of-type {
+            @apply text-red;
+        }
+    }
+
+    > div:first-of-type {
+        @apply absolute;
+        @apply inset-0;
+
+        @apply bg-transparent-dark;
+
+        @apply flex;
+        @apply justify-center;
+        @apply items-center;
+
+        @apply p-5;
+
+        > img {
+            @apply object-contain;
+            @apply bg-grey-dark;
+        }
+    }
+
     article:first-of-type {
         h3 {
             @apply text-30;
@@ -9,8 +57,43 @@
 
     article:nth-of-type(2) {
         @apply mt-10;
+        > div {
+            @apply relative;
+
+            > aside {
+                @apply w-full;
+                @apply absolute;
+                @apply bottom-0;
+
+                @apply flex;
+                @apply justify-between;
+                @apply items-center;
+
+                @apply text-white;
+
+                @apply pb-20;
+                @apply px-20;
+
+                p {
+                    @apply bg-transparent-light;
+                    @apply py-5;
+                    @apply px-20;
+                }
+
+                svg {
+                    @apply cursor-pointer;
+                    @apply w-6;
+                }
+            }
+        }
+
         img {
             width: 100%;
+            height: 250px;
+            @apply object-contain;
+            @apply bg-grey-dark;
+
+            @apply cursor-pointer;
         }
 
         aside {
@@ -19,6 +102,15 @@
             @apply gap-5;
 
             @apply mt-5;
+
+            img {
+                @apply cursor-pointer;
+                height: 64px;
+                @apply object-contain;
+                @apply bg-grey-dark;
+
+                @apply cursor-pointer;
+            }
         }
     }
 

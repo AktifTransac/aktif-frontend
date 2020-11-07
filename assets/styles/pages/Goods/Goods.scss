@@ -11,6 +11,8 @@
             img {
                 @apply w-full;
                 @apply h-400;
+                @apply object-contain;
+                @apply bg-grey-dark;
             }
 
             > div {

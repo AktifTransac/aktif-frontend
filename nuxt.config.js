@@ -60,7 +60,11 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'https://api.aktif-transac.com',
+    proxyHeaders: false,
+    credentials: false,
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

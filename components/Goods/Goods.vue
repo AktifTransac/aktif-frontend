@@ -2,14 +2,21 @@
   <section id="goods">
     <article class="container">
       <div v-for="(bien, i) in displayed" :key="i">
-        <img src="~/assets/images/test.jpg" alt="test" />
+        <img
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-a' +
+            '.jpg'
+          "
+          alt="test"
+        />
         <div>
           <h3>
             {{ goodsType(bien.TYPE_OFFRE._cdata) }}
             <span> {{ surface(bien) }} m² </span>
           </h3>
           <p>{{ prix(bien) }}</p>
-          <p>{{ bien.DATE_OFFRE._cdata }}</p>
           <div>
             <nuxt-link
               :to="'/biens/' + bien.NO_DOSSIER._cdata"

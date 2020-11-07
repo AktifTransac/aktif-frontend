@@ -1,7 +1,7 @@
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
 PassengerAppRoot "/home/aktisyuv/dev"
 PassengerBaseURI "/"
-PassengerNodejs "/home/aktisyuv/nodevenv/dev/14/bin/node"
+PassengerNodejs "/home/aktisyuv/nodevenv/dev/12/bin/node"
 PassengerAppType node
 PassengerStartupFile app.js
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
@@ -14,3 +14,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^dev.aktif-transac\.com [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}
+
+PassengerFriendlyErrorPages off
+PassengerAppEnv production

@@ -1,5 +1,29 @@
 <template>
   <section id="single" class="container">
+    <nav>
+      <nuxt-link to="/">Home</nuxt-link>
+      <p>></p>
+      <nuxt-link to="/biens">Biens</nuxt-link>
+      <p>></p>
+      <p @click="redirectChoice(bien)">{{ offerType(bien) }}</p>
+      <p>></p>
+      <p @click="redirectProject(bien)">{{ goodsType(bien) }}</p>
+      <p>></p>
+      <p>{{ goodsType(bien) }} {{ surface(bien) }} m²</p>
+    </nav>
+
+    <div v-show="bigPicture" @click.self="bigPicture = !bigPicture">
+      <img
+        :src="
+          'https://api.aktif-transac.com/data/6993-01-' +
+          bien.NO_ASP._cdata +
+          '-' +
+          img +
+          '.jpg'
+        "
+        :alt="bien.TEXTE_FR._cdata"
+      />
+    </div>
     <article>
       <h3>
         {{ goodsType(bien) }}
@@ -7,13 +31,112 @@
       </h3>
     </article>
     <article>
-      <img src="~/assets/images/test.jpg" alt="test" />
+      <div>
+        <img
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-' +
+            img +
+            '.jpg'
+          "
+          :alt="bien.TEXTE_FR._cdata"
+          @click="bigPicture = !bigPicture"
+        />
+        <aside>
+          <p>1/5</p>
+          <svg
+            v-show="!likes.includes(bien.NO_DOSSIER._cdata)"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="far"
+            data-icon="heart"
+            class="svg-inline--fa fa-heart fa-w-16"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            @click="like(bien.NO_DOSSIER._cdata)"
+          >
+            <path
+              fill="currentColor"
+              d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+            ></path>
+          </svg>
+          <svg
+            v-show="likes.includes(bien.NO_DOSSIER._cdata)"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="heart"
+            class="svg-inline--fa fa-heart fa-w-16"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            @click="dislike(bien.NO_DOSSIER._cdata)"
+          >
+            <path
+              fill="currentColor"
+              d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+            ></path>
+          </svg>
+        </aside>
+      </div>
       <aside>
-        <img src="~/assets/images/test.jpg" alt="test" />
-        <img src="~/assets/images/test.jpg" alt="test" />
-        <img src="~/assets/images/test.jpg" alt="test" />
-        <img src="~/assets/images/test.jpg" alt="test" />
-        <img src="~/assets/images/test.jpg" alt="test" />
+        <img
+          v-show="images.a"
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-a' +
+            '.jpg'
+          "
+          :alt="bien.TEXTE_FR._cdata"
+          @click="img = 'a'"
+        />
+        <img
+          v-show="images.b"
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-b' +
+            '.jpg'
+          "
+          :alt="bien.TEXTE_FR._cdata"
+          @click="img = 'b'"
+        />
+        <img
+          v-show="images.c"
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-c' +
+            '.jpg'
+          "
+          :alt="bien.TEXTE_FR._cdata"
+          @click="img = 'c'"
+        />
+        <img
+          v-show="images.d"
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-d' +
+            '.jpg'
+          "
+          :alt="bien.TEXTE_FR._cdata"
+          @click="img = 'd'"
+        />
+        <img
+          v-show="images.e"
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-e' +
+            '.jpg'
+          "
+          :alt="bien.TEXTE_FR._cdata"
+          @click="img = 'e'"
+        />
       </aside>
     </article>
     <article>
@@ -28,6 +151,48 @@
       <aside>
         <h4>Prix</h4>
         <h3>{{ prix(bien) }}</h3>
+      </aside>
+      <aside>
+        <h4>Superficie</h4>
+        <h3>{{ surface(bien) }} m²</h3>
+      </aside>
+      <aside v-show="bien.NB_PIECES && bien.NB_PIECES._cdata">
+        <h4>Pièces</h4>
+        <h3>{{ bien.NB_PIECES._cdata }}</h3>
+      </aside>
+      <aside
+        v-show="
+          bien.ANNEE_CONS &&
+          bien.ANNEE_CONS._cdata &&
+          bien.ANNEE_CONS._cdata !== '0'
+        "
+      >
+        <h4>Année</h4>
+        <h3>{{ bien.ANNEE_CONS._cdata }}</h3>
+      </aside>
+      <aside
+        v-show="
+          bien.TERRASSE && bien.TERRASSE._cdata && bien.TERRASSE._cdata !== '0'
+        "
+      >
+        <h4>Terrasse</h4>
+        <h3>{{ bien.TERRASSE._cdata }}</h3>
+      </aside>
+      <aside
+        v-show="bien.BALCON && bien.BALCON._cdata && bien.BALCON._cdata !== '0'"
+      >
+        <h4>Balcon</h4>
+        <h3>{{ bien.BALCON._cdata }}</h3>
+      </aside>
+      <aside
+        v-show="
+          bien.SURF_JARDIN &&
+          bien.SURF_JARDIN._cdata &&
+          bien.SURF_JARDIN._cdata !== '0'
+        "
+      >
+        <h4>Jardin</h4>
+        <h3>{{ bien.SURF_JARDIN._cdata }} m²</h3>
       </aside>
     </article>
     <article>
@@ -133,6 +298,8 @@
 </template>
 
 <script>
+import cookie from 'vue-cookies'
+
 export default {
   scrollToTop: true,
   props: {
@@ -157,9 +324,153 @@ export default {
         details: false,
         rappel: false,
       },
+      img: 'a',
+      images: {
+        a: false,
+        b: false,
+        c: false,
+        d: false,
+        e: false,
+      },
+      bigPicture: false,
+      filters: {
+        choice: '',
+        project: 'All',
+        localization: '',
+        budget: {
+          min: '',
+          max: '',
+        },
+        surface: {
+          min: '',
+          max: '',
+        },
+      },
+    }
+  },
+  computed: {
+    likes() {
+      return this.$store.getters.likes
+    },
+  },
+  async beforeMount() {
+    await this.$axios
+      .$get(
+        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=a`
+      )
+      .then((response) => {
+        this.images.a = response.result
+      })
+    await this.$axios
+      .$get(
+        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=b`
+      )
+      .then((response) => {
+        this.images.b = response.result
+      })
+    await this.$axios
+      .$get(
+        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=c`
+      )
+      .then((response) => {
+        this.images.c = response.result
+      })
+    await this.$axios
+      .$get(
+        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=d`
+      )
+      .then((response) => {
+        this.images.d = response.result
+      })
+    await this.$axios
+      .$get(
+        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=e`
+      )
+      .then((response) => {
+        this.images.e = response.result
+      })
+  },
+  mounted() {
+    if (this.$cookies.isKey('likes')) {
+      this.$store.commit('setLikes')
+      this.likes = JSON.parse(cookie.get('likes'))
     }
   },
   methods: {
+    offerType(bien) {
+      switch (bien.TYPE_OFFRE._cdata) {
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+          return 'Ventes'
+        case '11':
+        case '12':
+        case '13':
+        case '14':
+          return 'Location'
+      }
+    },
+    redirectChoice(bien) {
+      switch (bien.TYPE_OFFRE._cdata) {
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+          this.filters.choice = 'Ventes'
+          break
+        case '11':
+        case '12':
+        case '13':
+        case '14':
+          this.filters.choice = 'Locations'
+      }
+      return this.$router.push({
+        path: '/biens',
+        query: {
+          choice: this.filters.choice,
+          projet: this.filters.project,
+          localization: this.filters.localization,
+          budget: this.filters.budget,
+          surface: this.filters.surface,
+        },
+      })
+    },
+    redirectProject(bien) {
+      this.filters.project = this.goodsType(bien)
+      switch (bien.TYPE_OFFRE._cdata) {
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+          this.filters.choice = 'Ventes'
+          break
+        case '11':
+        case '12':
+        case '13':
+        case '14':
+          this.filters.choice = 'Locations'
+      }
+      return this.$router.push({
+        path: '/biens',
+        query: {
+          choice: this.filters.choice,
+          projet: this.filters.project,
+          localization: this.filters.localization,
+          budget: this.filters.budget,
+          surface: this.filters.surface,
+        },
+      })
+    },
     goodsType(offer) {
       if (offer.TYPE_OFFRE._cdata === '1' || offer.TYPE_OFFRE._cdata === '11') {
         return `Appartement`

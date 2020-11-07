@@ -30,8 +30,9 @@
             img {
                 width: calc(100vw - (15px * 2));
                 @apply h-400;
-                @apply object-cover;
+                @apply object-contain;
                 @apply box-content;
+                @apply bg-grey-dark;
             }
 
             > div {

@@ -14,7 +14,15 @@
         v-touch:swipe.right="handlePrev"
         class="slide"
       >
-        <img src="~/assets/images/test.jpg" alt="test" />
+        <img
+          :src="
+            'https://api.aktif-transac.com/data/6993-01-' +
+            bien.NO_ASP._cdata +
+            '-a' +
+            '.jpg'
+          "
+          alt="test"
+        />
         <div>
           <h3>
             {{ goodsType(bien.TYPE_OFFRE._cdata) }}
