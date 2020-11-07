@@ -57,6 +57,7 @@ export default {
     'vue-currency-input/nuxt',
     '@nuxt/http',
     '@nuxtjs/proxy',
+    '@nuxt/content',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

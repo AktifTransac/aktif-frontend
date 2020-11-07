@@ -42,9 +42,14 @@
 
         @apply p-5;
 
+        @apply z-50;
+
         > img {
             @apply object-contain;
             @apply bg-grey-dark;
+
+            max-height: 90vh;
+            max-width: 90vw;
         }
     }
 

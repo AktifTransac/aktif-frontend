@@ -44,7 +44,7 @@
           @click="bigPicture = !bigPicture"
         />
         <aside>
-          <p>1/5</p>
+          <p>{{ page }}</p>
           <svg
             v-show="!likes.includes(bien.NO_DOSSIER._cdata)"
             aria-hidden="true"
@@ -83,7 +83,7 @@
       </div>
       <aside>
         <img
-          v-show="images.a"
+          v-if="images.a"
           :src="
             'https://api.aktif-transac.com/data/6993-01-' +
             bien.NO_ASP._cdata +
@@ -94,7 +94,7 @@
           @click="img = 'a'"
         />
         <img
-          v-show="images.b"
+          v-if="images.b"
           :src="
             'https://api.aktif-transac.com/data/6993-01-' +
             bien.NO_ASP._cdata +
@@ -105,7 +105,7 @@
           @click="img = 'b'"
         />
         <img
-          v-show="images.c"
+          v-if="images.c"
           :src="
             'https://api.aktif-transac.com/data/6993-01-' +
             bien.NO_ASP._cdata +
@@ -116,7 +116,7 @@
           @click="img = 'c'"
         />
         <img
-          v-show="images.d"
+          v-if="images.d"
           :src="
             'https://api.aktif-transac.com/data/6993-01-' +
             bien.NO_ASP._cdata +
@@ -127,7 +127,7 @@
           @click="img = 'd'"
         />
         <img
-          v-show="images.e"
+          v-if="images.e"
           :src="
             'https://api.aktif-transac.com/data/6993-01-' +
             bien.NO_ASP._cdata +
@@ -298,8 +298,6 @@
 </template>
 
 <script>
-import cookie from 'vue-cookies'
-
 export default {
   scrollToTop: true,
   props: {
@@ -352,39 +350,56 @@ export default {
     likes() {
       return this.$store.getters.likes
     },
+    page() {
+      const images = Object.values(this.images).filter((el) => el === true)
+        .length
+      switch (this.img) {
+        case 'a':
+          return `1/${images}`
+        case 'b':
+          return `2/${images}`
+        case 'c':
+          return `3/${images}`
+        case 'd':
+          return `4/${images}`
+        case 'e':
+          return `5/${images}`
+      }
+      return 0
+    },
   },
   async beforeMount() {
     await this.$axios
       .$get(
-        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=a`
+        `https://api.aktif-transac.com/images?id=${this.bien.NO_ASP._cdata}&index=a`
       )
       .then((response) => {
         this.images.a = response.result
       })
     await this.$axios
       .$get(
-        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=b`
+        `https://api.aktif-transac.com/images?id=${this.bien.NO_ASP._cdata}&index=b`
       )
       .then((response) => {
         this.images.b = response.result
       })
     await this.$axios
       .$get(
-        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=c`
+        `https://api.aktif-transac.com/images?id=${this.bien.NO_ASP._cdata}&index=c`
       )
       .then((response) => {
         this.images.c = response.result
       })
     await this.$axios
       .$get(
-        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=d`
+        `https://api.aktif-transac.com/images?id=${this.bien.NO_ASP._cdata}&index=d`
       )
       .then((response) => {
         this.images.d = response.result
       })
     await this.$axios
       .$get(
-        `http://localhost:8000/images?id=${this.bien.NO_ASP._cdata}&index=e`
+        `https://api.aktif-transac.com/images?id=${this.bien.NO_ASP._cdata}&index=e`
       )
       .then((response) => {
         this.images.e = response.result
@@ -393,7 +408,6 @@ export default {
   mounted() {
     if (this.$cookies.isKey('likes')) {
       this.$store.commit('setLikes')
-      this.likes = JSON.parse(cookie.get('likes'))
     }
   },
   methods: {

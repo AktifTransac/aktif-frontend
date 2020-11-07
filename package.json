@@ -25,6 +25,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/vue-fontawesome": "^2.0.0",
+    "@nuxt/content": "^1.10.0",
     "@nuxt/http": "^0.6.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/proxy": "^2.0.1",
@@ -33,6 +34,7 @@
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "google-maps": "^4.3.3",
+    "iconv-lite": "^0.6.2",
     "js-cookie": "^2.2.1",
     "jszip": "^3.5.0",
     "material-design-icons": "^3.0.1",
