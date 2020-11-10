@@ -220,7 +220,7 @@
           </aside>
         </div>
       </div>
-      <div v-show="step === 2" class="step">
+      <div v-show="step === stepTwo" class="step">
         <h3>Description*</h3>
         <p v-show="error">{{ error }}</p>
         <form>
@@ -271,7 +271,7 @@
           </div>
         </form>
       </div>
-      <div v-show="step === 3" class="step">
+      <div v-show="step === stepThree" class="step">
         <h3>Vos coordonnés*</h3>
         <p v-show="error">{{ error }}</p>
         <form>
@@ -309,7 +309,7 @@
         </form>
       </div>
       <div>
-        <p>Étape {{ step }}/3</p>
+        <p>Étape {{ step }}/{{ numberOfSteps }}</p>
         <button @click="nextStep">Suivant</button>
       </div>
     </article>
@@ -336,9 +336,89 @@ export default {
       error: '',
     }
   },
+  computed: {
+    stepTwo() {
+      if (process.client) {
+        if (window.innerWidth >= 768) {
+          return 1
+        } else {
+          return 2
+        }
+      } else {
+        return 2
+      }
+    },
+    stepThree() {
+      if (process.client) {
+        if (window.innerWidth >= 768) {
+          return 2
+        } else {
+          return 3
+        }
+      } else {
+        return 3
+      }
+    },
+    numberOfSteps() {
+      if (process.client) {
+        if (window.innerWidth >= 768) {
+          return 2
+        } else {
+          return 3
+        }
+      } else {
+        return 3
+      }
+    },
+  },
   methods: {
     nextStep() {
-      if (this.step < 3) {
+      if (process.client) {
+        if (window.innerWidth >= 768) {
+          if (this.step < 2) {
+            if (
+              this.step === 1 &&
+              this.surface &&
+              this.pieces &&
+              this.situation &&
+              this.postal
+            ) {
+              const el = document.getElementsByClassName('step')
+              this.error = ''
+              el[this.step - 1].classList.add('leave')
+              setTimeout(() => {
+                el[this.step - 1].classList.remove('leave')
+                el[this.step].classList.add('fadeIn')
+                this.step++
+              }, 250)
+            } else {
+              this.error = 'Merci de remplir tous les champs !'
+            }
+          }
+        } else if (this.step < 3) {
+          if (
+            (this.step === 1 && this.type) ||
+            (this.step === 2 &&
+              this.surface &&
+              this.pieces &&
+              this.situation &&
+              this.postal)
+          ) {
+            const el = document.getElementsByClassName('step')
+            this.error = ''
+            el[this.step - 1].classList.add('leave')
+            setTimeout(() => {
+              el[this.step - 1].classList.remove('leave')
+              el[this.step].classList.add('fadeIn')
+              this.step++
+            }, 250)
+          } else if (this.step === 1) {
+            this.error = 'Merci de choisir le type de bien !'
+          } else {
+            this.error = 'Merci de remplir tous les champs !'
+          }
+        }
+      } else if (this.step < 3) {
         if (
           (this.step === 1 && this.type) ||
           (this.step === 2 &&

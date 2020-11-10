@@ -5,7 +5,8 @@
         @apply mb-15;
         @apply flex;
 
-        a, p {
+        a,
+        p {
             @apply text-grey-light;
             @apply no-underline;
 
@@ -184,7 +185,7 @@
     }
 
     article:last-of-type {
-        @apply mt-80;
+        @apply mt-60;
         form {
             fieldset {
                 @apply mx-15;
@@ -281,6 +282,94 @@
                 @apply text-white;
 
                 @apply cursor-pointer;
+            }
+        }
+    }
+}
+
+@screen md {
+    #single {
+        @apply mt-60;
+
+        > nav {
+            @apply mb-30;
+        }
+
+        article:first-of-type {
+            h3 {
+                @apply text-80;
+            }
+        }
+
+        article:nth-of-type(2) {
+            @apply mt-30;
+
+            img {
+                height: 500px;
+            }
+
+            aside {
+                @apply gap-10;
+
+                @apply mt-30;
+
+                img {
+                    height: 100px;
+                }
+            }
+        }
+
+        article:nth-of-type(3) {
+            @apply mt-60;
+        }
+
+        article:nth-of-type(4) {
+            @apply grid-cols-3;
+            @apply gap-60;
+
+            aside {
+                h4 {
+                    @apply text-25;
+                }
+
+                h3 {
+                    @apply text-40;
+                }
+            }
+        }
+
+        article:nth-of-type(5) {
+            @apply mt-60;
+            @apply ml-15;
+            @apply justify-start;
+
+            h4 {
+                @apply text-25;
+            }
+        }
+
+        article:last-of-type {
+            form {
+                @apply flex;
+                @apply flex-col;
+                fieldset {
+                    @apply grid;
+                    @apply grid-cols-2;
+                    @apply gap-30;
+                    @apply mx-15;
+
+                    > div {
+                        &:not(:first-of-type) {
+                            @apply mt-0;
+                        }
+                    }
+                }
+
+                input[type="submit"] {
+                    @apply mt-60;
+                    @apply w-8/12;
+                    @apply self-center;
+                }
             }
         }
     }

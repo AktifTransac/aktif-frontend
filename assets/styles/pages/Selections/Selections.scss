@@ -1,0 +1,243 @@
+#goods {
+    @apply mt-30;
+
+    article:first-of-type {
+        @apply grid;
+        @apply gap-y-30;
+
+        > div {
+            > div {
+                @apply relative;
+                @apply h-400;
+
+                img {
+                    @apply w-full;
+                    @apply h-400;
+                    @apply object-contain;
+                    @apply bg-grey-dark;
+                }
+
+                > aside {
+                    @apply absolute;
+                    @apply inset-0;
+                    @apply bg-transparent-light;
+
+                    @apply flex;
+                    @apply flex-col;
+                    @apply justify-end;
+
+                    @apply text-white;
+
+                    @apply px-30;
+                    @apply pb-30;
+
+                    h3 {
+                        @apply text-30;
+                        @apply pb-10;
+                    }
+
+                    > p {
+                        @apply text-25;
+                    }
+
+                    div {
+                        @apply mt-30;
+                        @apply flex;
+                        @apply justify-between;
+                        @apply items-end;
+
+                        @apply text-white;
+
+                        > span {
+                            @apply cursor-pointer;
+                            > svg {
+                                @apply w-6;
+                            }
+
+                            > p {
+                                @apply hidden;
+                            }
+                        }
+                    }
+                }
+            }
+            aside {
+                @apply hidden;
+            }
+        }
+    }
+
+    article:last-of-type {
+        @apply mt-30;
+        @apply mx-15;
+        @apply grid;
+        @apply grid-cols-2;
+        @apply text-20;
+
+        nav {
+            @apply flex;
+            @apply items-center;
+            @apply cursor-pointer;
+            @apply text-grey-dark;
+
+            @apply transition-all;
+            @apply duration-300;
+
+            svg {
+                fill: #424242;
+            }
+
+            &.active {
+                @apply text-red;
+
+                svg {
+                    fill: #fc5555;
+                }
+            }
+        }
+
+        nav:first-of-type {
+            svg {
+                @apply mr-10;
+            }
+        }
+
+        nav:last-of-type {
+            svg {
+                @apply ml-10;
+            }
+        }
+
+        > p {
+            @apply col-span-2;
+            @apply mt-10;
+            @apply text-center;
+            @apply text-16;
+            @apply text-grey-dark;
+        }
+    }
+}
+
+@screen md {
+    #goods {
+        @apply mt-80;
+
+        article:first-of-type {
+            > div {
+                @apply grid;
+                @apply grid-cols-5;
+                @apply gap-30;
+
+                > div {
+                    @apply col-span-2;
+
+                    > aside {
+                        h3 {
+                            @apply hidden;
+                        }
+
+                        > p {
+                            @apply hidden;
+                        }
+
+                        div {
+                            a {
+                                @apply hidden;
+                            }
+
+                            span {
+                                @apply flex;
+                                @apply items-center;
+
+                                &:last-of-type {
+                                    @apply bg-red;
+                                    @apply py-15;
+                                    @apply px-20;
+
+                                    > p {
+                                        @apply block;
+                                        @apply ml-20;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                > aside {
+                    @apply col-span-3;
+                    @apply flex;
+                    @apply flex-col;
+                    @apply justify-center;
+
+                    > h3 {
+                        @apply text-30;
+                        @apply text-grey-dark;
+                    }
+
+                    > div:first-of-type {
+                        @apply mt-10;
+                        @apply flex;
+                        @apply justify-between;
+                        @apply items-end;
+                        p:first-of-type {
+                            @apply text-25;
+                            @apply text-grey-dark;
+                        }
+
+                        p {
+                            @apply text-20;
+                            @apply text-red;
+                        }
+                    }
+
+                    > p {
+                        @apply my-30;
+                        @apply text-grey-dark;
+                        @apply text-justify;
+                        max-height: 150px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    > div:last-of-type {
+                        @apply flex;
+                        @apply justify-between;
+                        @apply items-end;
+
+                        > div {
+                            @apply flex;
+                            @apply items-center;
+
+                            h4 {
+                                @apply text-grey-dark;
+                            }
+
+                            > svg {
+                                @apply cursor-pointer;
+                                &:first-of-type {
+                                    @apply ml-30;
+                                }
+                                &:last-of-type {
+                                    @apply ml-20;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        article:last-of-type {
+            @apply mx-35;
+            @apply grid-cols-3;
+            @apply justify-items-end;
+            @apply content-center;
+
+            > p {
+                @apply col-span-1;
+                @apply mt-0;
+                @apply text-25;
+            }
+        }
+    }
+}

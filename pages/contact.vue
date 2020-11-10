@@ -18,12 +18,15 @@
           type="tel"
           placeholder="Dites-nous votre numéro de téléphone ?"
         />
-        <select id="project-select" v-model="project" name="project">
-          <option value="Achat de biens">Achat de biens</option>
-          <option value="Location">Location</option>
-          <option value="Gestion">Gestion</option>
-          <option value="Autre">Autre</option>
-        </select>
+        <fieldset>
+          <label>Votre type de requête ?</label>
+          <select id="project-select" v-model="project" name="project">
+            <option value="Achat de biens">Achat de biens</option>
+            <option value="Location">Location</option>
+            <option value="Gestion">Gestion</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </fieldset>
         <fieldset>
           <label for="infos">Message supplémentaire</label>
           <textarea v-model="infos" name="infos" rows="10"></textarea>

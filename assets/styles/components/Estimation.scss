@@ -80,7 +80,7 @@
                 @apply text-red;
                 @apply mt-10;
 
-                animation: squeeze 0.25s ease-in-out;
+                animation: squeeze ease-in 0.25s 1;
             }
 
             @keyframes squeeze {
@@ -225,7 +225,7 @@
                         @apply border-b;
                         @apply border-red;
 
-                        transition: all 0.3s ease-in-out;
+                        transition: border 0.3s ease-in-out;
 
                         &:focus {
                             @apply border-b-2;
@@ -273,26 +273,56 @@
     }
 }
 
-
 @screen md {
     #estimation {
         @apply mt-80;
-    
+
         h2 {
             @apply pt-60;
             @apply px-35;
-    
+
             @apply text-40;
         }
-    
+
         > div {
             @apply mx-35;
         }
-    
-        article {
+
+        > article {
             @apply mx-35;
-            @apply py-30;
+
+            @apply grid;
+            @apply grid-cols-5;
+            @apply gap-x-30;
+
+            > div:first-of-type {
+                @apply col-span-2;
+            }
+
+            > div:nth-child(2) {
+                @apply col-span-3;
+                
+                > form {
+                    @apply grid-cols-2;
+                    @apply gap-x-20;
+                }
+            }
+
+            > div:nth-child(3) {
+                @apply col-span-5;
+
+                > form {
+                    @apply grid-cols-3;
+
+                    > div:last-of-type {
+                        @apply col-span-3;
+                    }
+                }
+            }
+
+            > div:last-of-type {
+                @apply col-span-5;
+            }
         }
     }
-    
 }

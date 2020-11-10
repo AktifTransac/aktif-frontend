@@ -90,8 +90,8 @@
           />
         </svg>
       </nav>
+      <p>Page {{ page }} / {{ nbPages }}</p>
     </article>
-    <p>Page {{ page }} / {{ nbPages }}</p>
   </section>
 </template>
 
@@ -111,7 +111,15 @@ export default {
   },
   computed: {
     itemsByPage() {
-      return 6
+      if (process.client) {
+        if (window.innerWidth >= 768) {
+          return 12
+        } else {
+          return 6
+        }
+      } else {
+        return 6
+      }
     },
     displayed() {
       return this.filteredgoods.slice(

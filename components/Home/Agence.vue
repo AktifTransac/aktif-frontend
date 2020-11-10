@@ -1,6 +1,18 @@
 <template>
   <section id="agence">
     <img src="~/assets/images/test.jpg" alt="test" />
+    <client-only placeholder="Loading">
+      <GmapMap
+        id="map"
+        :center="{ lat: 43.5988549, lng: 3.8656149 }"
+        :zoom="15"
+        map-type-id="roadmap"
+      >
+        <GmapMarker
+          :position="{ lat: 43.5988549, lng: 3.8656149 }"
+          :clickable="true"
+      /></GmapMap>
+    </client-only>
     <article class="container">
       <h2>Non pas seulement une vente mais une <span>agence humaine.</span></h2>
       <p>
@@ -15,7 +27,13 @@
         volutpat vitae proin. Facilisis dui eleifend quisque non pellentesque
         sit vulputate vitae.
       </p>
-      <nuxt-link to="/agence" class="btn">Découvrir l’agence</nuxt-link>
+      <div>
+        <div>
+          <h3>Ou nous trouver ?</h3>
+          <h4>38 avenue de Toulouse, 34070 Montpellier.</h4>
+        </div>
+        <nuxt-link to="/agence" class="btn">Découvrir l’agence</nuxt-link>
+      </div>
     </article>
   </section>
 </template>

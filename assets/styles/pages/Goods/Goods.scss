@@ -58,8 +58,8 @@
     article:last-of-type {
         @apply mt-30;
         @apply mx-15;
-        @apply flex;
-        @apply justify-between;
+        @apply grid;
+        @apply grid-cols-2;
         @apply text-20;
 
         nav {
@@ -95,12 +95,44 @@
                 @apply ml-10;
             }
         }
-    }
 
-    > p {
-        @apply mt-10;
-        @apply text-center;
-        @apply text-16;
-        @apply text-grey-dark;
+        > p {
+            @apply col-span-2;
+            @apply mt-10;
+            @apply text-center;
+            @apply text-16;
+            @apply text-grey-dark;
+        }
+    }
+}
+
+@screen md {
+    #goods {
+        @apply mt-80;
+    
+        article:first-of-type {
+            @apply grid-cols-2;
+            @apply gap-30;
+    
+            > div {
+    
+                > div {    
+                    @apply pb-40;
+                }
+            }
+        }
+    
+        article:last-of-type {
+            @apply mx-35;
+            @apply grid-cols-3;
+            @apply justify-items-end;
+            @apply content-center;
+    
+            > p {
+                @apply col-span-1;
+                @apply mt-0;
+                @apply text-25;
+            }
+        }
     }
 }

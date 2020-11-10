@@ -131,8 +131,6 @@
 
         article:nth-of-type(2) {
             aside {
-                @apply mx-15;
-
                 img {
                     width: calc(50vw - (30px));
                 }

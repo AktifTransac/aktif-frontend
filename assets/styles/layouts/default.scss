@@ -23,3 +23,13 @@ header {
         }
     }
 }
+
+@screen md {
+    header {
+        > section:last-of-type {
+            h1 {
+                @apply text-80;
+            }
+        }
+    }
+}

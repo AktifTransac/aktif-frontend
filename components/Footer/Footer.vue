@@ -156,10 +156,10 @@
         <h3>Plan du site</h3>
         <h3>Barème des honoraires</h3>
       </article>
-    </section>
-    <section class="container">
-      <p>Mentions légales</p>
-      <p>Politique de protection des données</p>
+      <article>
+        <p>Mentions légales</p>
+        <p>Politique de protection des données</p>
+      </article>
     </section>
     <section class="container">
       <p>

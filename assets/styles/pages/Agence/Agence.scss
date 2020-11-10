@@ -17,6 +17,7 @@
             &:not(:first-of-type) {
                 @apply text-grey-dark;
                 @apply text-16;
+                @apply text-justify;
             }
 
             &:nth-of-type(2) {
@@ -36,8 +37,8 @@
             max-height: 40vh;
         }
 
-        .vue-map-container {
-            width: 100%;
+        #map {
+            @apply w-full;
             height: 40vh;
         }
     }
@@ -45,21 +46,87 @@
     article:last-of-type {
         @apply mt-60;
 
-        h2 {
-            @apply text-grey-dark;
-            @apply text-30;
-        }
+        div {
+            h2 {
+                @apply text-grey-dark;
+                @apply text-30;
+            }
 
-        p {
-            @apply text-grey-dark;
-            @apply text-16;
-            @apply mt-30;
+            p {
+                @apply text-justify;
+                @apply text-grey-dark;
+                @apply text-16;
+                @apply mt-30;
+            }
         }
 
         img {
             @apply mt-30;
             @apply w-full;
             max-height: 60vh;
+            @apply object-cover;
+        }
+    }
+}
+
+@screen md {
+    #agence {
+        @apply mt-80;
+        article:first-of-type {
+            @apply grid;
+            @apply grid-cols-2;
+            @apply gap-x-30;
+            h2 {
+                @apply text-40;
+                @apply col-span-2;
+            }
+
+            p {
+                &:first-of-type {
+                    @apply text-25;
+                    @apply col-span-2;
+                }
+
+                &:last-of-type {
+                    @apply mt-30;
+                }
+            }
+        }
+
+        article:nth-of-type(2) {
+            @apply grid;
+            @apply grid-cols-5;
+            img {
+                max-height: 300px;
+                @apply col-span-3;
+            }
+
+            #map {
+                max-height: 300px;
+                @apply col-span-2;
+            }
+        }
+
+        article:last-of-type {
+            @apply mt-80;
+
+            @apply grid;
+            @apply grid-cols-2;
+
+            > div {
+                @apply my-60;
+                @apply pr-30;
+                h2 {
+                    @apply text-40;
+                }
+            }
+
+            img {
+                @apply mt-0;
+                @apply h-full;
+
+                @apply pr-35;
+            }
         }
     }
 }

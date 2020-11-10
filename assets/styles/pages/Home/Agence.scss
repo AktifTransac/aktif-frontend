@@ -3,6 +3,12 @@
 
     img {
         @apply w-full;
+        max-height: 300px;
+        @apply object-cover;
+    }
+
+    #map {
+        @apply hidden;
     }
 
     article {
@@ -24,27 +30,63 @@
             @apply text-grey-dark;
             @apply text-justify;
         }
+
+        > div {
+            > div {
+                @apply hidden;
+            }
+        }
     }
 }
 
 @screen md {
     #agence {
         @apply mt-80;
-    
+
+        @apply grid;
+        @apply grid-cols-5;
+
+        img {
+            @apply col-span-3;
+        }
+
+        #map {
+            @apply block;
+            @apply col-span-2;
+        }
+
         article {
-            @apply mt-30;
-    
-            h2 {
-                @apply text-grey-dark;
-                @apply text-30;
-            }
-    
-            p {
-                @apply mt-30;
-                @apply mb-30;
-                @apply text-16;
-                @apply text-grey-dark;
-                @apply text-justify;
+            grid-row: 1;
+            @apply col-span-5;
+            @apply mt-0;
+            @apply mb-30;
+
+            > div {
+                @apply border-0;
+                @apply border-t;
+                @apply border-solid;
+                @apply border-grey-dark;
+
+                @apply pt-30;
+
+                @apply flex;
+                @apply items-start;
+                > div {
+                    @apply block;
+
+                    @apply text-grey-dark;
+
+                    @apply mr-60;
+
+                    h3 {
+                        @apply text-25;
+                    }
+
+                    h4 {
+                        @apply mt-10;
+                        @apply text-20;
+                    }
+                }
             }
         }
     }

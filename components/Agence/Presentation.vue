@@ -35,15 +35,18 @@
       </client-only>
     </article>
     <article>
-      <h2 class="container">Un duo gagnant depuis plus de 15 ans.</h2>
-      <p class="container">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc nulla
-        porttitor diam leo adipiscing. Egestas urna, venenatis, ut sit quis
-        elementum, a dignissim pharetra. Nisl vulputate amet sit est quis.
-        Imperdiet ut orci nunc quis in amet, nibh dolor. Tincidunt elit faucibus
-        pharetra turpis volutpat. Viverra bibendum nec at convallis sed blandit.
-        Odio felis posuere vitae nibh pellentesque urna ornare pulvinar.
-      </p>
+      <div class="container">
+        <h2>Un duo gagnant depuis plus de 15 ans.</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc
+          nulla porttitor diam leo adipiscing. Egestas urna, venenatis, ut sit
+          quis elementum, a dignissim pharetra. Nisl vulputate amet sit est
+          quis. Imperdiet ut orci nunc quis in amet, nibh dolor. Tincidunt elit
+          faucibus pharetra turpis volutpat. Viverra bibendum nec at convallis
+          sed blandit. Odio felis posuere vitae nibh pellentesque urna ornare
+          pulvinar.
+        </p>
+      </div>
       <img src="~/assets/images/test.jpg" alt="test" />
     </article>
   </section>

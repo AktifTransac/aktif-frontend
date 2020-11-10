@@ -59,7 +59,6 @@
             > div {
                 @apply mt-60;
                 @apply grid-cols-3;
-                @apply gap-x-30;
             }
     
             &:not(:first-of-type) {

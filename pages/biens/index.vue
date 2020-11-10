@@ -190,7 +190,7 @@ export default {
         this.filters.type.appartement = true
       } else if (route.projet === 'Maison') {
         this.filters.type.maison = true
-      } else if (route.projet === 'Magasin') {
+      } else if (route.projet === 'Magasin' || route.projet === 'Local') {
         this.filters.type.boutique = true
       } else if (route.projet === 'AllHabitation') {
         this.filters.type.maison = true

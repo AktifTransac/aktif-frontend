@@ -179,19 +179,17 @@ footer {
                 @apply text-white;
                 @apply text-25;
             }
-        }
-    }
 
-    > section:nth-of-type(3) {
-        @apply bg-grey-dark;
-        @apply pt-80;
-        @apply grid;
-        @apply gap-10;
-
-        p {
-            @apply text-white;
-            @apply text-16;
-            @apply text-center;
+            &:last-of-type {
+                @apply pt-80;
+                @apply grid;
+                @apply gap-10;
+                p {
+                    @apply text-white;
+                    @apply text-16;
+                    @apply text-center;
+                }
+            }
         }
     }
 
@@ -206,6 +204,32 @@ footer {
         p {
             svg {
                 @apply mx-10;
+            }
+        }
+    }
+}
+
+@screen md {
+    footer {    
+        @apply mt-80;
+
+        > section:nth-of-type(2) {
+            @apply pt-60;
+            @apply grid;
+            @apply grid-cols-2;
+            @apply gap-y-30;
+
+            article {
+                @apply pt-0;
+    
+                &:last-of-type {
+                    @apply pt-0;
+
+                    @apply self-end;
+                    p {
+                        @apply text-left;
+                    }
+                }
             }
         }
     }

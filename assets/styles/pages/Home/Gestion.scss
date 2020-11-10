@@ -3,6 +3,8 @@
 
     img {
         @apply w-full;
+        max-height: 300px;
+        @apply object-cover;
     }
 
     article {
