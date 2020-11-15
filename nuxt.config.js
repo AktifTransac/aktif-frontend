@@ -17,6 +17,10 @@ export default {
     ],
   },
 
+  router: {
+    middleware: 'i18n',
+  },
+
   server: {
     host: '0.0.0.0',
   },
@@ -35,6 +39,7 @@ export default {
     { src: '@/plugins/vue-touch', ssr: false },
     { src: '@/plugins/maps', ssr: false },
     { src: '@/plugins/cookies', ssr: false },
+    { src: '@/plugins/i18n' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

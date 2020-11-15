@@ -1,9 +1,13 @@
 <template>
   <section id="gestion">
-    <img src="~/assets/images/test.jpg" alt="test" />
+    <img
+      src="https://api.aktif-transac.com/assets/gestion.jpg"
+      alt="Photo d'une réunion avec un livre, un téléphone portable et un ordinateur"
+    />
     <article class="container">
       <h2>
-        Un accompagnement de vos projets de la vente à <span>la gestion.</span>
+        {{ $t('home.management.title') }}
+        <span>{{ $t('home.management.span') }}</span>
       </h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu amet, a,

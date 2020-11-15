@@ -1,6 +1,9 @@
 <template>
   <section id="agence">
-    <img src="~/assets/images/test.jpg" alt="test" />
+    <img
+      src="https://api.aktif-transac.com/assets/agence.jpg"
+      alt="Photo de deux femmes entrain de discuter"
+    />
     <client-only placeholder="Loading">
       <GmapMap
         id="map"
@@ -14,7 +17,9 @@
       /></GmapMap>
     </client-only>
     <article class="container">
-      <h2>Non pas seulement une vente mais une <span>agence humaine.</span></h2>
+      <h2>
+        {{ $t('home.agency.title') }} <span>{{ $t('home.agency.span') }}</span>
+      </h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu amet, a,
         ultrices luctus. Adipiscing ornare magna hendrerit suscipit vitae quis.
@@ -29,10 +34,12 @@
       </p>
       <div>
         <div>
-          <h3>Ou nous trouver ?</h3>
+          <h3>{{ $t('home.agency.find') }}</h3>
           <h4>38 avenue de Toulouse, 34070 Montpellier.</h4>
         </div>
-        <nuxt-link to="/agence" class="btn">Découvrir l’agence</nuxt-link>
+        <nuxt-link to="/agence" class="btn">
+          {{ $t('home.agency.btn') }}
+        </nuxt-link>
       </div>
     </article>
   </section>

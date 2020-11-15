@@ -13,7 +13,7 @@
                 img {
                     @apply w-full;
                     @apply h-400;
-                    @apply object-contain;
+                    @apply object-cover;
                     @apply bg-grey-dark;
                 }
 
@@ -141,6 +141,7 @@
                         }
 
                         div {
+                            @apply justify-center;
                             a {
                                 @apply hidden;
                             }
@@ -238,6 +239,30 @@
                 @apply mt-0;
                 @apply text-25;
             }
+        }
+    }
+}
+
+@screen xl {
+    #goods {
+        @apply mt-60;
+
+        article:first-of-type {
+            @apply mx-120;
+        }
+
+        article:last-of-type {
+            @apply mx-35;
+            @apply flex;
+            @apply justify-end;
+
+            > nav {
+                @apply mr-100;
+            }
+    
+            > p {
+                @apply mr-60;
+            }            
         }
     }
 }

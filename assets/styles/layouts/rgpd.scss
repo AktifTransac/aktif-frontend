@@ -1,0 +1,157 @@
+#rgpd-wrapper {
+    @apply w-screen;
+    @apply h-screen;
+
+    @apply fixed;
+    @apply inset-0;
+
+    @apply flex;
+    @apply justify-center;
+    @apply items-center;
+
+    @apply bg-transparent-dark;
+
+    > #rgpd {
+        @apply relative;
+        @apply bg-red;
+
+        height: 95%;
+        width: 95%;
+
+        @apply p-15;
+        @apply flex;
+        @apply flex-col;
+
+        > article:first-of-type {
+            @apply text-white;
+
+            h3 {
+                @apply text-12;
+            }
+
+            ul {
+                @apply mt-10;
+            }
+        }
+
+        > article:last-of-type {
+            @apply mt-30;
+            @apply bg-white;
+            @apply overflow-scroll;
+
+            @apply p-30;
+
+            @apply grid;
+            @apply gap-10;
+
+            @apply text-grey-dark;
+
+            h5 {
+                @apply text-20;
+                @apply text-red;
+            }
+
+            dl {
+                dt {
+                    @apply font-bold;
+                    @apply ml-10;
+                    @apply my-10;
+                    @apply underline;
+                }
+                dd {
+                    @apply ml-15;
+                }
+            }
+        }
+
+        aside {
+            @apply mt-30;
+
+            @apply flex;
+            @apply justify-center;
+            @apply items-center;
+
+            &#not-scrolled {
+                @apply text-white;
+    
+                p {
+                    @apply ml-30;
+                }
+            }
+
+            &#scrolled {
+                @apply mx-auto;
+                @apply bg-white;
+                @apply w-full;
+                @apply p-10;
+
+                @apply text-grey-dark;
+
+                @apply text-12;
+
+                span {
+                    @apply text-red;
+                }
+
+                svg {
+                    @apply ml-10;
+                }
+
+                &:hover {
+                    @apply underline;
+                    @apply cursor-pointer;
+                }
+            }
+        }
+    }
+}
+
+@screen md {
+    #rgpd-wrapper {
+        > #rgpd {    
+            height: 95%;
+            width: 90%;
+
+            @apply p-30;
+    
+            > article:first-of-type {
+                @apply px-30;
+                h3 {
+                    @apply text-20;
+                }
+            }
+    
+            aside {
+    
+                &#scrolled {
+                    @apply p-15;
+                    @apply text-16;
+                }
+            }
+        }
+    }
+}
+
+@screen xl {
+    #rgpd-wrapper {
+        > #rgpd {    
+            height: 90%;
+            width: 80%;
+    
+            > article:first-of-type {
+    
+                h3 {
+                    @apply text-25;
+                }
+            }
+    
+            aside {
+    
+                &#scrolled {
+                    @apply w-3/4;
+                    @apply p-30;
+                }
+            }
+        }
+    }
+}

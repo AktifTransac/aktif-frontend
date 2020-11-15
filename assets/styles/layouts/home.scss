@@ -123,8 +123,15 @@ header {
                 @apply border-0;
                 @apply px-20;
                 @apply w-full;
-                display: block;
+                display: flex;
+                align-items: center;
                 @apply cursor-pointer;
+                @apply relative;
+                overflow: hidden;
+
+                p {
+                    @apply hidden;
+                }
             }
         }
     }
@@ -157,6 +164,101 @@ header {
                     select {
                         @apply text-25;
                         @apply text-center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@screen xl {
+    header {
+        > section:nth-child(2) {
+            grid-template-columns: fit-content(100%) fit-content(100%);
+            @apply gap-x-80;
+            @apply gap-y-30;
+            p {
+                @apply text-25;
+                @apply col-span-2;
+            }
+
+            h1 {
+                a {
+                    @apply w-full;
+                    @apply text-80;
+                }
+            }
+        }
+        > section:last-of-type {
+            article {
+                @apply flex;
+                @apply justify-between;
+
+                > button {
+                    @apply hidden;
+                }
+
+                > div {
+                    button {
+                        @apply py-15;
+                        @apply px-25;
+                    }
+                }
+            }
+
+            form {
+                grid-template-columns: 1fr 1fr 1fr 1fr fit-content(100%);
+
+                div {
+                    &:nth-of-type(3),
+                    &:last-of-type {
+                        @apply row-start-1;
+                    }
+
+                    &:nth-of-type(3) {
+                        grid-column: 3;
+                    }
+
+                    &:last-of-type {
+                        grid-column: 4;
+                    }
+
+                    label {
+                        @apply mb-15;
+                    }
+
+                    input,
+                    select {
+                        @apply text-left;
+                    }
+                }
+
+                button {
+                    @apply px-30;
+
+                    svg,
+                    p {
+                        transition: all 1s;
+                    }
+
+                    p {
+                        @apply block;
+                        @apply absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -100%;
+                        @apply text-white;
+                    }
+
+                    &:hover {
+                        svg {
+                            transform: translateX(300%);
+                        }
+
+                        p {
+                            left: 50%;
+                            transform: translateY(-50%) translateX(-50%);
+                        }
                     }
                 }
             }

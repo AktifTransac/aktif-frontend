@@ -30,7 +30,7 @@
             img {
                 width: calc(100vw - (15px * 2));
                 @apply h-400;
-                @apply object-contain;
+                @apply object-cover;
                 @apply box-content;
                 @apply bg-grey-dark;
             }
@@ -148,6 +148,45 @@
             nav:first-of-type {
                 @apply mr-100;
             }
+        }
+    }
+}
+
+@screen xl {
+    #biens {
+        @apply pt-120;
+
+        article:first-of-type {
+            @apply flex;
+            @apply items-start;
+            @apply mx-160;
+            h2 {
+                @apply mb-0;
+            }
+            a {
+                @apply flex-shrink-0;
+                @apply ml-80;
+            }
+        }
+
+        article:nth-of-type(2) {
+            aside {
+                img {
+                    width: calc(25vw - (30px));
+                }
+
+                > div {
+                    @apply pb-40;
+                }
+
+                &:first-of-type {
+                    @apply ml-160;
+                }
+            }
+        }
+
+        article:last-of-type {
+            @apply mx-160;
         }
     }
 }

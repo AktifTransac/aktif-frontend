@@ -51,3 +51,9 @@
         @apply px-35;
     }
 }
+
+@screen xl {
+    .container {
+        @apply px-160;
+    }
+}

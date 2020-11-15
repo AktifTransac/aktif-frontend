@@ -1,25 +1,25 @@
 <template>
   <section id="estimation">
     <h2>
-      Vous avez un projet immobilier à estimer et vous souhaitez en discuter ?
+      {{ $t('tools.estimate.title') }}
     </h2>
     <div>
       <button
         :class="[choice === 'Ventes' ? 'active' : '']"
         @click="choice = 'Ventes'"
       >
-        Ventes
+        {{ $t('tools.estimate.sales') }}
       </button>
       <button
         :class="[choice === 'Locations' ? 'active' : '']"
         @click="choice = 'Locations'"
       >
-        Locations
+        {{ $t('tools.estimate.rentals') }}
       </button>
     </div>
     <article class="container">
       <div v-show="step === 1" class="step">
-        <h3>Type de bien*</h3>
+        <h3>{{ $t('tools.estimate.type.title') }}*</h3>
         <p v-show="error">{{ error }}</p>
         <div>
           <aside
@@ -52,7 +52,7 @@
                 />
               </svg>
             </div>
-            <p>Maison / Villa</p>
+            <p>{{ $t('tools.estimate.type.house') }}</p>
           </aside>
           <aside
             :class="[type === 'Appartement' ? 'selected' : '']"
@@ -98,7 +98,7 @@
                 />
               </svg>
             </div>
-            <p>Appartement</p>
+            <p>{{ $t('tools.estimate.type.apartment') }}</p>
           </aside>
           <aside
             :class="[type === 'Parking' ? 'selected' : '']"
@@ -120,7 +120,7 @@
                 />
               </svg>
             </div>
-            <p>Parking</p>
+            <p>{{ $t('tools.estimate.type.park') }}</p>
           </aside>
           <aside
             :class="[type === 'Terrain' ? 'selected' : '']"
@@ -143,7 +143,7 @@
                 <path d="M18.2145 11.498H17.1431V20.6168H18.2145V11.498Z" />
               </svg>
             </div>
-            <p>Terrain</p>
+            <p>{{ $t('tools.estimate.type.ground') }}</p>
           </aside>
           <aside
             :class="[type === 'Boutique' ? 'selected' : '']"
@@ -167,7 +167,7 @@
                 <path d="M11.5109 15.918H6.18359V16.9763H11.5109V15.918Z" />
               </svg>
             </div>
-            <p>Boutique</p>
+            <p>{{ $t('tools.estimate.type.shop') }}</p>
           </aside>
           <aside
             :class="[type === 'Autre' ? 'selected' : '']"
@@ -216,16 +216,16 @@
                 />
               </svg>
             </div>
-            <p>Autre</p>
+            <p>{{ $t('tools.estimate.type.other') }}</p>
           </aside>
         </div>
       </div>
       <div v-show="step === stepTwo" class="step">
-        <h3>Description*</h3>
+        <h3>{{ $t('tools.estimate.desc.title') }}*</h3>
         <p v-show="error">{{ error }}</p>
         <form>
           <div>
-            <label for="surface">Surface en m²*</label>
+            <label for="surface">{{ $t('tools.estimate.desc.area') }}*</label>
             <input
               v-model="surface"
               v-currency="{
@@ -238,7 +238,7 @@
             />
           </div>
           <div>
-            <label for="pieces">Nombres de pièces*</label>
+            <label for="pieces">{{ $t('tools.estimate.desc.rooms') }}*</label>
             <input
               v-model="pieces"
               type="number"
@@ -247,7 +247,7 @@
             />
           </div>
           <div>
-            <label for="situation">Ville ou village*</label>
+            <label for="situation">{{ $t('tools.estimate.desc.town') }}*</label>
             <input
               v-model="situation"
               type="text"
@@ -256,7 +256,7 @@
             />
           </div>
           <div>
-            <label for="postal">Code postal*</label>
+            <label for="postal">{{ $t('tools.estimate.desc.postal') }}*</label>
             <input
               id="postal"
               v-model="postal"
@@ -266,17 +266,17 @@
             />
           </div>
           <div>
-            <label for="infos">Informations complémentaires.</label>
+            <label for="infos">{{ $t('tools.estimate.desc.infos') }}.</label>
             <textarea v-model="infosBien" name="infos" rows="3"></textarea>
           </div>
         </form>
       </div>
       <div v-show="step === stepThree" class="step">
-        <h3>Vos coordonnés*</h3>
+        <h3>{{ $t('tools.estimate.contact.title') }}*</h3>
         <p v-show="error">{{ error }}</p>
         <form>
           <div>
-            <label for="name">Nom & Prénom*</label>
+            <label for="name">{{ $t('tools.estimate.contact.name') }}*</label>
             <input
               v-model="name"
               type="text"
@@ -285,7 +285,7 @@
             />
           </div>
           <div>
-            <label for="mail">Email*</label>
+            <label for="mail">{{ $t('tools.estimate.contact.mail') }}*</label>
             <input
               v-model="mail"
               type="mail"
@@ -294,7 +294,7 @@
             />
           </div>
           <div>
-            <label for="tel">Téléphone*</label>
+            <label for="tel">{{ $t('tools.estimate.contact.phone') }}</label>
             <input
               v-model="tel"
               type="tel"
@@ -303,17 +303,19 @@
             />
           </div>
           <div>
-            <label for="infos">Informations complémentaires.</label>
+            <label for="infos">{{ $t('tools.estimate.desc.infos') }}.</label>
             <textarea v-model="infosPerso" name="infos" rows="3"></textarea>
           </div>
         </form>
       </div>
       <div>
-        <p>Étape {{ step }}/{{ numberOfSteps }}</p>
-        <button @click="nextStep">Suivant</button>
+        <p>{{ $t('tools.estimate.step') }} {{ step }}/{{ numberOfSteps }}</p>
+        <button @click="nextStep">
+          {{ sended ? $t('tools.estimate.sended') : $t('tools.estimate.btn') }}
+        </button>
       </div>
     </article>
-    <p class="container">*Champs obligatoire</p>
+    <p class="container">{{ $t('tools.estimate.obligation') }}</p>
   </section>
 </template>
 
@@ -322,6 +324,7 @@ export default {
   data() {
     return {
       step: 1,
+      sended: false,
       choice: 'Ventes',
       type: '',
       surface: '',
@@ -373,6 +376,24 @@ export default {
   },
   methods: {
     nextStep() {
+      const headers = {
+        'Content-Type': 'application/json',
+      }
+
+      const data = {
+        name: this.name,
+        mail: this.mail,
+        phone: this.tel,
+        infos1: this.infosPerso,
+        prestation: this.choice,
+        goods: this.type,
+        area: this.surface,
+        rooms: this.pieces,
+        town: this.situation,
+        postal: this.situation,
+        infos2: this.infosBien,
+      }
+
       if (process.client) {
         if (window.innerWidth >= 768) {
           if (this.step < 2) {
@@ -392,8 +413,25 @@ export default {
                 this.step++
               }, 250)
             } else {
-              this.error = 'Merci de remplir tous les champs !'
+              this.error = this.$t('tools.estimate.error')
             }
+          } else if (!this.mail || !this.name) {
+            this.error = this.$t('contact.error')
+          } else {
+            this.$axios
+              .$post(`https://api.aktif-transac.com/estimation`, data, {
+                headers,
+              })
+              .then((response) => {
+                if (response.text === 'Mail envoyé') {
+                  this.error = ''
+                  this.sended = !this.sended
+                  setTimeout(() => {
+                    this.sended = !this.sended
+                    this.step = 1
+                  }, 3000)
+                }
+              })
           }
         } else if (this.step < 3) {
           if (
@@ -413,10 +451,27 @@ export default {
               this.step++
             }, 250)
           } else if (this.step === 1) {
-            this.error = 'Merci de choisir le type de bien !'
+            this.error = this.$t('tools.estimate.error2')
           } else {
-            this.error = 'Merci de remplir tous les champs !'
+            this.error = this.$t('tools.estimate.error')
           }
+        } else if (!this.mail || !this.name) {
+          this.error = this.$t('contact.error')
+        } else {
+          this.$axios
+            .$post(`https://api.aktif-transac.com/estimation`, data, {
+              headers,
+            })
+            .then((response) => {
+              if (response.text === 'Mail envoyé') {
+                this.error = ''
+                this.sended = !this.sended
+                setTimeout(() => {
+                  this.sended = !this.sended
+                  this.step = 1
+                }, 3000)
+              }
+            })
         }
       } else if (this.step < 3) {
         if (
@@ -436,10 +491,27 @@ export default {
             this.step++
           }, 250)
         } else if (this.step === 1) {
-          this.error = 'Merci de choisir le type de bien !'
+          this.error = this.$t('contact.error')
         } else {
-          this.error = 'Merci de remplir tous les champs !'
+          this.error = this.$t('tools.estimate.error')
         }
+      } else if (!this.mail || !this.name) {
+        this.error = this.$t('contact.error')
+      } else {
+        this.$axios
+          .$post(`https://api.aktif-transac.com/estimation`, data, {
+            headers,
+          })
+          .then((response) => {
+            if (response.text === 'Mail envoyé') {
+              this.error = ''
+              this.sended = !this.sended
+              setTimeout(() => {
+                this.sended = !this.sended
+                this.step = 1
+              }, 3000)
+            }
+          })
       }
     },
   },

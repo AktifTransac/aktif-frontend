@@ -2,15 +2,15 @@
   <header>
     <Menu></Menu>
     <section class="container">
-      <p>Devenez propriètaire sur Montpellier et ses alentours.</p>
+      <p>{{ $t('home.header.title') }}</p>
       <h1>
-        <a href="#biens"> Ventes & Locations </a>
+        <a href="#biens">{{ $t('home.header.links.1') }}</a>
       </h1>
       <h1>
-        <a href="#gestion">Gestion</a>
+        <a href="#gestion">{{ $t('home.header.links.2') }}</a>
       </h1>
       <h1>
-        <a href="#estimation">Estimation</a>
+        <a href="#estimation">{{ $t('home.header.links.3') }}</a>
       </h1>
     </section>
     <section class="container">
@@ -20,13 +20,13 @@
             :class="[choice === 'Ventes' ? 'active' : '']"
             @click="choice = 'Ventes'"
           >
-            Ventes
+            {{ $t('home.header.search.sales') }}
           </button>
           <button
             :class="[choice === 'Locations' ? 'active' : '']"
             @click="choice = 'Locations'"
           >
-            Locations
+            {{ $t('home.header.search.rentals') }}
           </button>
         </div>
         <button @click="moreFilters = !moreFilters">
@@ -44,40 +44,47 @@
               fill="#FCFCFC"
             />
           </svg>
-          <span>Plus de filtres</span>
+          <span>{{ $t('home.header.search.filters') }}</span>
         </button>
       </article>
       <form @submit.prevent="search">
         <div>
-          <label for="project-select">Votre projet</label>
+          <label for="project-select">{{
+            $t('home.header.search.project.title')
+          }}</label>
           <select id="project-select" v-model="project" name="project">
-            <option value="All">Tout type</option>
-            <optgroup label="Habitation">
-              <option value="Appartement">Appartement</option>
-              <option value="Maison">Maison</option>
-              <option value="AllHabitation">Tout type d'habitation</option>
+            <option value="All">
+              {{ $t('home.header.search.project.all') }}
+            </option>
+            <optgroup :label="$t('home.header.search.project.dwelling')">
+              <option value="Appartement">
+                {{ $t('home.header.search.project.apartment') }}
+              </option>
+              <option value="Maison">
+                {{ $t('home.header.search.project.house') }}
+              </option>
+              <option value="AllHabitation">
+                {{ $t('home.header.search.project.allHab') }}
+              </option>
             </optgroup>
-            <optgroup label="Autre">
-              <option value="Magasin">Magasin</option>
+            <optgroup :label="$t('home.header.search.project.other')">
+              <option value="Magasin">
+                {{ $t('home.header.search.project.shop') }}
+              </option>
             </optgroup>
           </select>
         </div>
         <div>
-          <label for="localization">Où se situe t-il ?</label>
+          <label for="localization">{{ $t('home.header.search.where') }}</label>
           <input
             id="localization"
             v-model="localization"
             type="text"
             placeholder="Montpellier"
-            list="villes"
           />
-          <datalist id="villes">
-            <option value="Montpellier"></option>
-            <option value="Rodez"></option>
-          </datalist>
         </div>
-        <div v-show="moreFilters">
-          <label for="budget">Budget</label>
+        <div v-show="handleFilters ? handleFilters : moreFilters">
+          <label for="budget">{{ $t('home.header.search.budget') }}</label>
           <input
             v-model="budget.min"
             v-currency="{
@@ -97,8 +104,8 @@
             placeholder="150 000 €"
           />
         </div>
-        <div v-show="moreFilters">
-          <label for="surface">Surface</label>
+        <div v-show="handleFilters ? handleFilters : moreFilters">
+          <label for="surface">{{ $t('home.header.search.area') }}</label>
           <input
             v-model="surface.min"
             v-currency="{
@@ -121,6 +128,7 @@
           />
         </div>
         <button @click.prevent="search">
+          <p>Recherche</p>
           <svg
             width="26"
             height="8"
@@ -160,6 +168,19 @@ export default {
       },
       moreFilters: false,
     }
+  },
+  computed: {
+    handleFilters() {
+      if (process.client) {
+        if (window.innerWidth >= 1280) {
+          return true
+        } else {
+          return this.moreFilters
+        }
+      } else {
+        return this.moreFilters
+      }
+    },
   },
   methods: {
     search() {

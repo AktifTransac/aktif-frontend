@@ -10,7 +10,8 @@
               '-a' +
               '.jpg'
             "
-            alt="test"
+            :alt="bien.TEXTE_FR._cdata"
+            @error="setFallbackImageUrl"
           />
           <aside>
             <h3>
@@ -22,7 +23,7 @@
               <nuxt-link
                 :to="'/biens/' + bien.NO_DOSSIER._cdata"
                 class="btn-biens"
-                >Découvrir</nuxt-link
+                >{{ $t('goods.btn') }}</nuxt-link
               >
               <span
                 v-show="!likes.includes(bien.NO_DOSSIER._cdata)"
@@ -39,7 +40,7 @@
                   viewBox="0 0 512 512"
                 >
                   <path
-                    fill="currentColor"
+                    fill="#FC5555"
                     d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
                   ></path>
                 </svg>
@@ -59,11 +60,11 @@
                   viewBox="0 0 512 512"
                 >
                   <path
-                    fill="currentColor"
+                    :fill="handleHeartColor"
                     d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
                   ></path>
                 </svg>
-                <p>Sélectionnés</p>
+                <p>{{ $t('goods.selected') }}</p>
               </span>
             </div>
           </aside>
@@ -76,15 +77,15 @@
           <div>
             <p>{{ prix(bien) }}</p>
             <p>{{ surface(bien) }} m²</p>
-            <p>{{ bien.NB_PIECES._cdata }} pièces</p>
+            <p>{{ bien.NB_PIECES._cdata }} {{ $t('goods.rooms') }}</p>
           </div>
           <p>{{ description(bien) }}</p>
           <div>
-            <nuxt-link :to="'/biens/' + bien.NO_DOSSIER._cdata" class="btn"
-              >Découvrir</nuxt-link
-            >
+            <nuxt-link :to="'/biens/' + bien.NO_DOSSIER._cdata" class="btn">
+              {{ $t('goods.btn') }}
+            </nuxt-link>
             <div>
-              <h4>Partagez le bien :</h4>
+              <h4>{{ $t('goods.share') }}</h4>
               <svg
                 width="30"
                 height="30"
@@ -137,10 +138,10 @@
             d="M0.646442 3.64644C0.45118 3.8417 0.451179 4.15829 0.646442 4.35355L3.82842 7.53553C4.02369 7.73079 4.34027 7.73079 4.53553 7.53553C4.73079 7.34027 4.73079 7.02368 4.53553 6.82842L1.7071 3.99999L4.53553 1.17157C4.73079 0.976306 4.73079 0.659723 4.53553 0.464461C4.34027 0.269199 4.02369 0.269199 3.82842 0.464461L0.646442 3.64644ZM61 3.5L0.999996 3.49999L0.999996 4.49999L61 4.5L61 3.5Z"
           />
         </svg>
-        Précédent
+        {{ $t('goods.prev') }}
       </nav>
       <nav :class="[page < nbPages ? 'active' : '']" @click="nextPage">
-        Suivant
+        {{ $t('goods.next') }}
         <svg
           width="61"
           height="8"
@@ -176,6 +177,17 @@ export default {
     }
   },
   computed: {
+    handleHeartColor() {
+      if (process.client) {
+        if (window.innerWidth >= 768) {
+          return '#FCFCFC'
+        } else {
+          return '#FC5555'
+        }
+      } else {
+        return '#FC5555'
+      }
+    },
     itemsByPage() {
       return 6
     },
@@ -206,6 +218,9 @@ export default {
     }
   },
   methods: {
+    setFallbackImageUrl(event) {
+      event.target.src = require('~/assets/images/logo.png')
+    },
     nextPage() {
       if (this.page + 1 <= this.nbPages) {
         location.hash = '#filters'
@@ -220,19 +235,19 @@ export default {
     },
     goodsType(offer) {
       if (offer === '1' || offer === '11') {
-        return `Appartement`
+        return this.$t('goods.apartment')
       } else if (offer === '2' || offer === '12') {
-        return 'Maison'
+        return this.$t('goods.house')
       } else if (offer === '3') {
-        return 'Terrain'
+        return this.$t('goods.ground')
       } else if (offer === '4') {
-        return 'Immeuble'
+        return this.$t('goods.building')
       } else if (offer === '5' || offer === '13') {
         return 'Local'
       } else if (offer === '6') {
         return 'FDC'
       } else if (offer === '7' || offer === '14') {
-        return 'Parking'
+        return this.$t('goods.park')
       }
     },
     prix(bien) {

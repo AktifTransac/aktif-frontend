@@ -1,7 +1,7 @@
 <template>
   <footer>
     <section class="container">
-      <h2>Ne ratez plus aucun biens avec l’alerte immo.</h2>
+      <h2>{{ $t('footer.alert.title') }}</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
         volutpat sollicitudin molestie bibendum. Sed curabitur semper faucibus
@@ -14,13 +14,13 @@
               :class="[choice === 'Ventes' ? 'active' : '']"
               @click="choice = 'Ventes'"
             >
-              Ventes
+              {{ $t('footer.alert.sales') }}
             </button>
             <button
               :class="[choice === 'Locations' ? 'active' : '']"
               @click="choice = 'Locations'"
             >
-              Locations
+              {{ $t('footer.alert.rentals') }}
             </button>
           </div>
           <button @click="moreFilters = !moreFilters">
@@ -38,24 +38,37 @@
                 fill="#FCFCFC"
               />
             </svg>
-            <span>Plus de filtres</span>
+            <span> {{ $t('footer.alert.filters') }} </span>
           </button>
         </aside>
         <form @submit.prevent="nextStep">
           <div v-show="step === 1">
-            <label for="project-select">Votre projet</label>
+            <label for="project-select">{{
+              $t('footer.alert.project.title')
+            }}</label>
             <select id="project-select" v-model="project" name="project">
-              <option value="Appartement">Appartement</option>
-              <option value="Maison">Maison</option>
-              <option value="Magasin">Magasin</option>
+              <option value="Appartement">
+                {{ $t('footer.alert.project.apartment') }}
+              </option>
+              <option value="Maison">
+                {{ $t('footer.alert.project.house') }}
+              </option>
+              <option value="Magasin">
+                {{ $t('footer.alert.project.shop') }}
+              </option>
             </select>
           </div>
           <div v-show="step === 1">
-            <label for="localization">Où se situe t-il ?</label>
-            <input id="localization" v-model="localization" type="text" />
+            <label for="localization">{{ $t('footer.alert.where') }}</label>
+            <input
+              id="localization"
+              v-model="localization"
+              type="text"
+              placeholder="Montpellier"
+            />
           </div>
           <div v-show="step === 2">
-            <label for="name">Nom & Prénom</label>
+            <label for="name">{{ $t('footer.alert.contact.name') }}</label>
             <input
               id="name"
               v-model="name"
@@ -64,7 +77,7 @@
             />
           </div>
           <div v-show="step === 2">
-            <label for="mail">Adresse mail</label>
+            <label for="mail">{{ $t('footer.alert.contact.mail') }}</label>
             <input
               id="mail"
               v-model="mail"
@@ -72,8 +85,25 @@
               placeholder="exemple@aktif.com"
             />
           </div>
-          <div v-show="moreFilters">
-            <label for="budget">Budget</label>
+          <div v-show="step === 2 && displayPhone">
+            <label for="phone">{{ $t('footer.alert.contact.phone') }}</label>
+            <input
+              id="phone"
+              v-model="phone"
+              type="tel"
+              placeholder="Facultatif"
+            />
+          </div>
+          <div v-show="handleFilters ? handleFilters : moreFilters">
+            <label for="pièces">{{ $t('footer.alert.rooms') }}</label>
+            <input v-model="pieces" type="number" placeholder="5" />
+          </div>
+          <div v-show="handleFilters ? handleFilters : moreFilters">
+            <label for="chambres">{{ $t('footer.alert.bedrooms') }}</label>
+            <input v-model="chambres" type="number" placeholder="2" />
+          </div>
+          <div v-show="handleFilters ? handleFilters : moreFilters">
+            <label for="budget">{{ $t('footer.alert.budget') }}</label>
             <input
               v-model="budget.min"
               v-currency="{
@@ -81,6 +111,7 @@
                 autoDecimalMode: true,
                 precision: 0,
               }"
+              placeholder="500 €"
             />
             <input
               v-model="budget.max"
@@ -89,10 +120,11 @@
                 autoDecimalMode: true,
                 precision: 0,
               }"
+              placeholder="150 000 €"
             />
           </div>
-          <div v-show="moreFilters">
-            <label for="surface">Surface</label>
+          <div v-show="handleFilters ? handleFilters : moreFilters">
+            <label for="surface">{{ $t('footer.alert.area') }}</label>
             <input
               v-model="surface.min"
               v-currency="{
@@ -101,6 +133,7 @@
                 currency: { prefix: '', suffix: ' m²' },
                 precision: 0,
               }"
+              placeholder="30 m²"
             />
             <input
               v-model="surface.max"
@@ -110,6 +143,7 @@
                 currency: { prefix: '', suffix: ' m²' },
                 precision: 0,
               }"
+              placeholder="100 m²"
             />
           </div>
           <button @click.prevent="nextStep">
@@ -130,16 +164,17 @@
         <aside v-show="step === 2">
           <input v-model="RGPD" type="checkbox" />
           <p>
-            J'accepte le traitement de mes données personnelles conformément au
-            RGPD.<br />
-            <nuxt-link to="/legals">En savoir plus</nuxt-link>
+            {{ $t('footer.alert.rgpd.text') }}<br />
+            <nuxt-link to="/legals">
+              {{ $t('footer.alert.rgpd.link') }}
+            </nuxt-link>
           </p>
         </aside>
       </article>
     </section>
     <section class="container">
       <article>
-        <p>Notre agence</p>
+        <p>{{ $t('footer.infos.agency') }}</p>
         <h3>Aktif transac</h3>
         <h3>
           38 avenue de toulouse<br />
@@ -147,23 +182,35 @@
         </h3>
       </article>
       <article>
-        <p>Nous contacter</p>
+        <p>{{ $t('footer.infos.contact') }}</p>
         <h3>contact.aktif@gmail.com</h3>
         <h3>+33467171806</h3>
       </article>
       <article>
-        <p>Plus d’info</p>
-        <h3>Plan du site</h3>
-        <h3>Barème des honoraires</h3>
+        <p>{{ $t('footer.infos.infos') }}</p>
+        <h3>
+          <nuxt-link :to="$i18n.path('plan')">
+            {{ $t('footer.infos.sitemap') }}
+          </nuxt-link>
+        </h3>
+        <h3>
+          <nuxt-link :to="$i18n.path('plan')">
+            {{ $t('footer.infos.hono') }}
+          </nuxt-link>
+        </h3>
       </article>
       <article>
-        <p>Mentions légales</p>
-        <p>Politique de protection des données</p>
+        <p>
+          <nuxt-link :to="$i18n.path('legals')">
+            {{ $t('footer.infos.legals') }}
+          </nuxt-link>
+        </p>
+        <p @click="$emit('rgpd')">{{ $t('footer.infos.rgpd') }}</p>
       </article>
     </section>
     <section class="container">
       <p>
-        Design par
+        {{ $t('footer.infos.copyright.1') }}
         <svg
           width="20"
           height="14"
@@ -180,7 +227,7 @@
             fill="#FCFCFC"
           />
         </svg>
-        Développer par Enzo Viry
+        {{ $t('footer.infos.copyright.2') }}
       </p>
     </section>
   </footer>
@@ -193,21 +240,56 @@ export default {
       displayMenu: false,
       choice: 'Ventes',
       project: 'Appartement',
-      localization: 'Montpellier',
+      localization: '',
+      pieces: '',
+      chambres: '',
       budget: {
-        min: 0,
-        max: 150000,
+        min: '',
+        max: '',
       },
       surface: {
-        min: 0,
-        max: 100,
+        min: '',
+        max: '',
       },
       moreFilters: false,
       name: '',
       mail: '',
+      phone: '',
       RGPD: false,
       step: 1,
     }
+  },
+  computed: {
+    handleFilters() {
+      if (process.client) {
+        if (window.innerWidth >= 1280) {
+          if (this.step === 1) {
+            return true
+          } else {
+            return false
+          }
+        } else {
+          return this.moreFilters
+        }
+      } else {
+        return this.moreFilters
+      }
+    },
+    displayPhone() {
+      if (process.client) {
+        if (window.innerWidth >= 1280) {
+          if (this.step === 2) {
+            return true
+          } else {
+            return false
+          }
+        } else {
+          return false
+        }
+      } else {
+        return false
+      }
+    },
   },
   methods: {
     nextStep() {

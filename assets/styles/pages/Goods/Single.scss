@@ -32,7 +32,7 @@
     }
 
     > div:first-of-type {
-        @apply absolute;
+        @apply fixed;
         @apply inset-0;
 
         @apply bg-transparent-dark;
@@ -152,6 +152,7 @@
                 @apply border-grey-light;
                 @apply border-solid;
                 @apply pb-15;
+                @apply capitalize;
             }
 
             h3 {
@@ -209,7 +210,7 @@
                         @apply border-b;
                         @apply border-red;
                         @apply border-solid;
-
+                        @apply text-grey-dark;
                         @apply pb-2;
                     }
 
@@ -268,6 +269,11 @@
                         }
                     }
                 }
+            }
+
+            > p {
+                @apply text-grey-dark;
+                @apply text-right;
             }
 
             input[type="submit"] {
@@ -369,6 +375,93 @@
                     @apply mt-60;
                     @apply w-8/12;
                     @apply self-center;
+                }
+            }
+        }
+    }
+}
+
+@screen xl {
+    #single {
+        @apply mt-30;
+
+        @apply grid;
+        @apply grid-cols-12;
+        @apply gap-30;
+
+        > nav {
+            @apply mb-60;
+            @apply col-span-12;
+        }
+
+        > article:first-of-type {
+            @apply col-span-12;
+            @apply pb-30;
+            @apply border-r-0;
+            @apply border-l-0;
+            @apply border-t-0;
+            @apply border-b;
+            @apply border-solid;
+            @apply border-grey-light;
+        }
+
+        > article:nth-of-type(2) {
+            @apply mt-0;
+            @apply col-span-8;
+            @apply row-start-2;
+        }
+
+        > article:nth-of-type(3) {
+            @apply col-start-7;
+            @apply col-end-13;
+            @apply row-start-4;
+
+            @apply ml-40;
+            @apply mt-0;
+        }
+
+        > article:nth-of-type(4) {
+            @apply col-start-1;
+            @apply col-end-7;
+            @apply row-start-4;
+
+            @apply grid-cols-2;
+            @apply gap-x-120;
+            @apply gap-y-40;
+
+            @apply mr-40;
+            @apply mt-0;
+        }
+
+        > article:nth-of-type(5) {
+            @apply col-span-12;
+            @apply mt-30;
+        }
+
+        > article:nth-of-type(6) {
+            @apply col-span-4;
+            @apply row-start-2;
+
+            @apply mt-20;
+
+            > form {
+                > fieldset {
+                    @apply grid-cols-1;
+
+                    > div {
+                        > label {
+                            @apply mb-15;
+                        }
+
+                        > div {
+                            @apply gap-10;
+                        }
+                    }
+                }
+
+                > input[type="submit"] {
+                    @apply w-full;
+                    @apply mt-30;
                 }
             }
         }

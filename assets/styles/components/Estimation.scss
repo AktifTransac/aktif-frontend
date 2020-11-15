@@ -9,7 +9,7 @@
         @apply inset-0;
         height: 50%;
         @apply bg-cover;
-        background-image: url("../../images/test.jpg");
+        background-image: url("https://api.aktif-transac.com/assets/estimation.jpg");
         background-position: center;
         filter: brightness(0.7);
         z-index: -1;
@@ -253,6 +253,7 @@
             }
 
             button {
+                @apply cursor-pointer;
                 @apply ml-30;
                 @apply bg-red;
                 @apply py-15;
@@ -301,7 +302,7 @@
 
             > div:nth-child(2) {
                 @apply col-span-3;
-                
+
                 > form {
                     @apply grid-cols-2;
                     @apply gap-x-20;
@@ -323,6 +324,35 @@
             > div:last-of-type {
                 @apply col-span-5;
             }
+        }
+    }
+}
+
+@screen xl {
+    #estimation {
+        @apply mt-120;
+
+        &::before {
+            height: 60%;
+            @apply mx-160;
+        }
+
+        h2 {
+            @apply px-320;
+        }
+
+        > div {
+            @apply mx-320;
+        }
+
+        > article {
+            @apply mx-320;
+            @apply px-30;
+            @apply gap-x-80;
+        }
+
+        > p {
+            @apply px-320;
         }
     }
 }

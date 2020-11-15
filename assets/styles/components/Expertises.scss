@@ -1,0 +1,15 @@
+#expertises {
+    @apply grid;
+    @apply grid-cols-1;
+    @apply gap-y-20;
+
+    a {
+        @apply text-grey-dark;
+        @apply text-20;
+        @apply no-underline;
+        &:hover {
+            @apply text-red;
+            @apply underline;
+        }
+    }
+}

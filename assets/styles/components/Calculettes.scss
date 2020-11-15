@@ -1,46 +1,159 @@
 #calculette {
-    .calculs {
-        @apply px-10;
-        @apply py-20;
+    > form {
+        @apply grid;
+        @apply grid-cols-1;
+        @apply gap-y-20;
 
-        @apply border;
-        @apply border-grey-dark;
-        @apply border-solid;
-
-        @apply transition-all;
-        @apply duration-300;
-
-        @apply cursor-pointer;
-
-        &:not(:last-of-type) {
-            @apply mb-10;
-        }
-
-        &.selected {
-            @apply border-red;
-
-            h3 {
+        > p {
+            @apply text-12;
+            &#error {
                 @apply text-red;
+            }
+
+            &:last-of-type {
+                @apply text-right;
+                @apply text-grey-dark;
             }
         }
 
-        h3 {
-            @apply text-grey-dark;
-            @apply text-20;
+        > div {
+            @apply flex;
+            @apply flex-col;
 
-            @apply transition-all;
-            @apply duration-300;
+            > label {
+                @apply mb-10;
+                @apply text-grey-dark;
+            }
+
+            > input {
+                @apply text-20;
+                @apply text-grey-dark;
+                -webkit-appearance: none;
+                @apply border-t-0;
+                @apply border-l-0;
+                @apply border-r-0;
+                @apply border-b;
+                @apply border-grey-light;
+                @apply border-solid;
+
+                @apply pb-2;
+            }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+            }
+        }
+
+        input[type="submit"] {
+            @apply border-0;
+            @apply bg-red;
+            @apply text-white;
+            @apply text-20;
+            @apply py-10;
+        }
+    }
+    > div {
+        @apply grid;
+        @apply grid-cols-1;
+        @apply gap-y-20;
+
+        > div {
+            @apply grid;
+            @apply grid-cols-1;
+            @apply gap-y-10;
+
+            > h3 {
+                @apply text-red;
+            }
+    
+            > h4 {
+                @apply text-20;
+                @apply text-grey-dark;
+    
+                @apply w-full;
+                @apply border-t-0;
+                @apply border-l-0;
+                @apply border-r-0;
+                @apply border-b;
+                @apply border-grey-light;
+                @apply border-solid;
+            }
+        }
+
+        p, a {
+            @apply cursor-pointer;
+            @apply text-grey-dark;
+            @apply no-underline;
+            
+            &:hover {
+                @apply text-red;
+                @apply underline;
+            }
         }
     }
 }
 
 @screen md {
     #calculette {
-        .calculs {
-            @apply p-20;
+        > form {
+            @apply grid-cols-2;
+            @apply gap-x-20;
     
-            &:not(:last-of-type) {
-                @apply mb-30;
+            > p {
+                &#error {
+                    @apply col-span-2;
+                    @apply row-start-1;
+                }
+    
+                &:last-of-type {
+                    @apply col-span-2;
+                }
+            }
+    
+            input[type="submit"] {
+                @apply col-span-2;
+            }
+        }
+        > div {
+            @apply grid-cols-2;
+            @apply gap-x-20;
+    
+            p, a {
+                @apply col-span-2;
+            }
+        }
+    }
+}
+
+@screen xl {
+    #calculette {
+        > form {
+            @apply grid-cols-4;
+            @apply gap-x-20;
+    
+            > p {
+                &#error {
+                    @apply col-span-4;
+                    @apply row-start-1;
+                }
+    
+                &:last-of-type {
+                    @apply col-span-4;
+                }
+            }
+    
+            input[type="submit"] {
+                @apply col-span-4;
+                @apply w-1/2;
+                @apply justify-self-center;
+            }
+        }
+        > div {
+            @apply grid-cols-3;
+            @apply gap-x-20;
+    
+            p, a {
+                @apply col-span-3;
             }
         }
     }

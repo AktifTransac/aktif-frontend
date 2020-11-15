@@ -1,23 +1,23 @@
 <template>
   <section id="outils">
     <article class="container">
-      <h2>Outils, nos calculettes immobilières.</h2>
+      <h2>{{ $t('home.tools.title') }}</h2>
       <div>
         <input
           type="button"
-          value="Nos calculettes"
+          :value="$t('home.tools.subtitle.1')"
           :class="[selected === 'calculette' ? 'selected' : '']"
           @click="selected = 'calculette'"
         />
         <input
           type="button"
-          value="Loi alur"
+          :value="$t('home.tools.subtitle.2')"
           :class="[selected === 'loi' ? 'selected' : '']"
           @click="selected = 'loi'"
         />
         <input
           type="button"
-          value="Expertises"
+          :value="$t('home.tools.subtitle.3')"
           :class="[selected === 'expertises' ? 'selected' : '']"
           @click="selected = 'expertises'"
         />

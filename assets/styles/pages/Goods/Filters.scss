@@ -262,3 +262,192 @@
         }
     }
 }
+
+@screen xl {
+    #filters {
+        > div {
+            @apply mt-60;
+            @apply grid;
+            @apply grid-cols-2;
+            > aside {
+                h3 {
+                    @apply text-grey-dark;
+                    @apply text-16;
+                    @apply mb-20;
+                }
+                &:first-of-type {
+                    div {
+                        @apply flex;
+                        p {
+                            @apply text-20;
+                            @apply text-grey-light;
+                            @apply border-grey-light;
+                            @apply border;
+                            @apply border-solid;
+                            @apply py-15;
+                            @apply px-20;
+                            @apply cursor-pointer;
+    
+                            &:first-of-type {
+                                @apply mr-10;
+                            }
+    
+                            &:hover {
+                                @apply border-red;
+                                @apply text-red;
+                            }
+    
+                            &.selected {
+                                @apply bg-red;
+                                @apply border-red;
+                                @apply text-white;
+                            }
+                        }
+                    }
+                }
+    
+                &:nth-of-type(2) {
+                    > div {
+                        @apply grid;
+                        @apply grid-cols-6;
+                        @apply justify-start;
+                        @apply gap-30;
+                        > div {
+                            @apply cursor-pointer;
+    
+                            > div {
+                                height: 3.75rem;
+                                width: 3.75rem;
+                                @apply border;
+                                @apply border-solid;
+                                @apply border-grey-light;
+                                @apply flex;
+                                @apply justify-center;
+                                @apply items-center;
+                                @apply m-auto;
+    
+                                svg {
+                                    fill: #c8c8c8;
+                                }
+                            }
+    
+                            &:nth-of-type(3) {
+                                > div {
+                                    svg {
+                                        fill: none;
+                                        stroke: #c8c8c8;
+                                    }
+                                }
+                            }
+    
+                            > p {
+                                @apply text-12;
+                                @apply text-center;
+                                @apply text-grey-light;
+                                @apply mt-5;
+                            }
+    
+                            &:hover {
+                                > div {
+                                    @apply border-red;
+    
+                                    svg {
+                                        fill: #fc5555;
+                                    }
+                                }
+    
+                                &:nth-of-type(3) {
+                                    > div {
+                                        svg {
+                                            fill: none;
+                                            stroke: #fc5555;
+                                        }
+                                    }
+                                }
+                                > p {
+                                    @apply text-red;
+                                }
+                            }
+    
+                            &.selected {
+                                > div {
+                                    @apply border-red;
+                                    @apply bg-red;
+    
+                                    svg {
+                                        fill: #fcfcfc;
+                                    }
+                                }
+    
+                                &:nth-of-type(3) {
+                                    > div {
+                                        svg {
+                                            fill: none;
+                                            stroke: #fcfcfc;
+                                        }
+                                    }
+                                }
+    
+                                > p {
+                                    @apply text-red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        > article {
+            @apply mt-30;
+            @apply grid-cols-2;            
+            @apply gap-y-30;
+            @apply gap-x-80;
+    
+            input[type="button"] {
+                @apply row-start-4;
+                @apply col-span-2;
+            }
+    
+            > div {
+                @apply row-start-5;
+                @apply col-span-2;
+            }
+        }
+
+        nav {
+            @apply relative;
+            @apply bg-transparent-full;
+            @apply text-red;
+            @apply py-30;
+            @apply mx-160;
+
+            svg {
+                @apply hidden;
+            }
+    
+            p {
+                @apply mr-0;
+                @apply text-16;
+            }
+
+            &::before,
+            &::after {
+                @apply absolute;
+                content: " ";
+                top: 50%;
+                width: 40%;
+                height: 1px;
+                @apply bg-red;
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+}

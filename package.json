@@ -37,11 +37,13 @@
     "iconv-lite": "^0.6.2",
     "js-cookie": "^2.2.1",
     "jszip": "^3.5.0",
+    "lodash": "^4.17.20",
     "material-design-icons": "^3.0.1",
     "nuxt": "^2.14.6",
     "nuxt-gmaps": "^1.2.10",
     "vue-cookies": "^1.7.4",
     "vue-currency-input": "^1.22.3",
+    "vue-i18n": "^8.22.1",
     "vue2-google-maps": "^0.10.7",
     "vue2-touch-events": "^2.3.2",
     "xml": "^1.0.1",
@@ -62,12 +64,14 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.3.0",
+    "jest": "^26.6.3",
     "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.2",
     "sass-loader": "^10.0.3",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "vue-jest": "^3.0.7"
   }
 }

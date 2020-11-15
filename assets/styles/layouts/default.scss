@@ -5,9 +5,9 @@ header {
 
     &::after {
         content: "";
-        background-image: url("~assets/images/home/home-header.jpg");
+        background-image: var(--img);
         @apply bg-cover;
-        background-position: 30% 30%;
+        background-position: 0 var(--pos-y);
         @apply absolute;
         @apply inset-0;
         z-index: -1;

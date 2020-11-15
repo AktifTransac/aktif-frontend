@@ -1,10 +1,9 @@
 <template>
   <section id="agence">
     <article class="container">
-      <p>à propos de notre agence</p>
+      <p>{{ $t('agency.1.title') }}</p>
       <h2>
-        Une agence humaine et réactive à votre service pour tout besoin
-        immobilier.
+        {{ $t('agency.1.subtitle') }}
       </h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor
@@ -20,7 +19,10 @@
       </p>
     </article>
     <article>
-      <img src="~/assets/images/test.jpg" alt="test" />
+      <img
+        src="https://api.aktif-transac.com/assets/agence.jpg"
+        alt="Photo de deux femmes entrain de discuter"
+      />
       <client-only placeholder="Loading">
         <GmapMap
           id="map"
@@ -36,7 +38,7 @@
     </article>
     <article>
       <div class="container">
-        <h2>Un duo gagnant depuis plus de 15 ans.</h2>
+        <h2>{{ $t('agency.2.title') }}</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc
           nulla porttitor diam leo adipiscing. Egestas urna, venenatis, ut sit
@@ -47,7 +49,10 @@
           pulvinar.
         </p>
       </div>
-      <img src="~/assets/images/test.jpg" alt="test" />
+      <img
+        src="https://api.aktif-transac.com/assets/agence2.jpg"
+        alt="Photo d'un immeuble de type haussmannien"
+      />
     </article>
   </section>
 </template>
