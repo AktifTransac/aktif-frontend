@@ -85,9 +85,24 @@ section {
 
                     li {
                         a {
+                            @apply inline-block;
+                            @apply relative;
                             @apply text-white;
                             @apply text-25;
                             @apply no-underline;
+
+                            @apply pb-5;
+
+                            &.nuxt-link-exact-active {
+                                &::after {
+                                    content: "";
+                                    @apply absolute;
+                                    @apply bottom-0;
+                                    @apply inset-x-0;
+                                    height: 2px;
+                                    @apply bg-white;
+                                }
+                            }
                         }
                     }
                 }
@@ -233,7 +248,11 @@ section {
 
                                     &.nuxt-link-exact-active {
                                         background-position: -100% 0;
-                                        @apply text-red;
+                                        @apply text-grey-dark;
+                                    }
+
+                                    &::after {
+                                        @apply hidden;
                                     }
                                 }
 
@@ -249,7 +268,11 @@ section {
                                     &:hover {
                                         @apply no-underline;
                                         background-position: -100% 0;
-                                        @apply text-red;
+                                        @apply text-white;
+                                    }
+
+                                    &::after {
+                                        @apply hidden;
                                     }
                                 }
                             }
@@ -310,24 +333,49 @@ section {
 
                     > li {
                         a {
+                            @apply relative;
                             @apply no-underline;
+                            @apply inline-block;
+
+                            @apply overflow-hidden;
+                            @apply pb-5;
+
+                            &::after {
+                                content: "";
+                                @apply absolute;
+                                @apply bottom-0;
+                                @apply inset-x-0;
+                                height: 2px;
+                                transform: translateX(-100%);
+                                transition: all 0.3s ease;
+                            }
 
                             &.black {
                                 @apply text-grey-dark;
+                                &::after {
+                                    @apply bg-grey-dark;
+                                }
                             }
 
                             &.white {
                                 @apply text-white;
+                                &::after {
+                                    @apply bg-white;
+                                }
                             }
 
                             &.white,
                             &.black {
                                 &:hover {
-                                    @apply text-red;
+                                    &::after {
+                                        transform: translateX(0%);
+                                    }
                                 }
 
                                 &.nuxt-link-exact-active {
-                                    @apply text-red;
+                                    &::after {
+                                        transform: translateX(0%);
+                                    }
                                 }
                             }
                         }

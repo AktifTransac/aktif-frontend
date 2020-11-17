@@ -7,8 +7,11 @@ module.exports = {
   },
   purge: [],
   theme: {
-    screen: {
+    screens: {
       sm: '512px',
+      md: '768px',
+      xl: '1280px',
+      extra: '1920px',
     },
     colors: {
       white: '#FCFCFC',
@@ -52,10 +55,13 @@ module.exports = {
       120: '7.5rem',
       160: '10rem',
       320: '20rem',
+      400: '25rem',
+      520: '32.5rem',
     },
     margin: {
       mobile: '0.9375rem',
       0: '0',
+      2: '0.125rem',
       5: '0.3125rem',
       10: '0.625rem',
       15: '0.9375rem',
@@ -72,6 +78,8 @@ module.exports = {
       125: '7.8125rem',
       160: '10rem',
       320: '20rem',
+      400: '25rem',
+      520: '32.5rem',
       auto: 'auto',
     },
     gap: {

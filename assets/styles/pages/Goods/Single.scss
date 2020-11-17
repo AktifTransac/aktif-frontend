@@ -451,6 +451,11 @@
                     > div {
                         > label {
                             @apply mb-15;
+                            @apply text-20;
+                        }
+
+                        input, > div > select, > div > button {
+                            @apply text-16;
                         }
 
                         > div {

@@ -81,3 +81,14 @@
         }
     }
 }
+
+@screen extra {
+    #outils { 
+        > article {
+    
+            &:not(:first-of-type) {
+                @apply mx-400;
+            }
+        }
+    }
+}

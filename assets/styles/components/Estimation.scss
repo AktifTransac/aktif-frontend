@@ -244,7 +244,7 @@
         > div:last-of-type {
             @apply flex;
             @apply items-center;
-            @apply justify-end;
+            @apply justify-between;
             @apply pt-20;
 
             > p {
@@ -262,6 +262,15 @@
 
                 @apply text-16;
                 @apply text-white;
+
+                &:first-of-type {
+                    @apply bg-transparent-full;
+                    @apply text-grey-light;
+
+                    &.active {
+                        @apply text-red;
+                    }
+                }
             }
         }
     }
@@ -353,6 +362,30 @@
 
         > p {
             @apply px-320;
+        }
+    }
+}
+
+@screen extra {
+    #estimation {
+        &::before {
+            @apply mx-400;
+        }
+
+        h2 {
+            @apply px-520;
+        }
+
+        > div {
+            @apply mx-520;
+        }
+
+        > article {
+            @apply mx-520;
+        }
+
+        > p {
+            @apply px-520;
         }
     }
 }

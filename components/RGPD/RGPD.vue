@@ -399,7 +399,10 @@ export default {
   methods: {
     handleScroll() {
       const element = document.getElementById('law')
-      if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+      if (
+        element.scrollHeight - element.scrollTop <=
+        element.clientHeight + 200
+      ) {
         this.scrolled = true
       }
     },

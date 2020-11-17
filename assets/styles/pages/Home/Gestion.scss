@@ -63,6 +63,16 @@
             @apply p-0;
 
             @apply my-125;
+
+            p {
+                @apply w-11/12;
+            }
         }
+    }
+}
+
+@screen extra {
+    #gestion {
+        @apply px-400;
     }
 }

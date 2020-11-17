@@ -1,7 +1,12 @@
 <template>
   <header :style="image">
     <Menu></Menu>
-    <section class="container">
+    <section
+      :class="
+        ($route.name === 'biens' ? 'biens container' : 'container',
+        $route.name === 'agence' ? 'agence container' : 'container')
+      "
+    >
       <h1>{{ accroche }}</h1>
     </section>
   </header>

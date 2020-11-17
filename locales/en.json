@@ -53,6 +53,7 @@
                 "phone": "Phone"
             },
             "step": "Step",
+            "prev": "Previous",
             "btn": "Next",
             "sended": "Request sent !",
             "obligation": "*Required fields",

@@ -110,10 +110,24 @@ header {
                     @apply border-0;
                     @apply w-full;
                     -webkit-appearance: none;
+                }
+
+                select {
+                    optgroup,
+                    option {
+                        @apply text-16;
+                    }
 
                     optgroup {
-                        @apply bg-red;
-                        @apply text-white;
+                        @apply bg-transparent-full;
+                        @apply not-italic;
+                        @apply text-red;
+
+                        @apply my-2;
+                    }
+
+                    option {
+                        @apply text-grey-dark;
                     }
                 }
             }
@@ -190,6 +204,8 @@ header {
             }
         }
         > section:last-of-type {
+            @apply pb-0;
+
             article {
                 @apply flex;
                 @apply justify-between;
@@ -210,6 +226,7 @@ header {
                 grid-template-columns: 1fr 1fr 1fr 1fr fit-content(100%);
 
                 div {
+                    @apply pt-25;
                     &:nth-of-type(3),
                     &:last-of-type {
                         @apply row-start-1;

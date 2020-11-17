@@ -33,3 +33,19 @@ header {
         }
     }
 }
+
+@screen xl {
+    header {
+        min-height: 70vh;
+
+        section:last-of-type {
+            &.biens {
+                @apply w-4/6;
+            }
+
+            &.agence {
+                @apply w-5/6;
+            }
+        }
+    }
+}

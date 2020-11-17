@@ -272,7 +272,7 @@
             > aside {
                 h3 {
                     @apply text-grey-dark;
-                    @apply text-16;
+                    @apply text-25;
                     @apply mb-20;
                 }
                 &:first-of-type {
@@ -403,8 +403,19 @@
             @apply grid-cols-2;            
             @apply gap-y-30;
             @apply gap-x-80;
+
+            aside {
+                h3 {
+                    @apply text-25;
+                }
+
+                input, select {
+                    @apply text-16;
+                }
+            }
     
             input[type="button"] {
+                @apply text-25;
                 @apply row-start-4;
                 @apply col-span-2;
             }
@@ -412,6 +423,10 @@
             > div {
                 @apply row-start-5;
                 @apply col-span-2;
+
+                > button {
+                    @apply text-25;
+                }
             }
         }
 
@@ -428,7 +443,7 @@
     
             p {
                 @apply mr-0;
-                @apply text-16;
+                @apply text-25;
             }
 
             &::before,

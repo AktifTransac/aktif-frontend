@@ -222,8 +222,11 @@
               {{ $t('links.contact') }}
             </nuxt-link>
           </li>
-          <li @click.self="displayLang = !displayLang">
-            <div @click="displayLang = !displayLang">
+          <li
+            @mouseenter="displayLang = !displayLang"
+            @mouseleave="displayLang = !displayLang"
+          >
+            <div>
               {{ lang }}
               <svg
                 v-show="!displayLang"

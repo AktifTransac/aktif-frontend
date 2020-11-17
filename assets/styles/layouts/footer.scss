@@ -278,6 +278,8 @@ footer {
                     grid-template-columns: repeat(6, 1fr) fit-content(100%);
 
                     div {
+                        @apply pt-25;
+
                         &:nth-of-type(6),
                         &:nth-of-type(7) {
                             grid-row: 1;
@@ -287,6 +289,15 @@ footer {
                         }
                         &:nth-of-type(7) {
                             grid-column: 4;
+                        }
+
+                        &:nth-of-type(6), &:nth-of-type(7) {
+                            @apply text-center;
+
+                            input {
+                                @apply text-center;
+                                @apply text-30;
+                            }
                         }
 
                         &:nth-of-type(8),

@@ -57,3 +57,9 @@
         @apply px-160;
     }
 }
+
+@screen extra {
+    .container {
+        @apply px-400;
+    }
+}

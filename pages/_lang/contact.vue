@@ -4,11 +4,44 @@
       <h2>{{ $t('contact.title') }}</h2>
       <p v-show="error">{{ error }}</p>
       <form @submit.prevent="handleSubmit">
-        <input v-model="name" type="text" :placeholder="$t('contact.name')" />
-        <input v-model="mail" type="mail" :placeholder="$t('contact.mail')" />
-        <input v-model="phone" type="tel" :placeholder="$t('contact.phone')" />
+        <article>
+          <label v-show="displayName" for="name">
+            {{ $t('contact.name') }}
+          </label>
+          <input
+            id="name"
+            v-model="name"
+            type="text"
+            :placeholder="$t('contact.name')"
+            @focus="displayName = true"
+          />
+        </article>
+        <article>
+          <label v-show="displayMail" for="mail">
+            {{ $t('contact.mail') }}
+          </label>
+          <input
+            id="mail"
+            v-model="mail"
+            type="mail"
+            :placeholder="$t('contact.mail')"
+            @focus="displayMail = true"
+          />
+        </article>
+        <article>
+          <label v-show="displayPhone" for="phone">
+            {{ $t('contact.phone') }}
+          </label>
+          <input
+            id="phone"
+            v-model="phone"
+            type="tel"
+            :placeholder="$t('contact.phone')"
+            @focus="displayPhone = true"
+          />
+        </article>
         <fieldset>
-          <label>{{ $t('contact.request.title') }}</label>
+          <label for="project-select">{{ $t('contact.request.title') }}</label>
           <select id="project-select" v-model="project" name="project">
             <option value="Achat de biens">
               {{ $t('contact.request.purchase') }}
@@ -168,6 +201,9 @@ export default {
   },
   data() {
     return {
+      displayName: false,
+      displayMail: false,
+      displayPhone: false,
       sended: false,
       error: '',
       name: '',

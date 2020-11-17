@@ -53,6 +53,7 @@
                 "phone": "Téléphone"
             },
             "step": "Étape",
+            "prev": "Précédent",
             "btn": "Suivant",
             "sended": "Demande envoyée !",
             "obligation": "*Champs obligatoire",

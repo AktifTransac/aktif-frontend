@@ -310,9 +310,16 @@
       </div>
       <div>
         <p>{{ $t('tools.estimate.step') }} {{ step }}/{{ numberOfSteps }}</p>
-        <button @click="nextStep">
-          {{ sended ? $t('tools.estimate.sended') : $t('tools.estimate.btn') }}
-        </button>
+        <div>
+          <button :class="step > 1 ? 'active' : ''" @click="prevStep">
+            {{ $t('tools.estimate.prev') }}
+          </button>
+          <button @click="nextStep">
+            {{
+              sended ? $t('tools.estimate.sended') : $t('tools.estimate.btn')
+            }}
+          </button>
+        </div>
       </div>
     </article>
     <p class="container">{{ $t('tools.estimate.obligation') }}</p>
@@ -375,6 +382,11 @@ export default {
     },
   },
   methods: {
+    prevStep() {
+      if (this.step >= 2) {
+        this.step--
+      }
+    },
     nextStep() {
       const headers = {
         'Content-Type': 'application/json',
