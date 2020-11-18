@@ -226,14 +226,14 @@
             > div {
                 aside {
                     &:first-of-type {
-                        @apply ml-400;
+                        @apply ml-320;
                     }
                 }
             }
         }
 
         article:last-of-type {
-            @apply mx-400;
+            @apply mx-320;
         }
     }
 }

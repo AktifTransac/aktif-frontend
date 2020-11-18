@@ -87,7 +87,7 @@
         > article {
     
             &:not(:first-of-type) {
-                @apply mx-400;
+                @apply mx-320;
             }
         }
     }

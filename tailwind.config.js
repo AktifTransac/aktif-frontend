@@ -1,9 +1,7 @@
 module.exports = {
   future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-    // defaultLineHeights: true,
-    // standardFontWeights: true
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
   purge: [],
   theme: {
@@ -55,7 +53,7 @@ module.exports = {
       120: '7.5rem',
       160: '10rem',
       320: '20rem',
-      400: '25rem',
+      440: '27.5rem',
       520: '32.5rem',
     },
     margin: {
@@ -78,7 +76,7 @@ module.exports = {
       125: '7.8125rem',
       160: '10rem',
       320: '20rem',
-      400: '25rem',
+      440: '27.5rem',
       520: '32.5rem',
       auto: 'auto',
     },

@@ -369,23 +369,23 @@
 @screen extra {
     #estimation {
         &::before {
-            @apply mx-400;
+            @apply mx-320;
         }
 
         h2 {
-            @apply px-520;
+            @apply px-440;
         }
 
         > div {
-            @apply mx-520;
+            @apply mx-440;
         }
 
         > article {
-            @apply mx-520;
+            @apply mx-440;
         }
 
         > p {
-            @apply px-520;
+            @apply px-440;
         }
     }
 }
