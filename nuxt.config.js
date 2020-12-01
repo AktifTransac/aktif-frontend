@@ -63,15 +63,14 @@ export default {
     'vue-currency-input/nuxt',
     '@nuxt/http',
     '@nuxtjs/proxy',
-    '@nuxt/content',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  // axios: {
-  //   baseURL: 'https://api.aktif-transac.com',
-  //   proxyHeaders: false,
-  //   credentials: false,
-  // },
+  axios: {
+    baseURL: 'https://api.aktif-transac.com',
+    proxyHeaders: false,
+    credentials: false,
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

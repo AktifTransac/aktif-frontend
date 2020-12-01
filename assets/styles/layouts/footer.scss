@@ -1,178 +1,178 @@
 footer {
     @apply mt-60;
+    //> section:first-of-type {
+    //    @apply relative;
+    //    @apply bg-transparent-light;
+    //    &::after {
+    //        content: "";
+    //        background-image: url("https://api.aktif-transac.com/assets/footer.jpg");
+    //        @apply bg-cover;
+    //        background-position: 30% 30%;
+    //        @apply absolute;
+    //        @apply inset-0;
+    //        z-index: -1;
+    //    }
+    //
+    //    > h2 {
+    //        @apply text-white;
+    //        @apply text-30;
+    //        @apply text-center;
+    //        @apply pt-30;
+    //    }
+    //
+    //    > p {
+    //        @apply text-16;
+    //        @apply text-white;
+    //        @apply text-center;
+    //        @apply mt-10;
+    //    }
+    //
+    //    > article {
+    //        @apply mt-30;
+    //        @apply pb-30;
+    //
+    //        aside:first-of-type {
+    //            @apply flex;
+    //            @apply justify-between;
+    //            button {
+    //                @apply cursor-pointer;
+    //                @apply bg-transparent-full;
+    //                @apply text-white;
+    //                @apply border-0;
+    //
+    //                span {
+    //                    @apply pl-10;
+    //                }
+    //            }
+    //
+    //            > div {
+    //                @apply flex;
+    //                button {
+    //                    @apply py-10;
+    //                    @apply px-15;
+    //
+    //                    @apply bg-red;
+    //
+    //                    @apply transition-all;
+    //                    @apply duration-300;
+    //
+    //                    &.active {
+    //                        @apply bg-white;
+    //                        @apply text-red;
+    //                    }
+    //                }
+    //            }
+    //        }
+    //
+    //        form {
+    //            @apply grid;
+    //            @apply justify-items-start;
+    //            grid-template-columns: 1fr 1fr fit-content(100%);
+    //
+    //            div {
+    //                @apply bg-white;
+    //                @apply border-0;
+    //                @apply pt-10;
+    //                @apply pb-25;
+    //                @apply px-20;
+    //                @apply flex;
+    //                @apply flex-col;
+    //                @apply justify-start;
+    //                @apply w-full;
+    //
+    //                &:nth-of-type(6),
+    //                &:nth-of-type(7) {
+    //                    grid-row: 2;
+    //                }
+    //
+    //                &:nth-of-type(8),
+    //                &:nth-of-type(9) {
+    //                    grid-row: 3;
+    //                }
+    //
+    //                label {
+    //                    @apply text-grey-dark;
+    //                    @apply text-12;
+    //                    @apply mb-10;
+    //                }
+    //
+    //                input,
+    //                select {
+    //                    @apply text-20;
+    //                    @apply text-red;
+    //                    @apply bg-white;
+    //                    @apply border-0;
+    //                    @apply w-full;
+    //                    -webkit-appearance: none;
+    //                }
+    //
+    //                input[type="number"] {
+    //                    -moz-appearance: textfield;
+    //                }
+    //            }
+    //
+    //            button {
+    //                @apply bg-red;
+    //                @apply border-0;
+    //                @apply px-20;
+    //                @apply w-full;
+    //                display: block;
+    //                @apply cursor-pointer;
+    //            }
+    //        }
+    //
+    //        aside:last-of-type {
+    //            @apply flex;
+    //            @apply items-start;
+    //
+    //            @apply mt-15;
+    //
+    //            input {
+    //                -webkit-appearance: none;
+    //                flex-basis: 1;
+    //                flex-shrink: 0;
+    //                @apply border;
+    //                @apply border-red;
+    //                @apply border-solid;
+    //
+    //                @apply bg-white;
+    //
+    //                width: 20px;
+    //                height: 20px;
+    //
+    //                &:checked {
+    //                    @apply relative;
+    //                    &::before {
+    //                        content: "\2714";
+    //                        @apply text-16;
+    //                        @apply text-red;
+    //
+    //                        @apply absolute;
+    //                        @apply inset-0;
+    //
+    //                        @apply flex;
+    //                        @apply items-center;
+    //                        @apply justify-center;
+    //                    }
+    //                }
+    //            }
+    //
+    //            p {
+    //                @apply ml-10;
+    //                @apply text-left;
+    //                @apply text-white;
+    //                @apply text-16;
+    //
+    //                a {
+    //                    @apply text-white;
+    //                    @apply text-16;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
     > section:first-of-type {
-        @apply relative;
-        @apply bg-transparent-light;
-        &::after {
-            content: "";
-            background-image: url("https://api.aktif-transac.com/assets/footer.jpg");
-            @apply bg-cover;
-            background-position: 30% 30%;
-            @apply absolute;
-            @apply inset-0;
-            z-index: -1;
-        }
-
-        > h2 {
-            @apply text-white;
-            @apply text-30;
-            @apply text-center;
-            @apply pt-30;
-        }
-
-        > p {
-            @apply text-16;
-            @apply text-white;
-            @apply text-center;
-            @apply mt-10;
-        }
-
-        > article {
-            @apply mt-30;
-            @apply pb-30;
-
-            aside:first-of-type {
-                @apply flex;
-                @apply justify-between;
-                button {
-                    @apply cursor-pointer;
-                    @apply bg-transparent-full;
-                    @apply text-white;
-                    @apply border-0;
-
-                    span {
-                        @apply pl-10;
-                    }
-                }
-
-                > div {
-                    @apply flex;
-                    button {
-                        @apply py-10;
-                        @apply px-15;
-
-                        @apply bg-red;
-
-                        @apply transition-all;
-                        @apply duration-300;
-
-                        &.active {
-                            @apply bg-white;
-                            @apply text-red;
-                        }
-                    }
-                }
-            }
-
-            form {
-                @apply grid;
-                @apply justify-items-start;
-                grid-template-columns: 1fr 1fr fit-content(100%);
-
-                div {
-                    @apply bg-white;
-                    @apply border-0;
-                    @apply pt-10;
-                    @apply pb-25;
-                    @apply px-20;
-                    @apply flex;
-                    @apply flex-col;
-                    @apply justify-start;
-                    @apply w-full;
-
-                    &:nth-of-type(6),
-                    &:nth-of-type(7) {
-                        grid-row: 2;
-                    }
-
-                    &:nth-of-type(8),
-                    &:nth-of-type(9) {
-                        grid-row: 3;
-                    }
-
-                    label {
-                        @apply text-grey-dark;
-                        @apply text-12;
-                        @apply mb-10;
-                    }
-
-                    input,
-                    select {
-                        @apply text-20;
-                        @apply text-red;
-                        @apply bg-white;
-                        @apply border-0;
-                        @apply w-full;
-                        -webkit-appearance: none;
-                    }
-
-                    input[type="number"] {
-                        -moz-appearance: textfield;
-                    }
-                }
-
-                button {
-                    @apply bg-red;
-                    @apply border-0;
-                    @apply px-20;
-                    @apply w-full;
-                    display: block;
-                    @apply cursor-pointer;
-                }
-            }
-
-            aside:last-of-type {
-                @apply flex;
-                @apply items-start;
-
-                @apply mt-15;
-
-                input {
-                    -webkit-appearance: none;
-                    flex-basis: 1;
-                    flex-shrink: 0;
-                    @apply border;
-                    @apply border-red;
-                    @apply border-solid;
-
-                    @apply bg-white;
-
-                    width: 20px;
-                    height: 20px;
-
-                    &:checked {
-                        @apply relative;
-                        &::before {
-                            content: "\2714";
-                            @apply text-16;
-                            @apply text-red;
-
-                            @apply absolute;
-                            @apply inset-0;
-
-                            @apply flex;
-                            @apply items-center;
-                            @apply justify-center;
-                        }
-                    }
-                }
-
-                p {
-                    @apply ml-10;
-                    @apply text-left;
-                    @apply text-white;
-                    @apply text-16;
-
-                    a {
-                        @apply text-white;
-                        @apply text-16;
-                    }
-                }
-            }
-        }
-    }
-
-    > section:nth-of-type(2) {
         @apply bg-grey-dark;
         article {
             @apply pt-30;
@@ -233,7 +233,7 @@ footer {
     footer {
         @apply mt-80;
 
-        > section:nth-of-type(2) {
+        > section:first-of-type {
             @apply pt-60;
             @apply grid;
             @apply grid-cols-2;
@@ -259,87 +259,87 @@ footer {
     footer {
         @apply mt-120;
 
+        //> section:first-of-type {
+        //    > article {
+        //        aside:first-of-type {
+        //            > div {
+        //                button {
+        //                    @apply py-15;
+        //                    @apply px-25;
+        //                }
+        //            }
+        //
+        //            > button {
+        //                @apply hidden;
+        //            }
+        //        }
+        //
+        //        form {
+        //            grid-template-columns: repeat(6, 1fr) fit-content(100%);
+        //
+        //            div {
+        //                @apply pt-25;
+        //
+        //                &:nth-of-type(6),
+        //                &:nth-of-type(7) {
+        //                    grid-row: 1;
+        //                }
+        //                &:nth-of-type(6) {
+        //                    grid-column: 3;
+        //                }
+        //                &:nth-of-type(7) {
+        //                    grid-column: 4;
+        //                }
+        //
+        //                &:nth-of-type(6), &:nth-of-type(7) {
+        //                    @apply text-center;
+        //
+        //                    input {
+        //                        @apply text-center;
+        //                        @apply text-30;
+        //                    }
+        //                }
+        //
+        //                &:nth-of-type(8),
+        //                &:nth-of-type(9) {
+        //                    grid-row: 1;
+        //                }
+        //                &:nth-of-type(8) {
+        //                    grid-column: 5;
+        //                }
+        //                &:nth-of-type(9) {
+        //                    grid-column: 6;
+        //                }
+        //
+        //                label {
+        //                    @apply text-16;
+        //                }
+        //
+        //                input,
+        //                select {
+        //                    @apply text-25;
+        //                }
+        //
+        //                input[type="number"] {
+        //                    -moz-appearance: textfield;
+        //                }
+        //
+        //                &:nth-of-type(3),
+        //                &:nth-of-type(4),
+        //                &:nth-of-type(5) {
+        //                    @apply col-span-2;
+        //                }
+        //
+        //                &:nth-of-type(5) {
+        //                    @apply row-start-1;
+        //                    @apply col-start-5;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
         > section:first-of-type {
-            > article {
-                aside:first-of-type {
-                    > div {
-                        button {
-                            @apply py-15;
-                            @apply px-25;
-                        }
-                    }
-
-                    > button {
-                        @apply hidden;
-                    }
-                }
-
-                form {
-                    grid-template-columns: repeat(6, 1fr) fit-content(100%);
-
-                    div {
-                        @apply pt-25;
-
-                        &:nth-of-type(6),
-                        &:nth-of-type(7) {
-                            grid-row: 1;
-                        }
-                        &:nth-of-type(6) {
-                            grid-column: 3;
-                        }
-                        &:nth-of-type(7) {
-                            grid-column: 4;
-                        }
-
-                        &:nth-of-type(6), &:nth-of-type(7) {
-                            @apply text-center;
-
-                            input {
-                                @apply text-center;
-                                @apply text-30;
-                            }
-                        }
-
-                        &:nth-of-type(8),
-                        &:nth-of-type(9) {
-                            grid-row: 1;
-                        }
-                        &:nth-of-type(8) {
-                            grid-column: 5;
-                        }
-                        &:nth-of-type(9) {
-                            grid-column: 6;
-                        }
-
-                        label {
-                            @apply text-16;
-                        }
-
-                        input,
-                        select {
-                            @apply text-25;
-                        }
-
-                        input[type="number"] {
-                            -moz-appearance: textfield;
-                        }
-
-                        &:nth-of-type(3),
-                        &:nth-of-type(4),
-                        &:nth-of-type(5) {
-                            @apply col-span-2;
-                        }
-
-                        &:nth-of-type(5) {
-                            @apply row-start-1;
-                            @apply col-start-5;
-                        }
-                    }
-                }
-            }
-        }
-
-        > section:nth-of-type(2) {
             @apply grid-cols-3;
             @apply gap-x-100;
             @apply gap-y-80;
