@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <nuxt-link id="logo" to="/">
+    <nuxt-link id="logo" :to="$i18n.path('')">
       <svg
         width="174"
         height="64"
@@ -222,10 +222,7 @@
               {{ $t('links.contact') }}
             </nuxt-link>
           </li>
-          <li
-            @mouseenter="displayLang = !displayLang"
-            @mouseleave="displayLang = !displayLang"
-          >
+          <li @mouseover="displayLang = true" @mouseleave="displayLang = false">
             <div>
               {{ lang }}
               <svg

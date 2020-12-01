@@ -15,9 +15,13 @@
     <nuxt-link :to="$i18n.path('biens')">
       {{ $t('links.property') }}
     </nuxt-link>
-    <nuxt-link :to="$i18n.path('plan')">
+    <a
+      href="https://api.aktif-transac.com/assets/BAREMEHONORAIRE.pdf"
+      rel="noreferrer noopener"
+      target="_blank"
+    >
       {{ $t('footer.infos.hono') }}
-    </nuxt-link>
+    </a>
     <nuxt-link :to="$i18n.path('legals')">
       {{ $t('footer.infos.legals') }}
     </nuxt-link>

@@ -182,6 +182,14 @@ section:last-of-type {
             @apply col-span-3;
             @apply p-0;
             @apply m-0;
+
+            > form {
+                fieldset:first-of-type {
+                    select {
+                        @apply text-right;
+                    }
+                }
+            }
         }
         > section:last-of-type {
             @apply col-span-2;

@@ -6,16 +6,10 @@
         {{ $t('agency.1.subtitle') }}
       </h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor
-        lacus massa, hac. Viverra urna et nisl lacus, id viverra dui lacus,
-        amet. Porta et porttitor dui est quis mattis lobortis. Arcu metus,
-        commodo aliquet in justo, ipsum in feugiat.
+        {{ $t('agency.1.text.1') }}
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dolor
-        lacus massa, hac. Viverra urna et nisl lacus, id viverra dui lacus,
-        amet. Porta et porttitor dui est quis mattis lobortis. Arcu metus,
-        commodo aliquet in justo, ipsum in feugiat.
+        {{ $t('agency.1.text.2') }}
       </p>
     </article>
     <article>

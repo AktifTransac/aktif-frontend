@@ -1,295 +1,305 @@
 {
-    "links": {
-        "home": "Home",
-        "property": "Property",
-        "agency": "Agency",
-        "selection": "Selection(s)",
-        "contact": "Contact",
-        "english": "English",
-        "french": "French"
-    },
-    "meta": {
-        "home": "Home page of the Aktif Transac agency website !",
-        "property": "Discover the properties offered by the Aktif Transac agency !",
-        "agency": "Discover the history and work of the Aktif Transac agency !",
-        "selection": "Here you will find your selection of properties on the Aktif Transac agency website !",
-        "contact": "Contact the Aktif Transac agency !",
-        "legals": "Legal notices of the Aktif Transac agency website.",
-        "plan": "Aktif Transac agency site map."
-    },
-    "headers": {
-        "agency": "Aktif Transac your real estate solution",
-        "property": "Find your favorite property",
-        "contact": "Contact",
-        "plan": "Sitemap",
-        "legals": "Legal Notice"
-    },
-    "tools": {
-        "estimate": {
-            "title": "Do you have a real estate project to estimate and want to discuss it ?",
-            "sales": "Sales",
-            "rentals": "Rentals",
-            "type": {
-                "title": "Kind of good",
-                "house": "House / Villa",
-                "apartment": "Apartment",
-                "park": "Car park",
-                "ground": "Ground",
-                "shop": "Shop",
-                "other": "Other"
-            },
-            "desc": {
-                "title": "Description",
-                "area": "Surface in m²",
-                "rooms": "Number of rooms",
-                "town": "City or town",
-                "postal": "Postal code",
-                "infos": "Further information"
-            },
-            "contact": {
-                "title": "Your contact details",
-                "name": "Last name & first name",
-                "mail": "Email",
-                "phone": "Phone"
-            },
-            "step": "Step",
-            "prev": "Previous",
-            "btn": "Next",
-            "sended": "Request sent !",
-            "obligation": "*Required fields",
-            "error": "Please fill in all required fields !",
-            "error2": "Please choose the type of property !"
-        },
-        "credit": {
-            "error": "Please fill in all required fields!",
-            "amount": "Desired amount",
-            "deposit": "Deposit",
-            "duration": "Loan term in years",
-            "rate": "Borrowing rate",
-            "required": "* Required fields",
-            "btn1": "Calculate",
-            "amount2": "Amount borrowed",
-            "estimation": "Estimate of your monthly payments",
-            "total": "Total amount borrowed (estimated)",
-            "price": "Cost of credit (estimated)",
-            "btn2": "Repeat a simulation",
-            "btn3": "See the properties"
-        },
-        "law": {
-            "link": "See the text of the Alur law"
-        },
-        "expert": {
-            "1": "Sales",
-            "2": "Rentals",
-            "3": "Diagnostics"
-        }
-    },
-    "home": {
-        "header": {
-            "title": "Become an owner in Montpellier and its surroundings.",
-            "links": {
-                "1": "Sales & Rentals",
-                "2": "Management",
-                "3": "Estimate"
-            },
-            "search": {
-                "sales": "Sales",
-                "rentals": "Rentals",
-                "filters": "More filters",
-                "project": {
-                    "title": "Your project",
-                    "all": "All types",
-                    "dwelling": "Dwelling",
-                    "apartment": "Apartment",
-                    "house": "House",
-                    "allHab": "All types of housing",
-                    "other": "Other",
-                    "shop": "Shop"
-                },
-                "where": "Where is it ?",
-                "budget": "Budget",
-                "area": "Area"
-            }
-        },
-        "goods": {
-            "title": "Find your dream property, ",
-            "span": "for sale or for rent.",
-            "btn": "Discover the properties"
-        },
-        "management": {
-            "title": "Support for your projects from sales to ",
-            "span": "management."
-        },
-        "agency": {
-            "title": "Not just a sale but a ",
-            "span": "human agency.",
-            "find": "Where to find us ?",
-            "btn": "Discover the agency"
-        },
-        "tools": {
-            "title": "Tools, estimate your monthly payments",
-            "subtitle": {
-                "1": "Your monthly payments",
-                "2": "Alur Law",
-                "3": "Expertise"
-            }
-        }
-    },
-    "footer": {
-        "alert": {
-            "title": "Never miss any more property with the immo alert.",
-            "sales": "Sales",
-            "rentals": "Rentals",
-            "filters": "More filters",
-            "project": {
-                "title": "Your project",
-                "apartment": "Apartment",
-                "house": "House",
-                "shop": "Shop"
-            },
-            "where": "Where is it ?",
-            "rooms": "Number of rooms",
-            "bedrooms": "Bedrooms",
-            "budget": "Budget",
-            "area": "Area",
-            "contact": {
-                "name": "Last name & first name",
-                "mail": "Email",
-                "phone": "Phone"
-            },
-            "rgpd" : {
-                "text": "I agree to the processing of my personal data in accordance with the GDPR.",
-                "link": "Learn more"
-            }
-        },
-        "infos": {
-            "agency": "Our agency",
-            "contact": "Contact us",
-            "infos": "More information",
-            "sitemap": "Sitemap",
-            "hono": "Schedule of fees",
-            "legals": "Legal Notice",
-            "rgpd": "Data protection policy",
-            "copyright": {
-                "1": "Design by ",
-                "2": " Developed by Enzo Viry"
-            }
-        }
-    },
-    "filters": {
-        "display": "All filters",
-        "benefit": {
-            "title": "Service",
-            "sales": "Sales",
-            "rentals": "Rentals"
-        },
-        "type": {
-            "title": "Kind of good",
-            "house": "House / Villa",
-            "apartment": "Apartment",
-            "park": "Car park",
-            "ground": "Ground",
-            "shop": "Shop",
-            "other": "Other"
-        },
-        "budget": "Budget",
-        "area": "Surface in m²",
-        "ref": "Property reference",
-        "location": "Location of the property",
-        "filter": {
-            "title": "Sort the goods",
-            "date_desc": "Most recent to oldest",
-            "date_asc": "Oldest to newest",
-            "price_asc": "Ascending price",
-            "price_desc": "Descending price",
-            "area_asc": "Growing area",
-            "area_desc": "Decreasing area"
-        },
-        "btn": "Validate",
-        "reduce": "Reduce -"
-    },
-    "goods" : {
-        "house": "House",
+  "links": {
+    "home": "Home",
+    "property": "Property",
+    "agency": "Agency",
+    "selection": "Selection(s)",
+    "contact": "Contact",
+    "english": "English",
+    "french": "French"
+  },
+  "meta": {
+    "home": "Home page of the Aktif Transac agency website !",
+    "property": "Discover the properties offered by the Aktif Transac agency !",
+    "agency": "Discover the history and work of the Aktif Transac agency !",
+    "selection": "Here you will find your selection of properties on the Aktif Transac agency website !",
+    "contact": "Contact the Aktif Transac agency !",
+    "legals": "Legal notices of the Aktif Transac agency website.",
+    "plan": "Aktif Transac agency site map."
+  },
+  "headers": {
+    "agency": "Aktif Transac your real estate solution",
+    "property": "Find your favorite property",
+    "contact": "Contact",
+    "plan": "Sitemap",
+    "legals": "Legal Notice"
+  },
+  "tools": {
+    "estimate": {
+      "title": "Do you have a real estate project to estimate and want to discuss it ?",
+      "sales": "Sales",
+      "rentals": "Rentals",
+      "type": {
+        "title": "Kind of good",
+        "house": "House / Villa",
         "apartment": "Apartment",
         "park": "Car park",
         "ground": "Ground",
         "shop": "Shop",
-        "other": "Other",
-        "building": "Building",
-        "btn": "Discover",
-        "prev": "Previous",
-        "next": "Next",
-        "selected": "Selected",
-        "share": "Share the good :",
-        "rooms": "rooms",
-        "location": "Location",
-        "price": "Price",
-        "area": "Area",
-        "year": "Year",
-        "terrace": "Terrace",
-        "balcony": "Balcony",
-        "garden": "Garden",
-        "form": {
-            "name": "Last name & first name",
-            "phone": "Phone number",
-            "mail": "Mail address",
-            "pref": {
-                "title": "Your preferences",
-                "monday": "Monday",
-                "tuesday": "Tuesday",
-                "wednesday": "Wednesday",
-                "thursday": "Thursday",
-                "friday": "Friday",
-                "morning": "Morning",
-                "afternoon": "Afternoon"
-            },
-            "choice": {
-                "title": "Choice",
-                "1": "Visit of the property",
-                "2": "More details",
-                "3": "Be called back"
-            },
-            "required": "* Required fields",
-            "btn": "Make a request"
-        }
+        "other": "Other"
+      },
+      "desc": {
+        "title": "Description",
+        "area": "Surface in m²",
+        "rooms": "Number of rooms",
+        "town": "City or town",
+        "postal": "Postal code",
+        "infos": "Further information"
+      },
+      "contact": {
+        "title": "Your contact details",
+        "name": "Last name & first name",
+        "mail": "Email",
+        "phone": "Phone"
+      },
+      "step": "Step",
+      "prev": "Previous",
+      "btn": "Next",
+      "sended": "Request sent !",
+      "obligation": "*Required fields",
+      "error": "Please fill in all required fields !",
+      "error2": "Please choose the type of property !"
+    },
+    "credit": {
+      "error": "Please fill in all required fields!",
+      "amount": "Desired amount",
+      "deposit": "Deposit",
+      "duration": "Loan term in years",
+      "rate": "Borrowing rate",
+      "required": "* Required fields",
+      "btn1": "Calculate",
+      "amount2": "Amount borrowed",
+      "estimation": "Estimate of your monthly payments",
+      "total": "Total amount borrowed (estimated)",
+      "price": "Cost of credit (estimated)",
+      "btn2": "Repeat a simulation",
+      "btn3": "See the properties"
+    },
+    "law": {
+      "link": "See the text of the Alur law"
+    },
+    "expert": {
+      "1": "Sales",
+      "2": "Rentals",
+      "3": "Diagnostics"
+    }
+  },
+  "home": {
+    "header": {
+      "title": "Become an owner in Montpellier and its surroundings.",
+      "links": {
+        "1": "Sales & Rentals",
+        "2": "Management",
+        "3": "Estimate"
+      },
+      "search": {
+        "sales": "Sales",
+        "rentals": "Rentals",
+        "filters": "More filters",
+        "project": {
+          "title": "Your project",
+          "all": "All types",
+          "dwelling": "Dwelling",
+          "apartment": "Apartment",
+          "house": "House",
+          "allHab": "All types of housing",
+          "other": "Other",
+          "shop": "Shop"
+        },
+        "where": "Where is it ?",
+        "budget": "Budget",
+        "area": "Area"
+      }
+    },
+    "goods": {
+      "title": "Find your property, ",
+      "span": "for sale or for rent.",
+      "btn": "Discover the properties"
+    },
+    "management": {
+      "title": "Support for your projects from sales to ",
+      "span": "management.",
+      "text1": "If we consider the overall increase in rents and the simultaneous fall in mortgage rates, investing in the acquisition of real estate becomes a relevant way to build up secure and sustainable capital.",
+      "text2": "Becoming an owner means building a transferable heritage, being able to benefit from added value and being able to dispose of your property to develop it in accordance with the imposed standards.",
+      "text3": "Aktif transac supports you in the search for goods (calculation of profitability), going to the notary, drafting of the management mandate, search and implementation of a solvent tenant (unpaid rent insurance)."
     },
     "agency": {
-        "1": {
-            "title": "about our agency",
-            "subtitle": "A human and responsive agency at your service for any real estate need.",
-            "text": {
-                "1": "",
-                "2": ""
-            }
-        },
-        "2": {
-            "title": "A winning duo for over 15 years.",
-            "text": ""
-        }
+      "title": "An agency on a ",
+      "span": "human scale and at your service.",
+      "find": "Where to find us ?",
+      "btn": "Discover the agency",
+      "text1": "With more than 1500 satisfied customers since 2008.",
+      "text2": "The real estate hunter service is aimed at both buyers and sellers wishing to optimize their time and benefit from personalized professional support in the context of a purchase or sale of real estate. 'to people not on site to carry out research or sales. "
     },
-    "contact": {
-        "title": "Contact form",
-        "name": "What is your first and last name?",
-        "mail": "What is your email address?",
-        "phone": "Tell us your phone number?",
-        "request": {
-            "title": "Your type of request?",
-            "purchase": "Purchase of goods",
-            "rental": "Rental",
-            "management": "Management",
-            "other": "Other"
-        },
-        "supp": "Additional message",
-        "btn": "Send",
-        "sended": "Message sent !",
-        "error": "Please enter at least one name and one email address !"
-    },
-    "rgpd": {
-        "title": "In accordance with Regulation (EU) No. 2016/679 of April 27, 2016 in force from its application on May 25, 2018 (RGPD), we invite you:",
-        "1": "1. To be aware of our data protection policy.",
-        "2": "2. To accept it in order to consult and benefit from all the services of our website and our company.",
-        "btn1": "Scroll down to know our policy and enter the site",
-        "btn2": "I have read and accept your data protection policy. ",
-        "span": "Access to the site"
+    "tools": {
+      "title": "Tools, estimate your monthly payments",
+      "subtitle": {
+        "1": "Your monthly payments",
+        "2": "Alur Law",
+        "3": "Expertise"
+      }
     }
+  },
+  "footer": {
+    "alert": {
+      "title": "Be reactive by subscribing to the immo alert.",
+      "subtitle": {
+        "1": "Find every day in your e-mail box all the new real estate advertisements by creating your e-mail alert!",
+        "2": "To cancel your alert, a simple click on the link at the bottom of the alerts received is enough.",
+        "3": "The E-mail alert is a free service without obligation on your part."
+      },
+      "sales": "Sales",
+      "rentals": "Rentals",
+      "filters": "More filters",
+      "project": {
+        "title": "Your project",
+        "apartment": "Apartment",
+        "house": "House",
+        "shop": "Shop"
+      },
+      "where": "Where is it ?",
+      "rooms": "Number of rooms",
+      "bedrooms": "Bedrooms",
+      "budget": "Budget",
+      "area": "Area",
+      "contact": {
+        "name": "Last name & first name",
+        "mail": "Email",
+        "phone": "Phone"
+      },
+      "rgpd" : {
+        "text": "I agree to the processing of my personal data in accordance with the GDPR.",
+        "link": "Learn more"
+      }
+    },
+    "infos": {
+      "agency": "Our agency",
+      "contact": "Contact us",
+      "infos": "More information",
+      "sitemap": "Sitemap",
+      "hono": "Schedule of fees",
+      "legals": "Legal Notice",
+      "rgpd": "Data protection policy",
+      "copyright": {
+        "1": "Design by ",
+        "2": " Developed by Enzo Viry"
+      }
+    }
+  },
+  "filters": {
+    "display": "All filters",
+    "benefit": {
+      "title": "Service",
+      "sales": "Sales",
+      "rentals": "Rentals"
+    },
+    "type": {
+      "title": "Kind of good",
+      "house": "House / Villa",
+      "apartment": "Apartment",
+      "park": "Car park",
+      "ground": "Ground",
+      "shop": "Shop",
+      "other": "Other"
+    },
+    "budget": "Budget",
+    "area": "Surface in m²",
+    "ref": "Property reference",
+    "location": "Location of the property",
+    "filter": {
+      "title": "Sort the goods",
+      "date_desc": "Most recent to oldest",
+      "date_asc": "Oldest to newest",
+      "price_asc": "Ascending price",
+      "price_desc": "Descending price",
+      "area_asc": "Growing area",
+      "area_desc": "Decreasing area"
+    },
+    "btn": "Validate",
+    "reduce": "Reduce -"
+  },
+  "goods" : {
+    "house": "House",
+    "apartment": "Apartment",
+    "park": "Car park",
+    "ground": "Ground",
+    "shop": "Shop",
+    "other": "Other",
+    "building": "Building",
+    "btn": "Discover",
+    "prev": "Previous",
+    "next": "Next",
+    "selected": "Selected",
+    "share": "Share the good :",
+    "rooms": "rooms",
+    "location": "Location",
+    "price": "Price",
+    "area": "Area",
+    "year": "Year",
+    "terrace": "Terrace",
+    "balcony": "Balcony",
+    "garden": "Garden",
+    "form": {
+      "name": "Last name & first name",
+      "phone": "Phone number",
+      "mail": "Mail address",
+      "pref": {
+        "title": "Your preferences",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "morning": "Morning",
+        "afternoon": "Afternoon"
+      },
+      "choice": {
+        "title": "Choice",
+        "1": "Visit of the property",
+        "2": "More details",
+        "3": "Be called back"
+      },
+      "required": "* Required fields",
+      "btn": "Make a request"
+    }
+  },
+  "agency": {
+    "1": {
+      "title": "about our agency",
+      "subtitle": "A human and responsive agency at your service for any real estate need.",
+      "text": {
+        "1": "Aktif transac is an agency on a human scale and attached to the quality of the service provided.",
+        "2": "Specialized in transaction, rental and rental management, we put all our experience of more than 15 years of the real estate agent's profession. We bring you legal, technical and property advice, as well as own insurance and financial guarantees for help you achieve your projects. "
+      }
+    },
+    "2": {
+      "title": "A winning duo for over 15 years.",
+      "text": ""
+    }
+  },
+  "contact": {
+    "title": "Contact form",
+    "name": "What is your first and last name?",
+    "mail": "What is your email address?",
+    "phone": "Tell us your phone number?",
+    "request": {
+      "title": "Your type of request?",
+      "purchase": "Purchase of goods",
+      "rental": "Rental",
+      "management": "Management",
+      "other": "Other"
+    },
+    "supp": "Additional message",
+    "btn": "Send",
+    "sended": "Message sent !",
+    "error": "Please enter at least one name and one email address !"
+  },
+  "rgpd": {
+    "title": "In accordance with Regulation (EU) No. 2016/679 of April 27, 2016 in force from its application on May 25, 2018 (RGPD), we invite you:",
+    "1": "1. To be aware of our data protection policy.",
+    "2": "2. To accept it in order to consult and benefit from all the services of our website and our company.",
+    "btn1": "Scroll down to know our policy and enter the site",
+    "btn2": "I have read and accept your data protection policy. ",
+    "span": "Access to the site"
+  }
 }

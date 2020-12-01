@@ -20,11 +20,11 @@
         <h5>I) Identité du responsable du traitement</h5>
         <dl>
           <dd>
-            Société Eurl UNIK IMMOBILIER au capital de 10000.00 €, immatriculée
-            au Registre du Commerce et des Sociétés sous le numéro et dont le
-            siège social se situe 23 AV G.Clemenceau 34000 MONTPELLIER (ci-après
-            « la Société »), cette société intervenant tant pour elle-même que
-            pour les sociétés membres de son groupe.
+            Société AKTIF TRANSAC au capital de 7600 €, immatriculée au Registre
+            du Commerce et des Sociétés sous le numéro 502 425 572 00018 et dont
+            le siège social se situe 38 avenue de toulouse 34070 MONTPELLIER
+            (ci-après « la Société »), cette société intervenant tant pour
+            elle-même que pour les sociétés membres de son groupe.
           </dd>
         </dl>
 
@@ -35,7 +35,7 @@
             utilisant les services ou le Site de la Société en qualité de client
             ou de simple visiteur du Site.
           </dd>
-          <dd>Site : il s’agit du site unik-immo.com de la Société.</dd>
+          <dd>Site : il s’agit du site aktif-transac.com de la Société.</dd>
         </dl>
 
         <h5>
@@ -51,20 +51,20 @@
           </dd>
           <dt>Cette collecte de données s’effectue lorsque l’Utilisateur :</dt>
           <dd>
-            s’inscrit aux alertes proposées par la Société, effectue une demande
+            S’inscrit aux alertes proposées par la Société, effectue une demande
             de retour sur le site
           </dd>
           <dd>
-            contacte le Service Client de la Société par tout moyen de
+            Contacte le Service Client de la Société par tout moyen de
             communication mis à sa disposition tel que le courrier électronique,
             le téléphone, etc.
           </dd>
-          <dd>navigue sur le Site</dd>
+          <dd>Navigue sur le Site</dd>
           <dd>
-            partage un bien avec un ami par envoi d’un e-mail et/ou facebook
+            Partage un bien avec un ami par envoi d’un e-mail et/ou facebook
           </dd>
           <dd>
-            remplit un formulaire de contact d’informations ou de correspondance
+            Remplit un formulaire de contact d’informations ou de correspondance
             sur le Site
           </dd>
           <dt>
@@ -140,8 +140,8 @@
             L’Utilisateur dispose d'un droit d'accès, de rectification, et de
             suppression des données le concernant. L’utilisateur peut
             expressément s’opposer au traitement de ses données personnelles.
-            Pour cela, il lui suffit d’écrire un courrier à la Société, 23 AV
-            G.Clemenceau 34000 MONTPELLIER ou remplir le formulaire de
+            Pour cela, il lui suffit d’écrire un courrier à la Société, 38
+            avenue de toulouse 34070 MONTPELLIER ou remplir le formulaire de
             correspondance en ligne.
           </dd>
           <dd>
@@ -231,16 +231,6 @@
             tout moment, la possibilité de se désabonner en cliquant sur le lien
             prévu à cet effet situé en bas de chacune des newsletters.
           </dd>
-          <dt>Sms / mms</dt>
-          <dd>
-            La Société peut utiliser le numéro de téléphone portable du client
-            pour la communication des offres, demandes et alertes. À tout moment
-            le client a la possibilité de s’y opposer de manière simple et
-            gratuite, ou de se désinscrire des alertes, sur le Site dans la
-            rubrique « Mon compte », ou via le formulaire de correspondance ou
-            par courrier postal à l’adresse suivante : 23 AV G.Clemenceau 34000
-            MONTPELLIER.
-          </dd>
           <dt>Cookies</dt>
           <dd>
             Définition du cookie
@@ -266,11 +256,9 @@
             <ul>
               <li>
                 L’Utilisateur peut à tout moment désactiver les cookies
-                enregistrés sur son terminal. Pour cela, il lui suffit
-                d’utiliser le bouton mis à sa disposition à cet effet dans la
-                page mentions légales ou de sélectionner les paramètres
-                appropriés dans son navigateur et consulter le menu d'aide de
-                votre navigateur.
+                enregistrés sur son terminal. Pour cela, il lui suffit de
+                sélectionner les paramètres appropriés dans son navigateur et
+                consulter le menu d'aide de son navigateur.
               </li>
               <li>
                 Cependant, cette désactivation pourra avoir pour conséquence
@@ -294,21 +282,6 @@
           </dd>
 
           <dt>Plugins réseaux sociaux</dt>
-          <dd>
-            Le Site utilise des plugins réseaux sociaux tels que Facebook,
-            Twitter (Ci-après « Réseaux Sociaux »). Par exemple, si
-            l’Utilisateur est connecté à Facebook lors de sa navigation sur le
-            Site, Facebook pourra directement relier sa visite à son compte
-            utilisateur Facebook même si l’Utilisateur n’a pas utilisé le bouton
-            de partage.
-          </dd>
-          <dd>
-            Si l’Utilisateur interagit au moyen des plugins, par exemple en
-            cliquant sur le bouton « J’aime » ou en laissant un commentaire, les
-            informations correspondantes seront transmises et enregistrées sur
-            un serveur de Facebook. Elles seront publiées sur le compte Facebook
-            de l’Utilisateur.
-          </dd>
           <dd>
             La Société ne gère pas les données collectées par les Réseaux
             Sociaux via les boutons. L’Utilisateur devra prendre connaissance de

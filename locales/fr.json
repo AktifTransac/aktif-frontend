@@ -1,295 +1,305 @@
 {
-    "links": {
-        "home": "Accueil",
-        "property": "Biens",
-        "agency": "Agence",
-        "selection": "Selection(s)",
-        "contact": "Contact",
-        "english": "Anglais",
-        "french": "Français"
-    },
-    "meta": {
-        "home": "Page d'accueil du site de l'agence Aktif Transac !",
-        "property": "Découvrez les biens proposé par l'agence Aktif Transac !",
-        "agency": "Découvrez l'histoire et le travail de l'agence Aktif Transac !",
-        "selection": "Vous trouverez ici votre sélection de biens sur le site de l'agence Aktif Transac !",
-        "contact": "Contactez l'agence Aktif Transac !",
-        "legals": "Mentions légales du site de l'agence Aktif Transac.",
-        "plan": "Plan du site de l'agence Aktif Transac."
-    },
-    "headers": {
-        "agency": "Aktif Transac votre solution immobilière",
-        "property": "Trouvez votre bien coup de coeur",
-        "contact": "Contact",
-        "plan": "Plan du site",
-        "legals": "Mentions légales"
-    },
-    "tools": {
-        "estimate": {
-            "title": "Vous avez un projet immobilier à estimer et vous souhaitez en discuter ?",
-            "sales": "Ventes",
-            "rentals": "Locations",
-            "type": {
-                "title": "Type de bien",
-                "house": "Maison / Villa",
-                "apartment": "Appartement",
-                "park": "Parking",
-                "ground": "Terrain",
-                "shop": "Boutique",
-                "other": "Autre"
-            },
-            "desc": {
-                "title": "Description",
-                "area": "Surface en m²",
-                "rooms": "Nombres de pièces",
-                "town": "Ville ou village",
-                "postal": "Code postal",
-                "infos": "Informations complémentaires"
-            },
-            "contact": {
-                "title": "Vos coordonnés",
-                "name": "Nom & Prénom",
-                "mail": "Email",
-                "phone": "Téléphone"
-            },
-            "step": "Étape",
-            "prev": "Précédent",
-            "btn": "Suivant",
-            "sended": "Demande envoyée !",
-            "obligation": "*Champs obligatoire",
-            "error": "Merci de remplir tous les champs obligatoire !",
-            "error2": "Merci de choisir le type de bien !"
-        },
-        "credit": {
-            "error": "Merci de remplir tous les champs obligatoire !",
-            "amount": "Montant souhaité",
-            "deposit": "Apport",
-            "duration": "Durée du prêt en années",
-            "rate": "Taux d'emprunt",
-            "required": "* Champs obligatoire",
-            "btn1": "Calculer",
-            "amount2": "Montant emprunté",
-            "estimation": "Estimation de vos mensualités",
-            "total": "Montant total emprunté (estimé)",
-            "price": "Coût du crédit (estimé)",
-            "btn2": "Refaire une simulation",
-            "btn3": "Voir les biens"
-        },
-        "law": {
-            "link": "Voir le texte de la loi Alur"
-        },
-        "expert": {
-            "1": "Ventes",
-            "2": "Locations",
-            "3": "Diagnostiques"
-        }
-    },
-    "home": {
-        "header": {
-            "title": "Devenez propriétaire sur Montpellier et ses alentours.",
-            "links": {
-                "1": "Ventes & Locations",
-                "2": "Gestion",
-                "3": "Estimation"
-            },
-            "search": {
-                "sales": "Ventes",
-                "rentals": "Locations",
-                "filters": "Plus de filtres",
-                "project": {
-                    "title": "Votre projet",
-                    "all": "Tous types",
-                    "dwelling": "Habitation",
-                    "apartment": "Appartement",
-                    "house": "Maison",
-                    "allHab": "Tous types d'habitation",
-                    "other": "Autre",
-                    "shop": "Magasin"
-                },
-                "where": "Où se situe t-il ?",
-                "budget": "Budget",
-                "area": "Surface"
-            }
-        },
-        "goods": {
-            "title": "Retrouvez votre bien de rêves, ",
-            "span": "en vente ou en location.",
-            "btn": "Découvrir les biens"
-        },
-        "management": {
-            "title": "Un accompagnement de vos projets de la vente à ",
-            "span": "la gestion."
-        },
-        "agency": {
-            "title": "Non pas seulement une vente mais une ",
-            "span": "agence humaine.",
-            "find": "Ou nous trouver ?",
-            "btn": "Découvrir l'agence"
-        },
-        "tools": {
-            "title": "Outils, estimez vos mensualités",
-            "subtitle": {
-                "1": "Votre crédit",
-                "2": "Loi Alur",
-                "3": "Expertises"
-            }
-        }
-    },
-    "footer": {
-        "alert": {
-            "title": "Ne ratez plus aucun biens avec l’alerte immo.",
-            "sales": "Ventes",
-            "rentals": "Locations",
-            "filters": "Plus de filtres",
-            "project": {
-                "title": "Votre projet",
-                "apartment": "Appartement",
-                "house": "Maison",
-                "shop": "Magasin"
-            },
-            "where": "Où se situe t-il ?",
-            "rooms": "Nombres de pièces",
-            "bedrooms": "Chambres",
-            "budget": "Budget",
-            "area": "Surface",
-            "contact": {
-                "name": "Nom & Prénom",
-                "mail": "Email",
-                "phone": "Téléphone"
-            },
-            "rgpd": {
-                "text": "J'accepte le traitement de mes données personnelles conformément au RGPD.",
-                "link": "En savoir plus"
-            }
-        },
-        "infos": {
-            "agency": "Notre agence",
-            "contact": "Nous contacter",
-            "infos": "Plus d’infos",
-            "sitemap": "Plan du site",
-            "hono": "Barème des honoraires",
-            "legals": "Mentions légales",
-            "rgpd": "Politique de protection des données",
-            "copyright": {
-                "1": "Design par ",
-                "2": " Développé par Enzo Viry"
-            }
-        }
-    },
-    "filters": {
-        "display": "Tous les filtres",
-        "benefit": {
-            "title": "Prestation",
-            "sales": "Ventes",
-            "rentals": "Locations"
-        },
-        "type": {
-            "title": "Type de bien",
-            "house": "Maison / Villa",
-            "apartment": "Appartement",
-            "park": "Parking",
-            "ground": "Terrain",
-            "shop": "Boutique",
-            "other": "Autre"
-        },
-        "budget": "Budget",
-        "area": "Surface",
-        "ref": "Référence du bien",
-        "location": "Lieu du bien",
-        "filter": {
-            "title": "Trier les biens",
-            "date_desc": "Plus récent au plus ancien",
-            "date_asc": "Plus ancien au plus récent",
-            "price_asc": "Prix croissant",
-            "price_desc": "Prix décroissant",
-            "area_asc": "Surface croissante",
-            "area_desc": "Surface décroissante"
-        },
-        "btn": "Valider",
-        "reduce": "Réduire -"
-    },
-    "goods": {
-        "house": "Maison",
+  "links": {
+    "home": "Accueil",
+    "property": "Biens",
+    "agency": "Agence",
+    "selection": "Selection(s)",
+    "contact": "Contact",
+    "english": "Anglais",
+    "french": "Français"
+  },
+  "meta": {
+    "home": "Page d'accueil du site de l'agence Aktif Transac !",
+    "property": "Découvrez les biens proposé par l'agence Aktif Transac !",
+    "agency": "Découvrez l'histoire et le travail de l'agence Aktif Transac !",
+    "selection": "Vous trouverez ici votre sélection de biens sur le site de l'agence Aktif Transac !",
+    "contact": "Contactez l'agence Aktif Transac !",
+    "legals": "Mentions légales du site de l'agence Aktif Transac.",
+    "plan": "Plan du site de l'agence Aktif Transac."
+  },
+  "headers": {
+    "agency": "Aktif Transac votre solution immobilière",
+    "property": "Trouvez votre bien coup de coeur",
+    "contact": "Contact",
+    "plan": "Plan du site",
+    "legals": "Mentions légales"
+  },
+  "tools": {
+    "estimate": {
+      "title": "Vous avez un projet immobilier à estimer et vous souhaitez en discuter ?",
+      "sales": "Ventes",
+      "rentals": "Locations",
+      "type": {
+        "title": "Type de bien",
+        "house": "Maison / Villa",
         "apartment": "Appartement",
         "park": "Parking",
         "ground": "Terrain",
         "shop": "Boutique",
-        "other": "Autre",
-        "building": "Immeuble",
-        "btn": "Découvrir",
-        "prev": "Précédent",
-        "next": "Suivant",
-        "selected": "Sélectionné",
-        "share": "Partager le bien :",
-        "rooms": "pièces",
-        "location": "Lieu",
-        "price": "Prix",
-        "area": "Superficie",
-        "year": "Année",
-        "terrace": "Terrasse",
-        "balcony": "Balcon",
-        "garden": "Jardin",
-        "form": {
-            "name": "Nom & Prénom",
-            "phone": "Numéro de téléphone",
-            "mail": "Adresse mail",
-            "pref": {
-                "title": "Vos préférences",
-                "monday": "Lundi",
-                "tuesday": "Mardi",
-                "wednesday": "Mercredi",
-                "thursday": "Jeudi",
-                "friday": "Vendredi",
-                "morning": "Matin",
-                "afternoon": "Après-midi"
-            },
-            "choice": {
-                "title": "Choix",
-                "1": "Visite du bien",
-                "2": "Plus de détails",
-                "3": "Être rappelé(e)"
-            },
-            "required": "* Champs obligatoires",
-            "btn": "Faire une demande"
-        }
+        "other": "Autre"
+      },
+      "desc": {
+        "title": "Description",
+        "area": "Surface en m²",
+        "rooms": "Nombres de pièces",
+        "town": "Ville ou village",
+        "postal": "Code postal",
+        "infos": "Informations complémentaires"
+      },
+      "contact": {
+        "title": "Vos coordonnés",
+        "name": "Nom & Prénom",
+        "mail": "Email",
+        "phone": "Téléphone"
+      },
+      "step": "Étape",
+      "prev": "Précédent",
+      "btn": "Suivant",
+      "sended": "Demande envoyée !",
+      "obligation": "*Champs obligatoire",
+      "error": "Merci de remplir tous les champs obligatoire !",
+      "error2": "Merci de choisir le type de bien !"
+    },
+    "credit": {
+      "error": "Merci de remplir tous les champs obligatoire !",
+      "amount": "Montant souhaité",
+      "deposit": "Apport",
+      "duration": "Durée du prêt en années",
+      "rate": "Taux d'emprunt",
+      "required": "* Champs obligatoire",
+      "btn1": "Calculer",
+      "amount2": "Montant emprunté",
+      "estimation": "Estimation de vos mensualités",
+      "total": "Montant total emprunté (estimé)",
+      "price": "Coût du crédit (estimé)",
+      "btn2": "Refaire une simulation",
+      "btn3": "Voir les biens"
+    },
+    "law": {
+      "link": "Voir le texte de la loi Alur"
+    },
+    "expert": {
+      "1": "Ventes",
+      "2": "Locations",
+      "3": "Diagnostiques"
+    }
+  },
+  "home": {
+    "header": {
+      "title": "Devenez propriétaire sur Montpellier et ses alentours.",
+      "links": {
+        "1": "Ventes & Locations",
+        "2": "Gestion",
+        "3": "Estimation"
+      },
+      "search": {
+        "sales": "Ventes",
+        "rentals": "Locations",
+        "filters": "Plus de filtres",
+        "project": {
+          "title": "Votre projet",
+          "all": "Tous types",
+          "dwelling": "Habitation",
+          "apartment": "Appartement",
+          "house": "Maison",
+          "allHab": "Tous types d'habitation",
+          "other": "Autre",
+          "shop": "Magasin"
+        },
+        "where": "Où se situe t-il ?",
+        "budget": "Budget",
+        "area": "Surface"
+      }
+    },
+    "goods": {
+      "title": "Retrouvez votre bien, ",
+      "span": "en vente ou en location.",
+      "btn": "Découvrir les biens"
+    },
+    "management": {
+      "title": "Un accompagnement de vos projets de la vente à ",
+      "span": "la gestion.",
+      "text1":  "Si l’on considère l’augmentation globale des loyers et la baisse, simultanée, des taux de crédits immobiliers, investir dans l’acquisition d’un bien immobilier devient un moyen pertinent de se constituer un capital sécurisé et pérenne. ",
+      "text2": "Devenir propriétaire c’est construire un patrimoine transmissible, pouvoir bénéficier d’une plus-value et pouvoir disposer de son bien pour l’aménager dans le respect des normes imposées.",
+      "text3": "Aktif transac vous accompagne pour la recherche de biens (calcul de rentabilité), passage chez le notaire, rédaction du mandat de gestion recherche et mise en place de locataire solvable (assurance loyer impayées)."
     },
     "agency": {
-        "1": {
-            "title": "à propos de notre agence",
-            "subtitle": "Une agence humaine et réactive à votre service pour tout besoin immobilier.",
-            "text": {
-                "1": "",
-                "2": ""
-            }
-        },
-        "2": {
-            "title": "Un duo gagnant depuis plus de 15 ans.",
-            "text": ""
-        }
+      "title": "Une agence à taille ",
+      "span": "humaine et à votre écoute.",
+      "find": "Ou nous trouver ?",
+      "btn": "Découvrir l'agence",
+      "text1": "Avec plus de 1500 clients satisfait depuis 2008.",
+      "text2": "Le service de chasseur immobilier s'adresse aussi bien aux acquéreurs, qu’aux vendeurs souhaitant optimiser leur temps et bénéficier d'un accompagnement professionnel personnalisé dans le cadre d'un achat ou de vente d’un bien immobilier qu'aux personnes n'étant pas sur place pour s'occuper de la recherche ou de la vente."
     },
-    "contact": {
-        "title": "Formulaire de contact",
-        "name": "Quel est votre nom & prénom ?",
-        "mail": "Quel est votre adresse mail ?",
-        "phone": "Dites-nous votre numéro de téléphone ?",
-        "request": {
-            "title": "Votre type de requête ?",
-            "purchase": "Achat de biens",
-            "rental": "Location",
-            "management": "Gestion",
-            "other": "Autre"
-        },
-        "supp": "Message supplémentaire",
-        "btn": "Envoyer",
-        "sended": "Message envoyé !",
-        "error": "Merci de renseigner au moins un nom et une adresse mail !"
-    },
-    "rgpd": {
-        "title": "Conformément au règlement (UE) n°2016/679 du 27 avril 2016 en vigueur à partir de son application le 25 mai 2018 (RGPD), nous vous invitons :",
-        "1": "1. A prendre connaissance de notre politique de protection des données.",
-        "2": "2. A l’accepter afin de consulter et bénéficier de tous les services de notre site internet et de notre société.",
-        "btn1": "Faites défiler pour connaître notre politique et entrer dans le site",
-        "btn2": " J’ai pris connaissance et j’accepte votre politique de protection des données. ",
-        "span": "Accès au site"
+    "tools": {
+      "title": "Outils, estimez vos mensualités",
+      "subtitle": {
+        "1": "Votre crédit",
+        "2": "Loi Alur",
+        "3": "Expertises"
+      }
     }
+  },
+  "footer": {
+    "alert": {
+      "title": "Soyez ré-aktif en vous inscrivant sur l’alerte immo.",
+      "subtitle": {
+        "1": "Retrouvez chaque jour dans votre boîte e-mail toutes les nouvelles annonces immobilières en créant votre alerte e-mail !",
+        "2": "Pour annuler votre alerte, un simple clic sur le lien qui figure en bas des alertes reçues suffit.",
+        "3": "L'alerte E-mail est un service gratuit et sans engagement de votre part."
+      },
+      "sales": "Ventes",
+      "rentals": "Locations",
+      "filters": "Plus de filtres",
+      "project": {
+        "title": "Votre projet",
+        "apartment": "Appartement",
+        "house": "Maison",
+        "shop": "Magasin"
+      },
+      "where": "Où se situe t-il ?",
+      "rooms": "Nombres de pièces",
+      "bedrooms": "Chambres",
+      "budget": "Budget",
+      "area": "Surface",
+      "contact": {
+        "name": "Nom & Prénom",
+        "mail": "Email",
+        "phone": "Téléphone"
+      },
+      "rgpd": {
+        "text": "J'accepte le traitement de mes données personnelles conformément au RGPD.",
+        "link": "En savoir plus"
+      }
+    },
+    "infos": {
+      "agency": "Notre agence",
+      "contact": "Nous contacter",
+      "infos": "Plus d’infos",
+      "sitemap": "Plan du site",
+      "hono": "Barème des honoraires",
+      "legals": "Mentions légales",
+      "rgpd": "Politique de protection des données",
+      "copyright": {
+        "1": "Design par ",
+        "2": " Développé par Enzo Viry"
+      }
+    }
+  },
+  "filters": {
+    "display": "Tous les filtres",
+    "benefit": {
+      "title": "Prestation",
+      "sales": "Ventes",
+      "rentals": "Locations"
+    },
+    "type": {
+      "title": "Type de bien",
+      "house": "Maison / Villa",
+      "apartment": "Appartement",
+      "park": "Parking",
+      "ground": "Terrain",
+      "shop": "Boutique",
+      "other": "Autre"
+    },
+    "budget": "Budget",
+    "area": "Surface",
+    "ref": "Référence du bien",
+    "location": "Lieu du bien",
+    "filter": {
+      "title": "Trier les biens",
+      "date_desc": "Plus récent au plus ancien",
+      "date_asc": "Plus ancien au plus récent",
+      "price_asc": "Prix croissant",
+      "price_desc": "Prix décroissant",
+      "area_asc": "Surface croissante",
+      "area_desc": "Surface décroissante"
+    },
+    "btn": "Valider",
+    "reduce": "Réduire -"
+  },
+  "goods": {
+    "house": "Maison",
+    "apartment": "Appartement",
+    "park": "Parking",
+    "ground": "Terrain",
+    "shop": "Boutique",
+    "other": "Autre",
+    "building": "Immeuble",
+    "btn": "Découvrir",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "selected": "Sélectionné",
+    "share": "Partager le bien :",
+    "rooms": "pièces",
+    "location": "Lieu",
+    "price": "Prix",
+    "area": "Superficie",
+    "year": "Année",
+    "terrace": "Terrasse",
+    "balcony": "Balcon",
+    "garden": "Jardin",
+    "form": {
+      "name": "Nom & Prénom",
+      "phone": "Numéro de téléphone",
+      "mail": "Adresse mail",
+      "pref": {
+        "title": "Vos préférences",
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "morning": "Matin",
+        "afternoon": "Après-midi"
+      },
+      "choice": {
+        "title": "Choix",
+        "1": "Visite du bien",
+        "2": "Plus de détails",
+        "3": "Être rappelé(e)"
+      },
+      "required": "* Champs obligatoires",
+      "btn": "Faire une demande"
+    }
+  },
+  "agency": {
+    "1": {
+      "title": "à propos de notre agence",
+      "subtitle": "Une agence humaine et réactive à votre service pour tout besoin immobilier.",
+      "text": {
+        "1": "Aktif transac est une agence à taille humaine et attachée à la qualité du service rendu.",
+        "2": "Spécialisée en transaction, location et gestion locative, nous mettons toute notre expérience de plus de 15 ans du métier d’agent immobilier. Nous vous apportons conseils juridiques, techniques et patrimoniaux, ainsi que des assurances et garanties financières propres pour vous aider à réaliser vos projets."
+      }
+    },
+    "2": {
+      "title": "Un duo gagnant depuis plus de 15 ans.",
+      "text": ""
+    }
+  },
+  "contact": {
+    "title": "Formulaire de contact",
+    "name": "Quel est votre nom & prénom ?",
+    "mail": "Quel est votre adresse mail ?",
+    "phone": "Dites-nous votre numéro de téléphone ?",
+    "request": {
+      "title": "Votre type de requête ?",
+      "purchase": "Achat de biens",
+      "rental": "Location",
+      "management": "Gestion",
+      "other": "Autre"
+    },
+    "supp": "Message supplémentaire",
+    "btn": "Envoyer",
+    "sended": "Message envoyé !",
+    "error": "Merci de renseigner au moins un nom et une adresse mail !"
+  },
+  "rgpd": {
+    "title": "Conformément au règlement (UE) n°2016/679 du 27 avril 2016 en vigueur à partir de son application le 25 mai 2018 (RGPD), nous vous invitons :",
+    "1": "1. A prendre connaissance de notre politique de protection des données.",
+    "2": "2. A l’accepter afin de consulter et bénéficier de tous les services de notre site internet et de notre société.",
+    "btn1": "Faites défiler pour connaître notre politique et entrer dans le site",
+    "btn2": " J’ai pris connaissance et j’accepte votre politique de protection des données. ",
+    "span": "Accès au site"
+  }
 }

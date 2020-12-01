@@ -21,7 +21,7 @@
             <p>{{ prix(bien) }}</p>
             <div>
               <nuxt-link
-                :to="'/biens/' + bien.NO_DOSSIER._cdata"
+                :to="$i18n.path('biens') + '/' + bien.NO_DOSSIER._cdata"
                 class="btn-biens"
                 >{{ $t('goods.btn') }}</nuxt-link
               >
@@ -81,7 +81,10 @@
           </div>
           <p>{{ description(bien) }}</p>
           <div>
-            <nuxt-link :to="'/biens/' + bien.NO_DOSSIER._cdata" class="btn">
+            <nuxt-link
+              :to="$i18n.path('biens') + '/' + bien.NO_DOSSIER._cdata"
+              class="btn"
+            >
               {{ $t('goods.btn') }}
             </nuxt-link>
             <div>

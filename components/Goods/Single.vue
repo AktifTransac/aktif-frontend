@@ -143,7 +143,7 @@
     </article>
     <article>
       <h4>Description</h4>
-      <p>{{ bien.TEXTE_FR._cdata }}</p>
+      <p>{{ desc }}</p>
     </article>
     <article>
       <aside>
@@ -235,7 +235,8 @@
       </svg>
     </article>
     <article>
-      <form>
+      <form @submit.prevent="handleSubmit">
+        <p v-show="error" id="error">{{ error }}</p>
         <fieldset>
           <div>
             <label>{{ $t('goods.form.name') }}*</label>
@@ -308,7 +309,10 @@
           </div>
         </fieldset>
         <p>{{ $t('goods.form.required') }}</p>
-        <input type="submit" :value="$t('goods.form.btn')" />
+        <input
+          type="submit"
+          :value="sended ? $t('contact.sended') : $t('goods.form.btn')"
+        />
       </form>
     </article>
   </section>
@@ -327,6 +331,8 @@ export default {
   },
   data() {
     return {
+      error: '',
+      sended: false,
       name: '',
       phone: '',
       mail: '',
@@ -348,6 +354,7 @@ export default {
         e: false,
       },
       bigPicture: false,
+      desc: '',
       filters: {
         choice: '',
         project: 'All',
@@ -386,6 +393,36 @@ export default {
     },
   },
   async beforeMount() {
+    if (this.$i18n.locale === 'en') {
+      const { v4: uuidv4 } = require('uuid')
+      const subscriptionKey = process.env.TRANSLATOR_SUBSCRIPTION_KEY
+      const location = process.env.TRANSLATOR_REGION
+      await this.$axios({
+        method: 'post',
+        url: `https://api.cognitive.microsofttranslator.com/translate`,
+        headers: {
+          'Ocp-Apim-Subscription-Key': subscriptionKey,
+          'Ocp-Apim-Subscription-Region': location,
+          'Content-type': 'application/json',
+          'X-ClientTraceId': uuidv4().toString(),
+        },
+        params: {
+          'api-version': '3.0',
+          from: 'fr',
+          to: ['en'],
+        },
+        data: [
+          {
+            text: this.bien.TEXTE_FR._cdata,
+          },
+        ],
+        responseType: 'json',
+      }).then((response) => {
+        this.desc = response.data[0].translations[0].text
+      })
+    } else {
+      this.desc = this.bien.TEXTE_FR._cdata
+    }
     await this.$axios
       .$get(
         `https://api.aktif-transac.com/images?id=${this.bien.NO_ASP._cdata}&index=a`
@@ -604,6 +641,39 @@ export default {
         `mailto:${email}?subject=${subject}&body=${emailBody}`,
         '_blank'
       )
+    },
+    handleSubmit() {
+      const headers = {
+        'Content-Type': 'application/json',
+      }
+
+      const data = {
+        name: this.name,
+        mail: this.mail,
+        phone: this.phone,
+        prefDay: this.pref.day,
+        prefTime: this.pref.time,
+        choix: this.choix,
+        bien: window.location.href,
+      }
+
+      if (!this.name || !this.mail) {
+        return (this.error = this.$t('contact.error'))
+      } else {
+        return this.$axios
+          .$post(`https://api.aktif-transac.com/bien`, data, {
+            headers,
+          })
+          .then((response) => {
+            if (response.text === 'Mail envoyé') {
+              this.sended = !this.sended
+              this.error = ''
+              setTimeout(() => {
+                this.sended = !this.sended
+              }, 3000)
+            }
+          })
+      }
     },
   },
   head() {
