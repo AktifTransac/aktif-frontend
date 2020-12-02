@@ -30,24 +30,24 @@
         /></GmapMap>
       </client-only>
     </article>
-    <article>
-      <div class="container">
-        <h2>{{ $t('agency.2.title') }}</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc
-          nulla porttitor diam leo adipiscing. Egestas urna, venenatis, ut sit
-          quis elementum, a dignissim pharetra. Nisl vulputate amet sit est
-          quis. Imperdiet ut orci nunc quis in amet, nibh dolor. Tincidunt elit
-          faucibus pharetra turpis volutpat. Viverra bibendum nec at convallis
-          sed blandit. Odio felis posuere vitae nibh pellentesque urna ornare
-          pulvinar.
-        </p>
-      </div>
-      <img
-        src="https://api.aktif-transac.com/assets/agence2.jpg"
-        alt="Photo d'un immeuble de type haussmannien"
-      />
-    </article>
+    <!--    <article>-->
+    <!--      <div class="container">-->
+    <!--        <h2>{{ $t('agency.2.title') }}</h2>-->
+    <!--        <p>-->
+    <!--          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nunc-->
+    <!--          nulla porttitor diam leo adipiscing. Egestas urna, venenatis, ut sit-->
+    <!--          quis elementum, a dignissim pharetra. Nisl vulputate amet sit est-->
+    <!--          quis. Imperdiet ut orci nunc quis in amet, nibh dolor. Tincidunt elit-->
+    <!--          faucibus pharetra turpis volutpat. Viverra bibendum nec at convallis-->
+    <!--          sed blandit. Odio felis posuere vitae nibh pellentesque urna ornare-->
+    <!--          pulvinar.-->
+    <!--        </p>-->
+    <!--      </div>-->
+    <!--      <img-->
+    <!--        src="https://api.aktif-transac.com/assets/agence2.jpg"-->
+    <!--        alt="Photo d'un immeuble de type haussmannien"-->
+    <!--      />-->
+    <!--    </article>-->
   </section>
 </template>
 

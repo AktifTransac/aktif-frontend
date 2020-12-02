@@ -40,6 +40,7 @@ export default {
     { src: '@/plugins/maps', ssr: false },
     { src: '@/plugins/cookies', ssr: false },
     { src: '@/plugins/i18n' },
+    { src: '~plugins/ga.js', ssr: false },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
