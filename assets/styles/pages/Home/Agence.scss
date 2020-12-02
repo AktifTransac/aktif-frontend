@@ -1,138 +1,140 @@
 #agence {
-    @apply mt-60;
+  @apply mt-60;
 
-    img {
-        @apply w-full;
-        max-height: 300px;
-        @apply object-cover;
+  img {
+    @apply w-full;
+    max-height: 300px;
+    @apply object-cover;
+  }
+
+  #map {
+    @apply hidden;
+  }
+
+  article {
+    @apply mt-30;
+
+    h2 {
+      @apply text-grey-dark;
+      @apply text-30;
+
+      span {
+        @apply text-red;
+      }
     }
 
-    #map {
+    p {
+      @apply mt-30;
+      @apply mb-30;
+      @apply text-16;
+      @apply text-grey-dark;
+      @apply text-justify;
+    }
+
+    > div {
+      > div {
         @apply hidden;
+      }
     }
-
-    article {
-        @apply mt-30;
-
-        h2 {
-            @apply text-grey-dark;
-            @apply text-30;
-
-            span {
-                @apply text-red;
-            }
-        }
-
-        p {
-            @apply mt-30;
-            @apply mb-30;
-            @apply text-16;
-            @apply text-grey-dark;
-            @apply text-justify;
-        }
-
-        > div {
-            > div {
-                @apply hidden;
-            }
-        }
-    }
+  }
 }
 
 @screen md {
-    #agence {
-        @apply mt-80;
+  #agence {
+    @apply mt-80;
 
-        @apply grid;
-        @apply grid-cols-5;
+    @apply grid;
+    @apply grid-cols-5;
 
-        img {
-            @apply col-span-3;
-        }
-
-        #map {
-            @apply block;
-            @apply col-span-2;
-        }
-
-        article {
-            grid-row: 1;
-            @apply col-span-5;
-            @apply mt-0;
-            @apply mb-30;
-
-            > div {
-                @apply border-0;
-                @apply border-t;
-                @apply border-solid;
-                @apply border-grey-dark;
-
-                @apply pt-30;
-
-                @apply flex;
-                @apply items-start;
-                > div {
-                    @apply block;
-
-                    @apply text-grey-dark;
-
-                    @apply mr-60;
-
-                    h3 {
-                        @apply text-25;
-                    }
-
-                    h4 {
-                        @apply mt-10;
-                        @apply text-20;
-                    }
-                }
-            }
-        }
+    img {
+      @apply col-span-3;
     }
+
+    #map {
+      @apply block;
+      @apply col-span-2;
+      @apply w-full;
+      @apply h-full;
+    }
+
+    article {
+      grid-row: 1;
+      @apply col-span-5;
+      @apply mt-0;
+      @apply mb-30;
+
+      > div {
+        @apply border-0;
+        @apply border-t;
+        @apply border-solid;
+        @apply border-grey-dark;
+
+        @apply pt-30;
+
+        @apply flex;
+        @apply items-start;
+        > div {
+          @apply block;
+
+          @apply text-grey-dark;
+
+          @apply mr-60;
+
+          h3 {
+            @apply text-25;
+          }
+
+          h4 {
+            @apply mt-10;
+            @apply text-20;
+          }
+        }
+      }
+    }
+  }
 }
 
 @screen xl {
-    #agence {
-        @apply mt-120;
+  #agence {
+    @apply mt-120;
 
-        @apply mx-160;
+    @apply mx-160;
 
-        img {
-            max-height: 350px;
-        }
-
-        article {
-            @apply px-0;
-            @apply mb-60;
-
-            @apply grid;
-            @apply grid-cols-2;
-            @apply gap-30;
-
-            > p {
-                @apply my-0;
-                @apply row-start-2;
-            }
-
-            > div {
-                @apply row-span-2;
-
-                @apply flex-col;
-                > div {
-                    @apply mr-0;
-                }
-
-                > a {
-                    @apply mt-30;
-                }
-            }
-        }
+    img {
+      max-height: 350px;
     }
+
+    article {
+      @apply px-0;
+      @apply mb-60;
+
+      @apply grid;
+      @apply grid-cols-2;
+      @apply gap-30;
+
+      > p {
+        @apply my-0;
+        @apply row-start-2;
+      }
+
+      > div {
+        @apply row-span-2;
+
+        @apply flex-col;
+        > div {
+          @apply mr-0;
+        }
+
+        > a {
+          @apply mt-30;
+        }
+      }
+    }
+  }
 }
 
 @screen extra {
-    #agence {
-        @apply mx-320;
-    }
+  #agence {
+    @apply mx-320;
+  }
 }

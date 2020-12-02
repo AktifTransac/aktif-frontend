@@ -5,16 +5,18 @@
       alt="Photo de deux femmes entrain de discuter"
     />
     <client-only placeholder="Loading">
-      <GmapMap
+      <iframe
         id="map"
-        :center="{ lat: 43.5988549, lng: 3.8656149 }"
-        :zoom="15"
-        map-type-id="roadmap"
+        frameborder="0"
+        style="border: 0"
+        :src="
+          'https://www.google.com/maps/embed/v1/place?key=' +
+          key +
+          '&q=AKTIF+TRANSAC,Montpellier+France'
+        "
+        allowfullscreen
       >
-        <GmapMarker
-          :position="{ lat: 43.5988549, lng: 3.8656149 }"
-          :clickable="true"
-      /></GmapMap>
+      </iframe>
     </client-only>
     <article class="container">
       <h2>
@@ -38,7 +40,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      key: process.env.MAP_API,
+    }
+  },
+}
 </script>
 
 <style scoped lang="scss" src="@/assets/styles/pages/Home/Agence.scss"></style>
