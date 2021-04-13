@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import NewGoods from '@/components/NewGoods'
+// import NewGoods from '@/components/NewGoods'
 import Gestion from '@/components/Home/Gestion'
 import Estimation from '@/components/Estimation'
 import Agence from '@/components/Home/Agence'
@@ -18,7 +18,7 @@ import Outils from '@/components/Home/Outils'
 export default {
   layout: 'home',
   components: {
-    NewGoods,
+    // NewGoods,
     Gestion,
     Estimation,
     Agence,

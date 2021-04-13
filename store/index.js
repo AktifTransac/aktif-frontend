@@ -16,27 +16,36 @@ export const getters = {
   newGoods(state) {
     let goods = _.cloneDeep(state.goods)
     goods.sort((a, b) => {
-      return new Date(b.DATE_OFFRE._cdata) - new Date(a.DATE_OFFRE._cdata)
+      return (
+        new Date(b.INFO_GENERALES.DATE_CREATION._text) -
+        new Date(a.INFO_GENERALES.DATE_CREATION._text)
+      )
     })
-    goods = goods.filter((el) => el.TYPE_OFFRE._cdata <= 7)
+    goods = goods.filter((el) => el.VENTE)
     const newGoods = goods.splice(0, 5)
     return newGoods
   },
   lastSale(state) {
     let goods = _.cloneDeep(state.goods)
     goods.sort((a, b) => {
-      return new Date(b.DATE_OFFRE._cdata) - new Date(a.DATE_OFFRE._cdata)
+      return (
+        new Date(b.INFO_GENERALES.DATE_CREATION._text) -
+        new Date(a.INFO_GENERALES.DATE_CREATION._text)
+      )
     })
-    goods = goods.filter((el) => el.TYPE_OFFRE._cdata <= 7)
+    goods = goods.filter((el) => el.VENTE)
     const lastSale = goods.splice(0, 1)
     return lastSale[0]
   },
   lastRent(state) {
     let goods = _.cloneDeep(state.goods)
     goods.sort((a, b) => {
-      return new Date(b.DATE_OFFRE._cdata) - new Date(a.DATE_OFFRE._cdata)
+      return (
+        new Date(b.INFO_GENERALES.DATE_CREATION._text) -
+        new Date(a.INFO_GENERALES.DATE_CREATION._text)
+      )
     })
-    goods = goods.filter((el) => el.TYPE_OFFRE._cdata > 7)
+    goods = goods.filter((el) => el.LOCATION)
     const lastRent = goods.splice(0, 1)
     return lastRent[0]
   },
@@ -55,7 +64,7 @@ export const getters = {
     return goods
   },
   single: (state) => (id) => {
-    return state.goods.find((el) => el.NO_DOSSIER._cdata === id)
+    return state.goods.find((el) => el.INFO_GENERALES.AFF_NUM._text === id)
   },
 }
 
@@ -65,14 +74,10 @@ export const mutations = {
       state.locale = locale
     }
   },
-  setGoods(state, data) {
+  async setGoods(state, data) {
     const biens = convert.xml2json(data, { compact: true, spaces: 4 })
-    const formated = JSON.parse(biens)
-    formated.BIENS.BIEN.forEach((el) => {
-      const format = el.DATE_OFFRE._cdata.split('/').reverse().join('/')
-      el.DATE_OFFRE._cdata = format
-    })
-    state.goods = formated.BIENS.BIEN
+    const formated = await JSON.parse(biens)
+    state.goods = formated.LISTEPA.BIEN
   },
   like(state, dossier) {
     if (!cookie.isKey('likes')) {
@@ -105,7 +110,14 @@ export const mutations = {
 
 export const actions = {
   async getGoods({ commit }) {
-    const data = await this.$axios.$get('https://api.aktif-transac.com/biens')
+    const data = await this.$axios.$get(
+      'http://clients.ac3-distribution.com/office12/sarlaktiftrans_02032021/cache/export.xml',
+      {
+        headers: {
+          'Content-Type': 'application/xml',
+        },
+      }
+    )
     await commit('setGoods', data)
   },
 }

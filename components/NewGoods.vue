@@ -11,28 +11,29 @@
         <aside v-for="(bien, i) in newGoods" :key="i" class="slide">
           <img
             :src="
-              'https://api.aktif-transac.com/data/6993-01-' +
-              bien.NO_ASP._cdata +
-              '-a' +
-              '.jpg'
+              bien.IMAGES.IMG.length
+                ? bien.IMAGES.IMG[0]._text
+                : bien.IMAGES.IMG._text
             "
-            :alt="bien.TEXTE_FR._cdata"
+            :alt="bien.INTITULE.FR._cdata"
             @error="setFallbackImageUrl"
           />
           <div>
             <h3>
-              {{ goodsType(bien.TYPE_OFFRE._cdata) }}
+              {{ goodsType(bien) }}
               <span> {{ surface(bien) }} m² </span>
             </h3>
             <p>{{ prix(bien) }}</p>
             <div>
               <nuxt-link
-                :to="'/biens/' + bien.NO_DOSSIER._cdata"
+                :to="
+                  $i18n.path('biens') + '/' + bien.INFO_GENERALES.AFF_NUM._text
+                "
                 class="btn-biens"
                 >{{ $t('goods.btn') }}</nuxt-link
               >
               <svg
-                v-show="!likes.includes(bien.NO_DOSSIER._cdata)"
+                v-show="!likes.includes(bien.INFO_GENERALES.AFF_NUM._text)"
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="far"
@@ -41,7 +42,7 @@
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                @click="like(bien.NO_DOSSIER._cdata)"
+                @click="like(bien.INFO_GENERALES.AFF_NUM._text)"
               >
                 <path
                   fill="#FC5555"
@@ -49,7 +50,7 @@
                 ></path>
               </svg>
               <svg
-                v-show="likes.includes(bien.NO_DOSSIER._cdata)"
+                v-show="likes.includes(bien.INFO_GENERALES.AFF_NUM._text)"
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fas"
@@ -58,7 +59,7 @@
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                @click="dislike(bien.NO_DOSSIER._cdata)"
+                @click="dislike(bien.INFO_GENERALES.AFF_NUM._text)"
               >
                 <path
                   fill="#FC5555"
@@ -242,45 +243,149 @@ export default {
     setFallbackImageUrl(event) {
       event.target.src = require('~/assets/images/logo.png')
     },
-    goodsType(offer) {
-      if (offer === '1' || offer === '11') {
+    goodsType(bien) {
+      if (bien.APPARTEMENT) {
         return this.$t('goods.apartment')
-      } else if (offer === '2' || offer === '12') {
+      } else if (bien.MAISON) {
         return this.$t('goods.house')
-      } else if (offer === '3') {
+      } else if (bien.TERRAIN) {
         return this.$t('goods.ground')
-      } else if (offer === '4') {
+      } else if (bien.IMMEUBLE) {
         return this.$t('goods.building')
-      } else if (offer === '5' || offer === '13') {
+      } else if (bien.LOCAL_PROFESSIONNEL) {
         return 'Local'
-      } else if (offer === '6') {
+      } else if (bien.FOND_COMMERCE) {
         return 'FDC'
-      } else if (offer === '7' || offer === '14') {
+      } else if (bien.PARKING) {
         return this.$t('goods.park')
       }
     },
     prix(bien) {
-      switch (bien.TYPE_OFFRE._cdata) {
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
-          return bien.PRIX._cdata + ' €'
-        case '11':
-        case '12':
-        case '13':
-        case '14':
-          return bien.LOYER._cdata + '€ / mois'
+      if (bien.VENTE) {
+        return String(parseFloat(bien.VENTE.PRIX._text).toFixed()) + ' €'
+      } else {
+        return (
+          String(parseFloat(bien.LOCATION.LOYER._text).toFixed()) + '€ / mois'
+        )
       }
     },
     surface(bien) {
-      if (bien.TYPE_OFFRE._cdata === '6') {
-        return String(parseFloat(bien.SURFACEPROFESSIONNELLE._cdata).toFixed())
-      } else {
-        return String(parseFloat(bien.SURF_HAB._cdata).toFixed())
+      if (bien.APPARTEMENT) {
+        if (bien.APPARTEMENT.SURFACE_CARREZ) {
+          return String(
+            parseFloat(bien.APPARTEMENT.SURFACE_CARREZ._text).toFixed()
+          )
+        } else if (bien.APPARTEMENT.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(bien.APPARTEMENT.SURFACE_COMMERCE._text).toFixed()
+          )
+        } else if (bien.APPARTEMENT.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(bien.APPARTEMENT.SURFACE_HABITABLE._text).toFixed()
+          )
+        } else if (bien.APPARTEMENT.SURFACE_SOL) {
+          return String(
+            parseFloat(bien.APPARTEMENT.SURFACE_SOL._text).toFixed()
+          )
+        }
+      } else if (bien.MAISON) {
+        if (bien.MAISON.SURFACE_CARREZ) {
+          return String(parseFloat(bien.MAISON.SURFACE_CARREZ._text).toFixed())
+        } else if (bien.MAISON.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(bien.MAISON.SURFACE_COMMERCE._text).toFixed()
+          )
+        } else if (bien.MAISON.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(bien.MAISON.SURFACE_HABITABLE._text).toFixed()
+          )
+        } else if (bien.MAISON.SURFACE_SOL) {
+          return String(parseFloat(bien.MAISON.SURFACE_SOL._text).toFixed())
+        }
+      } else if (bien.TERRAIN) {
+        if (bien.TERRAIN.SURFACE_CARREZ) {
+          return String(parseFloat(bien.TERRAIN.SURFACE_CARREZ._text).toFixed())
+        } else if (bien.TERRAIN.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(bien.TERRAIN.SURFACE_COMMERCE._text).toFixed()
+          )
+        } else if (bien.TERRAIN.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(bien.TERRAIN.SURFACE_HABITABLE._text).toFixed()
+          )
+        } else if (bien.TERRAIN.SURFACE_SOL) {
+          return String(parseFloat(bien.TERRAIN.SURFACE_SOL._text).toFixed())
+        }
+      } else if (bien.IMMEUBLE) {
+        if (bien.IMMEUBLE.SURFACE_CARREZ) {
+          return String(
+            parseFloat(bien.IMMEUBLE.SURFACE_CARREZ._text).toFixed()
+          )
+        } else if (bien.IMMEUBLE.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(bien.IMMEUBLE.SURFACE_COMMERCE._text).toFixed()
+          )
+        } else if (bien.IMMEUBLE.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(bien.IMMEUBLE.SURFACE_HABITABLE._text).toFixed()
+          )
+        } else if (bien.IMMEUBLE.SURFACE_SOL) {
+          return String(parseFloat(bien.IMMEUBLE.SURFACE_SOL._text).toFixed())
+        }
+      } else if (bien.LOCAL_PROFESSIONNEL) {
+        if (bien.LOCAL_PROFESSIONNEL.SURFACE_CARREZ) {
+          return String(
+            parseFloat(bien.LOCAL_PROFESSIONNEL.SURFACE_CARREZ._text).toFixed()
+          )
+        } else if (bien.LOCAL_PROFESSIONNEL.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(
+              bien.LOCAL_PROFESSIONNEL.SURFACE_COMMERCE._text
+            ).toFixed()
+          )
+        } else if (bien.LOCAL_PROFESSIONNEL.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(
+              bien.LOCAL_PROFESSIONNEL.SURFACE_HABITABLE._text
+            ).toFixed()
+          )
+        } else if (bien.LOCAL_PROFESSIONNEL.SURFACE_SOL) {
+          return String(
+            parseFloat(bien.LOCAL_PROFESSIONNEL.SURFACE_SOL._text).toFixed()
+          )
+        }
+      } else if (bien.FOND_COMMERCE) {
+        if (bien.FOND_COMMERCE.SURFACE_CARREZ) {
+          return String(
+            parseFloat(bien.FOND_COMMERCE.SURFACE_CARREZ._text).toFixed()
+          )
+        } else if (bien.FOND_COMMERCE.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(bien.FOND_COMMERCE.SURFACE_COMMERCE._text).toFixed()
+          )
+        } else if (bien.FOND_COMMERCE.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(bien.FOND_COMMERCE.SURFACE_HABITABLE._text).toFixed()
+          )
+        } else if (bien.FOND_COMMERCE.SURFACE_SOL) {
+          return String(
+            parseFloat(bien.FOND_COMMERCE.SURFACE_SOL._text).toFixed()
+          )
+        }
+      } else if (bien.PARKING) {
+        if (bien.PARKING.SURFACE_CARREZ) {
+          return String(parseFloat(bien.PARKING.SURFACE_CARREZ._text).toFixed())
+        } else if (bien.PARKING.SURFACE_COMMERCE) {
+          return String(
+            parseFloat(bien.PARKING.SURFACE_COMMERCE._text).toFixed()
+          )
+        } else if (bien.PARKING.SURFACE_HABITABLE) {
+          return String(
+            parseFloat(bien.PARKING.SURFACE_HABITABLE._text).toFixed()
+          )
+        } else if (bien.PARKING.SURFACE_SOL) {
+          return String(parseFloat(bien.PARKING.SURFACE_SOL._text).toFixed())
+        }
       }
     },
     like(dossier) {
