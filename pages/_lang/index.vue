@@ -24,11 +24,6 @@ export default {
     Agence,
     Outils,
   },
-  async fetch({ store }) {
-    if (!store.state.goods.length) {
-      await store.dispatch('getGoods')
-    }
-  },
   head() {
     return {
       title: `${this.$t('links.home')} - Aktif Transac`,
