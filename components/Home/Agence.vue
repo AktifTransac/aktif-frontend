@@ -29,7 +29,7 @@
 export default {
   data() {
     return {
-      key: process.env.MAP_API,
+      // key: process.env.MAP_API,
     }
   },
 }

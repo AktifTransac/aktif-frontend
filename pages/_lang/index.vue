@@ -4,7 +4,7 @@
     <Gestion></Gestion>
     <Estimation></Estimation>
     <Agence></Agence>
-    <Outils></Outils>
+    <Outils></Outils>w
   </div>
 </template>
 
@@ -23,6 +23,11 @@ export default {
     Estimation,
     Agence,
     Outils,
+  },
+  async fetch({ store }) {
+    if (!store.state.goods.length) {
+      await store.dispatch('getGoods')
+    }
   },
   head() {
     return {

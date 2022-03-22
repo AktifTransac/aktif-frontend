@@ -17,20 +17,20 @@
         src="https://api.aktif-transac.com/assets/agence.jpg"
         alt="Photo de deux femmes entrain de discuter"
       />
-      <client-only placeholder="Loading">
-        <iframe
-          id="map"
-          frameborder="0"
-          style="border: 0"
-          :src="
-            'https://www.google.com/maps/embed/v1/place?key=' +
-            key +
-            '&q=AKTIF+TRANSAC,Montpellier+France'
-          "
-          allowfullscreen
-        >
-        </iframe>
-      </client-only>
+      <!--      <client-only placeholder="Loading">-->
+      <!--        <iframe-->
+      <!--          id="map"-->
+      <!--          frameborder="0"-->
+      <!--          style="border: 0"-->
+      <!--          :src="-->
+      <!--            'https://www.google.com/maps/embed/v1/place?key=' +-->
+      <!--            key +-->
+      <!--            '&q=AKTIF+TRANSAC,Montpellier+France'-->
+      <!--          "-->
+      <!--          allowfullscreen-->
+      <!--        >-->
+      <!--        </iframe>-->
+      <!--      </client-only>-->
     </article>
     <!--    <article>-->
     <!--      <div class="container">-->
@@ -57,7 +57,7 @@
 export default {
   data() {
     return {
-      key: process.env.MAP_API,
+      // key: process.env.MAP_API,
     }
   },
 }
