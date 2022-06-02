@@ -111,7 +111,7 @@ export const mutations = {
 export const actions = {
   async getGoods({ commit }) {
     const data = await this.$axios.$get(
-      'http://clients.ac3-distribution.com/office12/sarlaktiftrans_02032021/cache/export.xml',
+      'https://clients.immo-facile.com/office12/sarlaktiftrans_02032021/cache/export.xml',
       {
         headers: {
           'Content-Type': 'application/xml',
